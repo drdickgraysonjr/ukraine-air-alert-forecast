@@ -5,6 +5,7 @@ Every number here is a decision documented in README.md ("Data decisions").
 
 from __future__ import annotations
 
+import os
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -13,8 +14,9 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = ROOT / "data"
 RAW_DIR = DATA_DIR / "raw"
-ARTIFACTS_DIR = ROOT / "artifacts"
-REPORTS_DIR = ROOT / "reports"
+# Overridable so the reproducibility check can write to a scratch directory.
+ARTIFACTS_DIR = Path(os.environ.get("ALERTS_ARTIFACTS_DIR", ROOT / "artifacts"))
+REPORTS_DIR = Path(os.environ.get("ALERTS_REPORTS_DIR", ROOT / "reports"))
 MANIFEST_PATH = ROOT / "data_manifest.json"
 
 KYIV_TZ = "Europe/Kyiv"
