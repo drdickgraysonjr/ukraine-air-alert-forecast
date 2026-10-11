@@ -1,0 +1,1989 @@
+{
+ "channel": "alarm_signal",
+ "annotator": "Claude (agent), blind to the parser",
+ "labels": [
+  {
+   "id": 50041,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 51444,
+   "oblasts": [
+    "mykolaiv"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 57424,
+   "oblasts": [
+    "khmelnytskyi"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 58235,
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 59290,
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 60078,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 60201,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 60893,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 65401,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [],
+   "note": ""
+  },
+  {
+   "id": 67628,
+   "oblasts": [
+    "mykolaiv"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 69443,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 69637,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 70711,
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 74821,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 78421,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 79441,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 82228,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [],
+   "note": ""
+  },
+  {
+   "id": 83713,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [],
+   "note": "planned demolition of explosive objects near Slavutych, not an attack; no type"
+  },
+  {
+   "id": 85663,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [],
+   "note": ""
+  },
+  {
+   "id": 86322,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 90046,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [],
+   "note": ""
+  },
+  {
+   "id": 90353,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 93648,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 95579,
+   "oblasts": [
+    "lviv"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 96021,
+   "oblasts": [
+    "mykolaiv"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 96203,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 97594,
+   "oblasts": [
+    "ivano_frankivsk"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 98842,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 100700,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 102191,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 102571,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 104120,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 105153,
+   "oblasts": [
+    "vinnytsia"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 105712,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "all_clear",
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 106005,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 110476,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 115338,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 115773,
+   "oblasts": [
+    "mykolaiv"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 117450,
+   "oblasts": [],
+   "types": [],
+   "note": "volunteer recruitment ad; mentions alerts generically, no announcement"
+  },
+  {
+   "id": 123350,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 127712,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 131548,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [],
+   "note": ""
+  },
+  {
+   "id": 136153,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 138808,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 139132,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 142187,
+   "oblasts": [
+    "chernihiv"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 145606,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "all_clear",
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 147045,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 148999,
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 149823,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 152081,
+   "oblasts": [
+    "kirovohrad"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 154183,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 158183,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 158541,
+   "oblasts": [
+    "kherson"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 164446,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 169078,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 172314,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 175523,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 179895,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 183561,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 183883,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 191041,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 193073,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 194572,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 197377,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 205999,
+   "oblasts": [
+    "chernihiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 212876,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 212907,
+   "oblasts": [
+    "kherson"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 215493,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 216234,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 217142,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 217777,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [],
+   "note": ""
+  },
+  {
+   "id": 221613,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 224844,
+   "oblasts": [
+    "khmelnytskyi"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 227600,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 235702,
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 247840,
+   "oblasts": [
+    "kirovohrad"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 250180,
+   "oblasts": [
+    "cherkasy"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 254094,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 255119,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 260568,
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 267476,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 268046,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 269552,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 270989,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 271135,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 271703,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 275010,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 276703,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "kab"
+   ],
+   "note": ""
+  },
+  {
+   "id": 279898,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 281945,
+   "oblasts": [
+    "zhytomyr"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 281983,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 284638,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 295110,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 296214,
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 297104,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 297990,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 306243,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 309342,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 310062,
+   "oblasts": [
+    "chernihiv"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 312295,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 315680,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 316921,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 318784,
+   "oblasts": [
+    "mykolaiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 321554,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 321697,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 321869,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 322178,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "kab"
+   ],
+   "note": ""
+  },
+  {
+   "id": 325166,
+   "oblasts": [
+    "chernihiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 325970,
+   "oblasts": [
+    "chernihiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 331585,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 334942,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 342237,
+   "oblasts": [
+    "kherson"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 349943,
+   "oblasts": [
+    "kherson"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 353388,
+   "oblasts": [
+    "vinnytsia"
+   ],
+   "types": [
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 356290,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "artillery"
+   ],
+   "note": ""
+  },
+  {
+   "id": 357961,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "kab"
+   ],
+   "note": ""
+  },
+  {
+   "id": 370000,
+   "oblasts": [
+    "kherson"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 371571,
+   "oblasts": [
+    "mykolaiv"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 372039,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 374767,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 378098,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 381213,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 383506,
+   "oblasts": [
+    "rivne"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 386112,
+   "oblasts": [
+    "mykolaiv"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 386268,
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 386484,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 394145,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 395462,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 413568,
+   "oblasts": [
+    "chernihiv"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 417980,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 421881,
+   "oblasts": [
+    "chernihiv"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 427576,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 432286,
+   "oblasts": [
+    "kirovohrad"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 443329,
+   "oblasts": [
+    "chernihiv"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 448109,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 449544,
+   "oblasts": [
+    "zhytomyr"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 458220,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 463194,
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 478386,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "kab"
+   ],
+   "note": ""
+  },
+  {
+   "id": 481442,
+   "oblasts": [
+    "kherson"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 500975,
+   "oblasts": [
+    "kherson"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 503864,
+   "oblasts": [
+    "chernihiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 504242,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 507289,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 507670,
+   "oblasts": [
+    "cherkasy"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 510119,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 513207,
+   "oblasts": [
+    "kirovohrad"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 516608,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 519068,
+   "oblasts": [
+    "chernihiv"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 519165,
+   "oblasts": [
+    "chernihiv"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 522422,
+   "oblasts": [
+    "chernihiv"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 528631,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 531407,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 531560,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 534033,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 534896,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [],
+   "note": ""
+  },
+  {
+   "id": 535769,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 538252,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 546118,
+   "oblasts": [
+    "vinnytsia"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 549299,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 551313,
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 554572,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 558096,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 559829,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 560894,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 564614,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 564628,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 565683,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 568459,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 571793,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 579511,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "kab"
+   ],
+   "note": ""
+  },
+  {
+   "id": 580947,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 581911,
+   "oblasts": [
+    "kherson"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 582793,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 586616,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 586901,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 587465,
+   "oblasts": [
+    "chernihiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 589156,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 592119,
+   "oblasts": [
+    "dnipropetrovsk",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 593806,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 594296,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 594317,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 597098,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 598203,
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 599350,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 599469,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 601905,
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 606989,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 612211,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 613799,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [],
+   "note": ""
+  },
+  {
+   "id": 616121,
+   "oblasts": [
+    "rivne"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 622913,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 628788,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 628849,
+   "oblasts": [
+    "chernihiv"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 631105,
+   "oblasts": [
+    "mykolaiv",
+    "odesa"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 642261,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "alert"
+   ],
+   "note": ""
+  },
+  {
+   "id": 642599,
+   "oblasts": [
+    "mykolaiv",
+    "odesa"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 643258,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 648630,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  }
+ ]
+}

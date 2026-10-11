@@ -109,7 +109,7 @@ ZONE_MIN_SHARE = 0.9
 
 # Telegram channels whose posts feed the text features (alerts.telegram).
 # Chosen on the validation window (reports/validation.json, "text").
-TEXT_CHANNELS: tuple[str, ...] = ("kpszsu", "war_monitor", "eradar", "alarm_signal")
+TEXT_CHANNELS: tuple[str, ...] = ("war_monitor", "eradar", "alarm_signal")
 # Keep posts that were edited after publication (see alerts.telegram).
 DROP_EDITED_POSTS = False
 

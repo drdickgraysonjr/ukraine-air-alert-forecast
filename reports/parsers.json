@@ -297,6 +297,104 @@
         "f1": 0.9235668789808917
       },
       "exact_post_match": 0.785
+    },
+    "alarm_signal": {
+      "annotator": "Claude (agent), blind to the parser",
+      "reviewer": null,
+      "reviewed": false,
+      "corrections": null,
+      "n_posts": 200,
+      "oblasts": {
+        "tp": 202,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.9950738916256158,
+        "recall": 1.0,
+        "f1": 0.9975308641975309
+      },
+      "types": {
+        "alert": {
+          "tp": 49,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.98,
+          "recall": 1.0,
+          "f1": 0.98989898989899,
+          "support": 49
+        },
+        "all_clear": {
+          "tp": 53,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 53
+        },
+        "drone": {
+          "tp": 54,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 54
+        },
+        "missile": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666,
+          "support": 1
+        },
+        "ballistic": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "support": 0
+        },
+        "kab": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 5
+        },
+        "aviation": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "support": 0
+        },
+        "artillery": {
+          "tp": 30,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.967741935483871,
+          "recall": 1.0,
+          "f1": 0.9836065573770492,
+          "support": 30
+        }
+      },
+      "types_micro": {
+        "tp": 192,
+        "fp": 3,
+        "fn": 0,
+        "precision": 0.9846153846153847,
+        "recall": 1.0,
+        "f1": 0.9922480620155039
+      },
+      "exact_post_match": 0.99
     }
   }
 }
