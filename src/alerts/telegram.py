@@ -320,3 +320,44 @@ def text_features(g) -> dict[str, np.ndarray]:
         f[f"tg_ua_{k}_6h"] = np.repeat(_rolling_sum(ua[k], 6), R, axis=0)
     f["tg_posts_per_day_28d"] = np.repeat(_rolling_sum(ua["posts"], 672) / 28.0, R, axis=0)
     return {k: v[g.parent] for k, v in f.items()}
+
+
+# ------------------------------------------------------------------ pinning
+
+def pin(key: str, export_dir) -> dict:
+    """Copy an export's message files to data/raw/telegram/<key> and record its
+    digest and post count in data_manifest.json."""
+    import json
+    import shutil
+
+    if key not in CHANNELS:
+        raise ValueError(f"unknown channel {key}")
+    dst = TELEGRAM_DIR / key
+    if dst.exists():
+        shutil.rmtree(dst)
+    dst.mkdir(parents=True)
+    files = export_files(export_dir)
+    if not files:
+        raise ValueError(f"{export_dir}: no messages*.html")
+    for f in files:
+        shutil.copy2(f, dst / os.path.basename(f))
+    df = read_export(dst)
+    digest, size = export_sha256(dst)
+    entry = {
+        "handle": CHANNELS[key].handle,
+        "export": os.path.basename(os.path.normpath(str(export_dir))),
+        "format": "Telegram Desktop HTML export, local time Europe/Warsaw",
+        "sha256": digest,
+        "bytes": size,
+        "n_files": len(files),
+        "n_posts": int(len(df)),
+        "first_id": int(df["id"].min()),
+        "last_id": int(df["id"].max()),
+        "first_post_local": df["ts_local"].iloc[0],
+        "last_post_local": df["ts_local"].iloc[-1],
+        "edited_posts": int(df["edited"].sum()),
+    }
+    m = json.loads(config.MANIFEST_PATH.read_text())
+    m.setdefault("telegram", {})[key] = entry
+    config.MANIFEST_PATH.write_text(json.dumps(m, indent=2, ensure_ascii=False) + "\n")
+    return entry

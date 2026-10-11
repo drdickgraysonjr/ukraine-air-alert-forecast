@@ -82,6 +82,12 @@ def _data(posts=None):
     return datasets.build(stitch.load_all(), config.DATA_END_UTC, posts=posts)
 
 
+def _posts(channels, drop_edited=False):
+    from . import telegram
+
+    return telegram.Posts.load(channels, drop_edited=drop_edited) if channels else None
+
+
 def step_zones() -> dict:
     from . import stitch, zones
 
@@ -114,3 +120,45 @@ def step_history() -> dict:
     out["history"] = {"trials": trials, **pick(trials)}
     save(out)
     return out["history"]
+
+
+ALL_CHANNELS = ("kpszsu", "war_monitor", "eradar", "alarm_signal")
+
+
+def step_text() -> dict:
+    """Which channels feed the text features: none, all four, or all but one.
+    History start as chosen in the history step (config)."""
+    options = [("none", ()), ("all", ALL_CHANNELS)] + [(f"all-{c}", tuple(x for x in ALL_CHANNELS if x != c)) for c in ALL_CHANNELS]
+    trials = []
+    for name, chans in options:
+        s = score(_data(_posts(chans)))
+        s.update(option=name, channels=list(chans))
+        print("text", name, round(s["score"], 4), s["phase1_rel_mae"], s["phase2_rel_logloss"], flush=True)
+        trials.append(s)
+    out = load()
+    best = pick(trials)
+    best["selected_channels"] = next(t["channels"] for t in trials if t["option"] == best["selected"])
+    out["text"] = {"trials": trials, **best}
+    save(out)
+    return out["text"]
+
+
+def step_edited() -> dict:
+    """Not a choice: what dropping edited posts changes on the validation window,
+    with the chosen channels. The flag is never a feature."""
+    from . import telegram
+
+    chans = config.TEXT_CHANNELS
+    res = {"channels": list(chans), "dropped_posts": {}, "trials": []}
+    for c in chans:
+        df = telegram.load_channel(c)
+        res["dropped_posts"][c] = int(df["edited"].sum())
+    for drop in (False, True):
+        s = score(_data(_posts(chans, drop_edited=drop)))
+        s["option"] = "without edited posts" if drop else "all posts"
+        print("edited", s["option"], round(s["score"], 4), flush=True)
+        res["trials"].append(s)
+    out = load()
+    out["edited"] = res
+    save(out)
+    return res

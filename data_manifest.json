@@ -20,5 +20,49 @@
       "sha256": "f5110defe3b7661dc350e4d5923668039eaa2f35712313203a3a5f535476e123",
       "bytes": 3043044
     }
+  },
+  "telegram": {
+    "kpszsu": {
+      "handle": "@kpszsu",
+      "export": "ChatExport_Повітряні Сили ЗС України _ Air Force of the Armed Forces of Ukraine",
+      "format": "Telegram Desktop HTML export, local time Europe/Warsaw",
+      "sha256": "97d22ae3576522e0ea7c628eb166a037dc0220cc27ae14870d3f1cee69f5b29f",
+      "bytes": 85793932,
+      "n_files": 17,
+      "n_posts": 84952,
+      "first_id": 3,
+      "last_id": 85322,
+      "first_post_local": "2019-02-18 13:37:13",
+      "last_post_local": "2026-10-11 22:04:52",
+      "edited_posts": 2903
+    },
+    "war_monitor": {
+      "handle": "@war_monitor",
+      "export": "ChatExport_monitor",
+      "format": "Telegram Desktop HTML export, local time Europe/Warsaw",
+      "sha256": "1d2af9f5803dc0595170d9893373611f98525877601459bb2918cd8afdbaa957",
+      "bytes": 46312646,
+      "n_files": 10,
+      "n_posts": 47078,
+      "first_id": 10,
+      "last_id": 47555,
+      "first_post_local": "2022-04-29 13:24:57",
+      "last_post_local": "2026-10-11 12:02:55",
+      "edited_posts": 2648
+    },
+    "eradar": {
+      "handle": "@eRadarrua",
+      "export": "ChatExport_🔊⚠️єРадар _ Повітряна тривога _ Ракетна небезпека",
+      "format": "Telegram Desktop HTML export, local time Europe/Warsaw",
+      "sha256": "4fad01ed04027a60f978d6b3fd926978361647f3b3e5dcd9e5e1112f7b18b8fa",
+      "bytes": 129966940,
+      "n_files": 24,
+      "n_posts": 119520,
+      "first_id": 4,
+      "last_id": 122052,
+      "first_post_local": "2022-12-03 19:11:49",
+      "last_post_local": "2026-10-11 15:53:09",
+      "edited_posts": 9506
+    }
   }
 }

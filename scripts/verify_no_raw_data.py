@@ -1,14 +1,17 @@
-"""Gate G10: no raw data file is tracked by git (alerts.in.ua data has no licence
-to redistribute). Positive control: the same check must flag a scratch repo in
-which a CSV is tracked."""
+"""Gate: no raw data file, Telegram export or post text is tracked by git
+(alerts.in.ua data has no licence to redistribute; the posts belong to the
+channels). Gold labels may be tracked, but only as ids and labels.
+Positive controls: the same check must flag a scratch repo in which a CSV is
+tracked, and one in which a gold file carries post texts."""
 
+import json
 import subprocess
 import sys
 import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-BAD_SUFFIXES = (".csv", ".csv.gz", ".parquet", ".jsonl", ".zip")
+BAD_SUFFIXES = (".csv", ".csv.gz", ".parquet", ".jsonl", ".zip", ".html", ".pkl")
 MAX_BYTES = 1_000_000
 
 
@@ -19,7 +22,24 @@ def offenders(repo: Path) -> list[str]:
         p = repo / f
         if f.startswith(("data/", "artifacts/")) or f.endswith(BAD_SUFFIXES) or (p.exists() and p.stat().st_size > MAX_BYTES):
             bad.append(f)
+        elif f.startswith("gold/") and p.exists() and _has_text(p):
+            bad.append(f)
     return bad
+
+
+def _has_text(p: Path) -> bool:
+    """A gold file with any field named "text" (post bodies)."""
+    def walk(x):
+        if isinstance(x, dict):
+            return "text" in x or any(walk(v) for v in x.values())
+        if isinstance(x, list):
+            return any(walk(v) for v in x)
+        return False
+
+    try:
+        return walk(json.loads(p.read_text()))
+    except ValueError:
+        return True
 
 
 def control() -> bool:
@@ -28,8 +48,11 @@ def control() -> bool:
         subprocess.run(["git", "init", "-q", str(repo)], check=True)
         (repo / "data" / "raw").mkdir(parents=True)
         (repo / "data" / "raw" / "alerts_in_ua.csv").write_text("id,started_at\n1,2026-01-01\n")
+        (repo / "gold").mkdir()
+        (repo / "gold" / "labels_x.json").write_text(json.dumps({"labels": [{"id": 1, "text": "post"}]}))
+        (repo / "gold" / "labels_y.json").write_text(json.dumps({"labels": [{"id": 1, "oblasts": []}]}))
         subprocess.run(["git", "-C", str(repo), "add", "-A"], check=True)
-        return offenders(repo) == ["data/raw/alerts_in_ua.csv"]
+        return offenders(repo) == ["data/raw/alerts_in_ua.csv", "gold/labels_x.json"]
 
 
 def main() -> int:

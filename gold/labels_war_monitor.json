@@ -1,0 +1,2003 @@
+{
+ "channel": "war_monitor",
+ "annotator": "Claude (agent), blind to the parser",
+ "labels": [
+  {
+   "id": 5123,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "ballistic"
+   ],
+   "note": "ЗРК/ОТРК on ground targets"
+  },
+  {
+   "id": 5157,
+   "oblasts": [
+    "dnipropetrovsk",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "missile"
+   ],
+   "note": "fast missiles, type not named"
+  },
+  {
+   "id": 5283,
+   "oblasts": [],
+   "types": [
+    "all_clear"
+   ],
+   "note": ""
+  },
+  {
+   "id": 5352,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [],
+   "note": "Donetsk city (occupied), explosions only"
+  },
+  {
+   "id": 5646,
+   "oblasts": [
+    "khmelnytskyi"
+   ],
+   "types": [
+    "missile"
+   ],
+   "note": "past alert mentioned, not announced"
+  },
+  {
+   "id": 6020,
+   "oblasts": [],
+   "types": [
+    "drone"
+   ],
+   "note": "NATO recon UAV, not a threat"
+  },
+  {
+   "id": 6368,
+   "oblasts": [],
+   "types": [
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 6997,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 7258,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [],
+   "note": ""
+  },
+  {
+   "id": 7531,
+   "oblasts": [
+    "kherson",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "aviation",
+    "kab",
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 7639,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 8462,
+   "oblasts": [],
+   "types": [
+    "aviation"
+   ],
+   "note": ""
+  },
+  {
+   "id": 8718,
+   "oblasts": [
+    "khmelnytskyi"
+   ],
+   "types": [],
+   "note": ""
+  },
+  {
+   "id": 9623,
+   "oblasts": [
+    "mykolaiv",
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 9696,
+   "oblasts": [],
+   "types": [
+    "all_clear",
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 9902,
+   "oblasts": [],
+   "types": [
+    "missile"
+   ],
+   "note": "reports absence of Kalibr carriers"
+  },
+  {
+   "id": 10452,
+   "oblasts": [],
+   "types": [
+    "aviation"
+   ],
+   "note": ""
+  },
+  {
+   "id": 10487,
+   "oblasts": [],
+   "types": [
+    "aviation",
+    "drone",
+    "missile"
+   ],
+   "note": "status summary; aviation/fleet reported inactive or in port, labelled by topic"
+  },
+  {
+   "id": 10908,
+   "oblasts": [],
+   "types": [],
+   "note": ""
+  },
+  {
+   "id": 11118,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [],
+   "note": "Berdiansk, Ukrainian strike"
+  },
+  {
+   "id": 11347,
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 11378,
+   "oblasts": [
+    "kherson",
+    "mykolaiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 11396,
+   "oblasts": [],
+   "types": [
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 11676,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [],
+   "note": "'ціль' type unspecified"
+  },
+  {
+   "id": 11774,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [],
+   "note": ""
+  },
+  {
+   "id": 12082,
+   "oblasts": [
+    "ternopil"
+   ],
+   "types": [],
+   "note": "'група' type unspecified (likely drones)"
+  },
+  {
+   "id": 12389,
+   "oblasts": [],
+   "types": [],
+   "note": ""
+  },
+  {
+   "id": 12400,
+   "oblasts": [],
+   "types": [
+    "drone"
+   ],
+   "note": "Shahed fell in Russia"
+  },
+  {
+   "id": 12715,
+   "oblasts": [],
+   "types": [],
+   "note": ""
+  },
+  {
+   "id": 12738,
+   "oblasts": [
+    "kirovohrad"
+   ],
+   "types": [],
+   "note": ""
+  },
+  {
+   "id": 12828,
+   "oblasts": [
+    "poltava",
+    "sumy"
+   ],
+   "types": [],
+   "note": ""
+  },
+  {
+   "id": 12864,
+   "oblasts": [],
+   "types": [
+    "aviation",
+    "ballistic",
+    "drone",
+    "kab",
+    "missile"
+   ],
+   "note": "daily summary; Kinzhal=ballistic"
+  },
+  {
+   "id": 12877,
+   "oblasts": [],
+   "types": [],
+   "note": ""
+  },
+  {
+   "id": 13795,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 13921,
+   "oblasts": [
+    "dnipropetrovsk",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "ballistic"
+   ],
+   "note": ""
+  },
+  {
+   "id": 13948,
+   "oblasts": [],
+   "types": [],
+   "note": ""
+  },
+  {
+   "id": 14312,
+   "oblasts": [],
+   "types": [
+    "aviation",
+    "kab",
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 14354,
+   "oblasts": [
+    "kirovohrad",
+    "mykolaiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 14571,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 14590,
+   "oblasts": [
+    "dnipropetrovsk",
+    "kirovohrad",
+    "mykolaiv",
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 14754,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 15100,
+   "oblasts": [
+    "dnipropetrovsk",
+    "mykolaiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 15450,
+   "oblasts": [],
+   "types": [],
+   "note": "Iranian cargo Il-76 in Moscow, not labelled aviation"
+  },
+  {
+   "id": 15557,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 15790,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "kab"
+   ],
+   "note": ""
+  },
+  {
+   "id": 15858,
+   "oblasts": [],
+   "types": [
+    "aviation"
+   ],
+   "note": ""
+  },
+  {
+   "id": 15912,
+   "oblasts": [
+    "ivano_frankivsk"
+   ],
+   "types": [
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 16160,
+   "oblasts": [],
+   "types": [
+    "all_clear",
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 16293,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "kab"
+   ],
+   "note": ""
+  },
+  {
+   "id": 16429,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 16658,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "ballistic"
+   ],
+   "note": ""
+  },
+  {
+   "id": 16693,
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 17416,
+   "oblasts": [],
+   "types": [
+    "ballistic"
+   ],
+   "note": "'Чисто до Дніпра' — city or river unclear, left out"
+  },
+  {
+   "id": 17505,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [],
+   "note": ""
+  },
+  {
+   "id": 17574,
+   "oblasts": [
+    "dnipropetrovsk",
+    "kherson",
+    "kirovohrad",
+    "mykolaiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": "'північніше Дніпра. Курс на місто' read as Dnipro city"
+  },
+  {
+   "id": 17933,
+   "oblasts": [
+    "cherkasy",
+    "khmelnytskyi",
+    "kyiv",
+    "poltava",
+    "vinnytsia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 18054,
+   "oblasts": [
+    "kherson"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 18193,
+   "oblasts": [
+    "mykolaiv"
+   ],
+   "types": [
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 18205,
+   "oblasts": [
+    "kyiv",
+    "kyiv_city"
+   ],
+   "types": [
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 18215,
+   "oblasts": [],
+   "types": [],
+   "note": ""
+  },
+  {
+   "id": 18271,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 18295,
+   "oblasts": [
+    "vinnytsia"
+   ],
+   "types": [
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 18952,
+   "oblasts": [],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 19103,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 19309,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 19606,
+   "oblasts": [
+    "chernihiv",
+    "donetsk",
+    "kherson",
+    "kyiv",
+    "mykolaiv",
+    "poltava",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 19715,
+   "oblasts": [],
+   "types": [
+    "aviation",
+    "missile"
+   ],
+   "note": "air-launched KR from Saratov; aviation implied by 'повітряного базування'"
+  },
+  {
+   "id": 19902,
+   "oblasts": [],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 19916,
+   "oblasts": [],
+   "types": [
+    "drone"
+   ],
+   "note": "UAVs over Engels, Russia"
+  },
+  {
+   "id": 19980,
+   "oblasts": [
+    "vinnytsia"
+   ],
+   "types": [
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 20156,
+   "oblasts": [
+    "dnipropetrovsk",
+    "kherson"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 20292,
+   "oblasts": [
+    "chernihiv",
+    "kharkiv",
+    "poltava"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 20462,
+   "oblasts": [
+    "dnipropetrovsk",
+    "kirovohrad"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 20592,
+   "oblasts": [
+    "kyiv",
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": "'передмістя' = Kyiv oblast"
+  },
+  {
+   "id": 20926,
+   "oblasts": [
+    "kherson",
+    "kyiv",
+    "mykolaiv",
+    "poltava",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 21041,
+   "oblasts": [
+    "cherkasy",
+    "chernihiv",
+    "ivano_frankivsk",
+    "kyiv",
+    "poltava",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 21375,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "ballistic"
+   ],
+   "note": ""
+  },
+  {
+   "id": 21483,
+   "oblasts": [
+    "chernihiv",
+    "poltava",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 21575,
+   "oblasts": [
+    "cherkasy",
+    "poltava"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 21717,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 22066,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 23500,
+   "oblasts": [
+    "khmelnytskyi",
+    "vinnytsia"
+   ],
+   "types": [
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 23649,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 23862,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 24307,
+   "oblasts": [
+    "cherkasy",
+    "mykolaiv",
+    "poltava"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 24649,
+   "oblasts": [
+    "kyiv",
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 24931,
+   "oblasts": [],
+   "types": [
+    "aviation",
+    "drone",
+    "missile"
+   ],
+   "note": "status summary; aviation/fleet reported inactive or in port, labelled by topic"
+  },
+  {
+   "id": 24945,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [],
+   "note": "'1х' without stated type"
+  },
+  {
+   "id": 25143,
+   "oblasts": [
+    "mykolaiv",
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 25239,
+   "oblasts": [],
+   "types": [
+    "all_clear",
+    "ballistic"
+   ],
+   "note": ""
+  },
+  {
+   "id": 25370,
+   "oblasts": [],
+   "types": [
+    "all_clear",
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 25642,
+   "oblasts": [],
+   "types": [
+    "aviation",
+    "drone",
+    "missile"
+   ],
+   "note": "status summary; aviation/fleet reported inactive or in port, labelled by topic"
+  },
+  {
+   "id": 25716,
+   "oblasts": [],
+   "types": [
+    "all_clear",
+    "ballistic"
+   ],
+   "note": ""
+  },
+  {
+   "id": 25751,
+   "oblasts": [
+    "kharkiv",
+    "poltava"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 25818,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 25824,
+   "oblasts": [],
+   "types": [
+    "aviation",
+    "drone",
+    "missile"
+   ],
+   "note": "status summary; aviation/fleet reported inactive or in port, labelled by topic"
+  },
+  {
+   "id": 25904,
+   "oblasts": [
+    "poltava",
+    "sumy"
+   ],
+   "types": [
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 26251,
+   "oblasts": [
+    "kirovohrad"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 26287,
+   "oblasts": [
+    "cherkasy",
+    "chernihiv",
+    "dnipropetrovsk",
+    "kirovohrad",
+    "kyiv",
+    "poltava",
+    "sumy",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 26342,
+   "oblasts": [
+    "cherkasy",
+    "dnipropetrovsk",
+    "donetsk",
+    "kharkiv",
+    "kirovohrad",
+    "mykolaiv",
+    "poltava",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 26471,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 26781,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [],
+   "note": "'прифронтова активність' type unspecified"
+  },
+  {
+   "id": 26991,
+   "oblasts": [
+    "kharkiv",
+    "poltava",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 27582,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 27626,
+   "oblasts": [],
+   "types": [
+    "all_clear",
+    "ballistic"
+   ],
+   "note": ""
+  },
+  {
+   "id": 27659,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 27782,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 27854,
+   "oblasts": [],
+   "types": [],
+   "note": "channel anniversary; generic mentions of alerts/missiles/shaheds not labelled"
+  },
+  {
+   "id": 28247,
+   "oblasts": [
+    "cherkasy",
+    "poltava"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 28324,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 28497,
+   "oblasts": [
+    "dnipropetrovsk",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 28581,
+   "oblasts": [
+    "kirovohrad"
+   ],
+   "types": [
+    "ballistic"
+   ],
+   "note": ""
+  },
+  {
+   "id": 28627,
+   "oblasts": [
+    "chernihiv",
+    "dnipropetrovsk",
+    "kherson",
+    "kirovohrad",
+    "kyiv",
+    "mykolaiv",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 28682,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [],
+   "note": "'комбінована атака' types not named"
+  },
+  {
+   "id": 28921,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 30053,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [],
+   "note": "districts only, no stated type"
+  },
+  {
+   "id": 30148,
+   "oblasts": [],
+   "types": [
+    "all_clear",
+    "ballistic"
+   ],
+   "note": ""
+  },
+  {
+   "id": 30211,
+   "oblasts": [
+    "zhytomyr"
+   ],
+   "types": [
+    "ballistic"
+   ],
+   "note": ""
+  },
+  {
+   "id": 30280,
+   "oblasts": [],
+   "types": [],
+   "note": ""
+  },
+  {
+   "id": 30365,
+   "oblasts": [
+    "donetsk",
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 30397,
+   "oblasts": [
+    "dnipropetrovsk",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 31047,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 31100,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [],
+   "note": "'Вихід' (launch) type not named"
+  },
+  {
+   "id": 31151,
+   "oblasts": [
+    "chernihiv",
+    "dnipropetrovsk",
+    "sumy",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 31309,
+   "oblasts": [
+    "mykolaiv",
+    "poltava"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 31505,
+   "oblasts": [
+    "kyiv",
+    "kyiv_city"
+   ],
+   "types": [],
+   "note": "no stated type"
+  },
+  {
+   "id": 31656,
+   "oblasts": [],
+   "types": [
+    "ballistic"
+   ],
+   "note": ""
+  },
+  {
+   "id": 32732,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 33164,
+   "oblasts": [
+    "chernihiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 33382,
+   "oblasts": [],
+   "types": [
+    "aviation"
+   ],
+   "note": "launches implied but missile not named"
+  },
+  {
+   "id": 33534,
+   "oblasts": [],
+   "types": [
+    "drone"
+   ],
+   "note": "Kyiv reservoir = water body, not labelled"
+  },
+  {
+   "id": 33773,
+   "oblasts": [
+    "lviv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 33871,
+   "oblasts": [],
+   "types": [
+    "aviation",
+    "drone",
+    "missile"
+   ],
+   "note": "status summary; aviation/fleet reported inactive or in port, labelled by topic"
+  },
+  {
+   "id": 34133,
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [],
+   "note": "'1х' without stated type"
+  },
+  {
+   "id": 34280,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 34402,
+   "oblasts": [
+    "kirovohrad",
+    "vinnytsia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": "'Кам'янець' ambiguous, left out"
+  },
+  {
+   "id": 34564,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "ballistic"
+   ],
+   "note": ""
+  },
+  {
+   "id": 34763,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [],
+   "note": "'1х' without stated type"
+  },
+  {
+   "id": 34815,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "ballistic"
+   ],
+   "note": ""
+  },
+  {
+   "id": 35098,
+   "oblasts": [],
+   "types": [
+    "aviation",
+    "drone",
+    "missile"
+   ],
+   "note": "status summary; aviation/fleet reported inactive or in port, labelled by topic"
+  },
+  {
+   "id": 35124,
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 35461,
+   "oblasts": [
+    "dnipropetrovsk",
+    "khmelnytskyi",
+    "kirovohrad",
+    "poltava",
+    "vinnytsia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 35747,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 36099,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 36508,
+   "oblasts": [
+    "rivne"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 37089,
+   "oblasts": [
+    "chernihiv",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 37197,
+   "oblasts": [
+    "poltava",
+    "sumy"
+   ],
+   "types": [
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 37609,
+   "oblasts": [
+    "dnipropetrovsk",
+    "kharkiv",
+    "kirovohrad",
+    "poltava",
+    "vinnytsia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 37649,
+   "oblasts": [
+    "khmelnytskyi",
+    "ternopil"
+   ],
+   "types": [
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 37861,
+   "oblasts": [
+    "cherkasy",
+    "vinnytsia"
+   ],
+   "types": [
+    "ballistic",
+    "drone",
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 37894,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone",
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 37967,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 37997,
+   "oblasts": [
+    "cherkasy",
+    "kyiv"
+   ],
+   "types": [
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 38274,
+   "oblasts": [
+    "kyiv",
+    "zhytomyr"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 38429,
+   "oblasts": [],
+   "types": [
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 38558,
+   "oblasts": [
+    "khmelnytskyi",
+    "vinnytsia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": "'бала' read as typo for БпЛА"
+  },
+  {
+   "id": 38797,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [],
+   "note": "no stated type"
+  },
+  {
+   "id": 39157,
+   "oblasts": [],
+   "types": [
+    "all_clear",
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 39263,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 39853,
+   "oblasts": [
+    "khmelnytskyi",
+    "zhytomyr"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 40229,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "ballistic"
+   ],
+   "note": "☄ = channel's ballistic marker; text says only 'Вихід'"
+  },
+  {
+   "id": 40275,
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 40311,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "ballistic"
+   ],
+   "note": ""
+  },
+  {
+   "id": 40316,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "ballistic"
+   ],
+   "note": ""
+  },
+  {
+   "id": 40961,
+   "oblasts": [
+    "dnipropetrovsk",
+    "kharkiv",
+    "odesa",
+    "sumy"
+   ],
+   "types": [
+    "aviation",
+    "ballistic",
+    "drone"
+   ],
+   "note": "forecast; 'флот' without missile word"
+  },
+  {
+   "id": 41050,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 41099,
+   "oblasts": [
+    "kyiv",
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 41264,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "ballistic"
+   ],
+   "note": ""
+  },
+  {
+   "id": 41463,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 41827,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "aviation",
+    "drone",
+    "missile"
+   ],
+   "note": "status summary; aviation/fleet reported inactive or in port, labelled by topic"
+  },
+  {
+   "id": 42200,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 42235,
+   "oblasts": [
+    "kyiv",
+    "kyiv_city"
+   ],
+   "types": [
+    "ballistic"
+   ],
+   "note": ""
+  },
+  {
+   "id": 42304,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 42322,
+   "oblasts": [
+    "dnipropetrovsk",
+    "kharkiv",
+    "odesa",
+    "sumy",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "aviation",
+    "ballistic",
+    "drone"
+   ],
+   "note": "forecast; 'флот' without missile word"
+  },
+  {
+   "id": 42330,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": "Zazymia (Kyiv oblast); 'передмістя Києва' only as reference"
+  },
+  {
+   "id": 42598,
+   "oblasts": [
+    "chernihiv",
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 42618,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 43034,
+   "oblasts": [
+    "kherson",
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": "Tendra Spit = Kherson oblast"
+  },
+  {
+   "id": 43129,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 43151,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 43168,
+   "oblasts": [
+    "kyiv",
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 43766,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [],
+   "note": ""
+  },
+  {
+   "id": 43873,
+   "oblasts": [],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 44047,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 44137,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 44272,
+   "oblasts": [
+    "kyiv",
+    "kyiv_city"
+   ],
+   "types": [],
+   "note": ""
+  },
+  {
+   "id": 44523,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 44587,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 44734,
+   "oblasts": [
+    "kyiv",
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 45084,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 45368,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "ballistic"
+   ],
+   "note": ""
+  },
+  {
+   "id": 45830,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 46189,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 46575,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 46786,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [],
+   "note": "🔄 marker, no stated type"
+  },
+  {
+   "id": 46796,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "missile"
+   ],
+   "note": ""
+  },
+  {
+   "id": 47012,
+   "oblasts": [
+    "kyiv",
+    "kyiv_city"
+   ],
+   "types": [
+    "ballistic",
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 47498,
+   "oblasts": [],
+   "types": [],
+   "note": ""
+  },
+  {
+   "id": 47509,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "note": ""
+  },
+  {
+   "id": 47539,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "ballistic"
+   ],
+   "note": ""
+  }
+ ]
+}

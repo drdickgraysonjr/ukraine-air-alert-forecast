@@ -107,6 +107,12 @@ REGION_UNIT_LEVELS = ("oblast", "raion")
 ZONE_LOOKBACK_DAYS = 7
 ZONE_MIN_SHARE = 0.9
 
+# Telegram channels whose posts feed the text features (alerts.telegram).
+# Chosen on the validation window (reports/validation.json, "text").
+TEXT_CHANNELS: tuple[str, ...] = ("kpszsu", "war_monitor", "eradar", "alarm_signal")
+# Keep posts that were edited after publication (see alerts.telegram).
+DROP_EDITED_POSTS = False
+
 # Evaluation windows (Kyiv calendar days, inclusive).
 PRE_BREAK_WINDOW = ("2026-06-01", "2026-08-22")
 POST_BREAK_START = "2026-09-14"

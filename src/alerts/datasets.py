@@ -33,6 +33,21 @@ def last_complete_day(data_end_sec: int) -> str:
     return str((end.normalize() - pd.Timedelta(days=1)).date())
 
 
+def default_posts():
+    """Posts of config.TEXT_CHANNELS, or None when no channel is used."""
+    if not config.TEXT_CHANNELS:
+        return None
+    from . import telegram
+
+    return telegram.Posts.load(config.TEXT_CHANNELS, drop_edited=config.DROP_EDITED_POSTS)
+
+
+def load_default() -> Data:
+    from . import stitch
+
+    return build(stitch.load_all(), config.DATA_END_UTC, posts=default_posts())
+
+
 def build(alerts: pd.DataFrame, data_end: pd.Timestamp, posts=None) -> Data:
     g = features.build_grid(alerts, data_end, posts=posts)
     f = features.feature_matrix(g)

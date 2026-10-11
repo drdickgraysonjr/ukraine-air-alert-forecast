@@ -1,0 +1,95 @@
+"""Cross-check of the stitched alert series against @UkraineAlarmSignal
+(reports/crosscheck.json).
+
+The channel posts every oblast- and raion-level alert start ("🚨 Сумська обл."
+or "🚨 Сумський район (Сумська обл.)") and end ("🟢 ..."). It is an independent
+copy of the official alert feed, so it can confirm the series after the seam
+(2026-09-07), where only alerts.in.ua is available.
+
+For each window the check reports, per alert level:
+  - posts -> series: the share of the channel's alert-start posts with a start
+    of the same region's series within TOL minutes;
+  - series -> posts: the share of series starts with such a post.
+The pre-seam window (official feed) is the reference for what agreement looks like.
+"""
+
+from __future__ import annotations
+
+import json
+import re
+
+import numpy as np
+import pandas as pd
+
+from . import config, stitch, telegram
+from . import timeline as T
+
+TOL_MIN = 5
+_HEAD = re.compile(r"^\s*(🚨|🟢)\s*(?:(?P<raion>[^\n(]+?)\s+район\s*\()?\s*(?P<obl>[^\n()]+?)\s+обл\.?\)?\s*$", re.M)
+_OBL = {v[1].replace(" область", "").lower(): k for k, v in __import__("alerts.regions", fromlist=["REGIONS"]).REGIONS.items()}
+WINDOWS = {"before_seam": ("2026-06-01", "2026-09-05"), "after_seam": ("2026-09-08", None)}
+
+
+def alert_posts(df: pd.DataFrame) -> pd.DataFrame:
+    rows = []
+    for ts, text in zip(df["ts"], df["text"]):
+        first = text.split("\n", 1)[0]
+        if re.match(r"^\s*🚨\s*м\.\s*київ\s*$", first, re.I):
+            rows.append((int(ts), "kyiv_city", "oblast"))
+            continue
+        m = _HEAD.match(first)
+        if not m or m.group(1) != "🚨":
+            continue
+        r = _OBL.get(m.group("obl").strip().lower())
+        if r:
+            rows.append((int(ts), r, "raion" if m.group("raion") else "oblast"))
+    return pd.DataFrame(rows, columns=["ts", "region", "unit_level"])
+
+
+def _share(a: np.ndarray, b: np.ndarray, tol: int) -> float | None:
+    """Share of points in a with some point of b within tol seconds."""
+    if len(a) == 0:
+        return None
+    b = np.sort(b)
+    i = np.searchsorted(b, a)
+    lo = np.abs(a - b[np.maximum(i - 1, 0)]) if len(b) else np.full(len(a), np.inf)
+    hi = np.abs(b[np.minimum(i, len(b) - 1)] - a) if len(b) else np.full(len(a), np.inf)
+    return float(np.mean(np.minimum(lo, hi) <= tol))
+
+
+def run() -> dict:
+    posts = alert_posts(telegram.load_channel("alarm_signal"))
+    alerts = stitch.load_stitched()
+    last = str((config.DATA_END_UTC.tz_convert(config.KYIV_TZ).normalize() - pd.Timedelta(days=1)).date())
+    tol = TOL_MIN * 60
+    out = {"tolerance_min": TOL_MIN, "posts_last_utc": str(pd.Timestamp(int(posts["ts"].max()), unit="s", tz="UTC")), "windows": {}}
+    for name, (a, b) in WINDOWS.items():
+        b = b or last
+        lo = int(pd.Timestamp(a).tz_localize(config.KYIV_TZ).timestamp())
+        hi = int((pd.Timestamp(b) + pd.Timedelta(days=1)).tz_localize(config.KYIV_TZ).timestamp())
+        p = posts[(posts["ts"] >= lo) & (posts["ts"] < hi)]
+        s = alerts[(alerts["started_at"] >= pd.Timestamp(lo, unit="s", tz="UTC")) & (alerts["started_at"] < pd.Timestamp(hi, unit="s", tz="UTC"))]
+        res = {"first_day": a, "last_day": b, "levels": {}}
+        for level in sorted(s["level"].unique()):
+            sl = s[s["level"] == level]
+            p2s, s2p, n_p, n_s = [], [], 0, 0
+            for r in sorted(set(sl["region"]) | set(p["region"])):
+                ps = p[p["region"] == r]["ts"].to_numpy(np.int64)
+                ss = T.to_sec(sl[sl["region"] == r]["started_at"]).astype(np.int64)
+                all_s = T.to_sec(s[s["region"] == r]["started_at"]).astype(np.int64)
+                if len(ps):
+                    p2s.append(_share(ps, all_s, tol) * len(ps))
+                    n_p += len(ps)
+                if len(ss):
+                    s2p.append(_share(ss, ps, tol) * len(ss))
+                    n_s += len(ss)
+            res["levels"][level] = {"series_starts": n_s, "series_to_posts": sum(s2p) / n_s if n_s else None}
+        res["alert_posts"] = int(len(p))
+        allp = []
+        for r in sorted(set(p["region"])):
+            ps = p[p["region"] == r]["ts"].to_numpy(np.int64)
+            allp.append(_share(ps, T.to_sec(s[s["region"] == r]["started_at"]).astype(np.int64), tol) * len(ps))
+        res["posts_to_series"] = sum(allp) / len(p) if len(p) else None
+        out["windows"][name] = res
+    (config.REPORTS_DIR / "crosscheck.json").write_text(json.dumps(out, indent=2) + "\n")
+    return out

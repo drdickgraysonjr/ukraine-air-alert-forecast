@@ -16,6 +16,9 @@ from . import config  # noqa: E402
 
 README = config.ROOT / "README.md"
 START, END = "<!-- RESULTS:START -->", "<!-- RESULTS:END -->"
+CSTART, CEND = "<!-- CHOICES:START -->", "<!-- CHOICES:END -->"
+TYPE_ORDER = ("drone", "missile", "ballistic", "kab", "aviation", "all_clear", "alert", "artillery")
+CHANNEL_NAMES = {"kpszsu": "Air Force (@kpszsu)", "war_monitor": "@war_monitor", "eradar": "eRadar (@eRadarrua)", "alarm_signal": "@UkraineAlarmSignal"}
 
 SURFACE, INK, INK2, GRID = "#fcfcfb", "#0b0b0b", "#52514e", "#e4e3df"
 SERIES = {"pre_break": "#2a78d6", "post_break": "#eb6834"}
@@ -83,45 +86,125 @@ def _ci(v) -> str:
     return f"[{v[0]:+.1%}, {v[1]:+.1%}]"
 
 
-def results_markdown(m1: dict, m2: dict) -> str:
-    out = []
-    out.append("#### Phase 1: alerts and alert hours per region for the coming Kyiv day (forecast at 00:00)\n")
-    out.append("Mean absolute error per region-day. Skill = 1 - MAE(model) / MAE(best naive forecast), 90% interval from a day-level bootstrap.\n")
-    out.append("| Window | Target | Days | Actual mean | Model MAE | Best naive forecast | Its MAE | Skill [90% CI] |")
-    out.append("|---|---|---:|---:|---:|---|---:|---|")
+def _phase1_rows(windows: dict, rows_label: str) -> list[str]:
+    out = [f"| Window | Target | {rows_label} | Actual mean | Model MAE | Best naive forecast | Its MAE | Skill [90% CI] |",
+           "|---|---|---:|---:|---:|---|---:|---|"]
     for w in ("pre_break", "post_break"):
-        x = m1["windows"][w]
+        x = windows[w]
         for tgt, name in (("count", "alerts"), ("hours", "hours")):
             t = x["targets"][tgt]
             b = t["best_baseline"]
             mb = t["methods"][b]
-            out.append(f"| {LABEL[w]} | {name} | {x['n_days']} | {t['mean_actual']:.2f} | {t['methods']['model']['mae']:.3f} | {BASE_NAMES[b]} | {mb['mae']:.3f} | {mb['model_skill']:+.1%} {_ci(mb['model_skill_ci90'])} |")
+            n = x["n_days"] if rows_label == "Days" else x["n_rows"]
+            out.append(f"| {LABEL[w]} | {name} | {n} | {t['mean_actual']:.2f} | {t['methods']['model']['mae']:.3f} | {BASE_NAMES[b]} | {mb['mae']:.3f} | {mb['model_skill']:+.1%} {_ci(mb['model_skill_ci90'])} |")
+    return out
+
+
+def _phase2_rows(windows: dict) -> list[str]:
+    out = ["| Window | h | Forecasts | Base rate | Brier model | Brier climatology | BSS [90% CI] | AUC model | AUC climatology |",
+           "|---|---:|---:|---:|---:|---:|---|---:|---:|"]
+    for w in ("pre_break", "post_break"):
+        for h, v in windows[w]["horizons"].items():
+            mm, mc = v["methods"]["model"], v["methods"]["clim"]
+            out.append(f"| {LABEL[w]} | {h} | {v['n']} | {v['base_rate']:.3f} | {mm['brier']:.4f} | {mc['brier']:.4f} | {mc['model_bss']:+.1%} {_ci(mc['model_bss_ci90'])} | {mm['auc']:.3f} | {mc['auc']:.3f} |")
+    return out
+
+
+def results_markdown(m1: dict, m2: dict) -> str:
+    out = []
+    out.append("#### Phase 1: alerts and alert hours per region for the coming Kyiv day (forecast at 00:00)\n")
+    out.append("Mean absolute error per region-day (the region series: oblast- and raion-level alerts, i.e. the oblast outside its zone of regular alerts). Skill = 1 - MAE(model) / MAE(best naive forecast), 90% interval from a day-level bootstrap.\n")
+    out += _phase1_rows(m1["windows"], "Days")
     out.append("")
     out.append("#### Phase 2: probability that an alert starts in the region within the next h hours\n")
     out.append("Scored only at moments with no alert in progress (otherwise the answer is \"alert in progress\"). BSS = Brier skill vs the 28-day climatology of the same region and hour of day, 90% bootstrap interval.\n")
-    out.append("| Window | h | Forecasts | Base rate | Brier model | Brier climatology | BSS [90% CI] | AUC model | AUC climatology |")
-    out.append("|---|---:|---:|---:|---:|---:|---|---:|---:|")
-    for w in ("pre_break", "post_break"):
-        for h, v in m2["windows"][w]["horizons"].items():
-            mm, mc = v["methods"]["model"], v["methods"]["clim"]
-            out.append(f"| {LABEL[w]} | {h} | {v['n']} | {v['base_rate']:.3f} | {mm['brier']:.4f} | {mc['brier']:.4f} | {mc['model_bss']:+.1%} {_ci(mc['model_bss_ci90'])} | {mm['auc']:.3f} | {mc['auc']:.3f} |")
+    out += _phase2_rows(m2["windows"])
+    out.append("")
+    zs = ", ".join(z.split("~")[0] for z in m1["meta"]["zone_series"])
+    out.append(f"#### Zones of regular alerts: phase 1 (zone-days; zones: {zs})\n")
+    out += _phase1_rows(m1["zones"]["windows"], "Zone-days")
+    out.append("")
+    out.append("#### Zones of regular alerts: phase 2\n")
+    out += _phase2_rows(m2["zones"]["windows"])
     return "\n".join(out)
 
 
-def update_readme(block: str) -> None:
-    text = README.read_text()
-    pat = re.compile(re.escape(START) + r".*?" + re.escape(END), re.S)
+def _pct(x) -> str:
+    return "–" if x is None else f"{x:.1%}"
+
+
+def choices_markdown(v: dict, parsers: dict, ablation: dict, cross: dict) -> str:
+    out = ["#### Choices on the validation window (2026-03-02 .. 05-31)\n"]
+    z = v["zones"]
+    best = max(z["trials"], key=lambda t: (round(t["f1"], 12), t["lookback_days"], t["min_share"]))
+    f1s = [t["f1"] for t in z["trials"]]
+    out.append(f"Zones: {len(z['trials'])} settings of (lookback, share) scored by the F1 of \"member on day d\" against \"alerts on at least 5 of the next 7 days\" "
+               f"over {z['n_unit_days']} hromada-days. All settings land between {min(f1s):.3f} and {max(f1s):.3f}; the best is a {best['lookback_days']}-day lookback "
+               f"with a share of {best['min_share']} (precision {best['precision']:.3f}, recall {best['recall']:.3f}).\n")
+    out.append("Score for the other choices: mean of the phase 1 ratio model MAE / best naive MAE (both targets) and the phase 2 ratio model log loss / climatology log loss (1, 3, 6 h), regions only. Lower is better.\n")
+    out.append("| Decision | Option | Phase 1 MAE ratio (alerts / hours) | Phase 2 log-loss ratio (1 / 3 / 6 h) | Score | Chosen |")
+    out.append("|---|---|---|---|---:|---|")
+    for step, title in (("history", "History start"), ("text", "Text channels"), ("edited", "Edited posts (not a choice)")):
+        if step not in v:
+            continue
+        sel = v[step].get("selected")
+        for t in v[step]["trials"]:
+            p1 = t["phase1_rel_mae"]
+            p2 = t["phase2_rel_logloss"]
+            out.append(f"| {title} | {t['option']} | {p1['count']:.3f} / {p1['hours']:.3f} | {p2['1']:.3f} / {p2['3']:.3f} / {p2['6']:.3f} | {t['score']:.4f} | {'yes' if t['option'] == sel else ''} |")
+    out.append("")
+    out.append("#### Parser accuracy on the gold set\n")
+    out.append(f"{parsers['n_per_channel']} posts per channel drawn at random (seed {parsers['seed']}) from posts with text since 2023-01-01. "
+               "Oblasts: post x oblast pairs. Types: post x type pairs.\n")
+    out.append("| Channel | Labelled by | Reviewed by (corrections) | Oblasts P / R / F1 | Types P / R / F1 | Post fully right |")
+    out.append("|---|---|---|---|---|---:|")
+    for c, m in parsers["channels"].items():
+        o, t = m["oblasts"], m["types_micro"]
+        rv = f"{m['reviewer']} ({m['corrections']})" if m["reviewed"] else "not yet"
+        out.append(f"| {CHANNEL_NAMES[c]} | {m['annotator']} | {rv} | {o['precision']:.2f} / {o['recall']:.2f} / {o['f1']:.2f} | {t['precision']:.2f} / {t['recall']:.2f} / {t['f1']:.2f} | {m['exact_post_match']:.0%} |")
+    out.append("")
+    out.append("#### Edited posts and text features on the test windows\n")
+    out.append("The same backtest with edited posts dropped, and with no text features at all; everything else fixed. Phase 1: skill vs the best naive forecast (hours). Phase 2: BSS vs climatology at 1 h.\n")
+    out.append("| Series / window | Final model: P1 hours / P2 1 h | Without edited posts | Without text features |")
+    out.append("|---|---|---|---|")
+    for k in sorted(ablation["with_edited"]):
+        cells = []
+        for src in (ablation["with_edited"], ablation["without_edited"], ablation["without_text"]):
+            x = src[k]
+            cells.append(f"{x['phase1_skill_vs_best_naive']['hours']:+.1%} / {x['phase2_bss_vs_climatology']['1']:+.1%}")
+        out.append(f"| {k.replace('/', ', ').replace('pre_break', 'before the break').replace('post_break', 'after the break')} | " + " | ".join(cells) + " |")
+    out.append("")
+    out.append(f"Posts dropped: " + ", ".join(f"{CHANNEL_NAMES[c]} {n}" for c, n in ablation["dropped_posts"].items()) + ".\n")
+    out.append("#### Cross-check of the series with @UkraineAlarmSignal\n")
+    out.append(f"Share of alert-start posts with a start of the same region's series within {cross['tolerance_min']} min, and the reverse per alert level.\n")
+    out.append("| Window | Alert posts | Posts matched by the series | Series starts matched by a post, per level |")
+    out.append("|---|---:|---:|---|")
+    for name, w in cross["windows"].items():
+        lv = "; ".join(f"{k}: {_pct(x['series_to_posts'])} of {x['series_starts']}" for k, x in w["levels"].items())
+        out.append(f"| {name.replace('_', ' ')} ({w['first_day']} .. {w['last_day']}) | {w['alert_posts']} | {_pct(w['posts_to_series'])} | {lv} |")
+    return "\n".join(out)
+
+
+def _replace(text: str, a: str, b: str, block: str) -> str:
+    pat = re.compile(re.escape(a) + r".*?" + re.escape(b), re.S)
     if not pat.search(text):
-        raise RuntimeError("README has no results markers")
-    README.write_text(pat.sub(START + "\n" + block + "\n" + END, text))
+        raise RuntimeError(f"README has no {a} markers")
+    return pat.sub(lambda _m: a + "\n" + block + "\n" + b, text)
+
+
+def update_readme(block: str, choices: str | None = None) -> None:
+    text = _replace(README.read_text(), START, END, block)
+    if choices is not None:
+        text = _replace(text, CSTART, CEND, choices)
+    README.write_text(text)
 
 
 def run() -> None:
     from . import datasets, stitch
 
     m1, m2 = _load("metrics_phase1.json"), _load("metrics_phase2.json")
-    D = datasets.build(stitch.load_stitched(), config.DATA_END_UTC)
-    fig_daily_hours(D.daily)
+    D = datasets.build(stitch.load_all(), config.DATA_END_UTC)
+    fig_daily_hours(D.daily[D.daily["kind"] == "region"])
     fig_reliability(m2)
-    update_readme(results_markdown(m1, m2))
+    update_readme(results_markdown(m1, m2), choices_markdown(_load("validation.json"), _load("parsers.json"), _load("edited_ablation.json"), _load("crosscheck.json")))
     print("figures and README results updated")

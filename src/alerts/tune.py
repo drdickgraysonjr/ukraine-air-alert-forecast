@@ -44,6 +44,7 @@ def run(D) -> dict:
     best2 = min(trials2, key=lambda x: x["mean_log_loss"])
     out = {
         "validation_window": list(config.VALIDATION_WINDOW),
+        "config": config_snapshot(D),
         "refit_every_days": EVERY,
         "phase1_trials": trials1,
         "phase2_trials": trials2,
@@ -52,3 +53,15 @@ def run(D) -> dict:
     config.REPORTS_DIR.mkdir(exist_ok=True)
     (config.REPORTS_DIR / "tuning.json").write_text(json.dumps(out, indent=2) + "\n")
     return out
+
+
+def config_snapshot(D) -> dict:
+    """The data choices the hyper-parameters were tuned under."""
+    return {
+        "history_start_utc": str(config.HISTORY_START_UTC),
+        "zone_lookback_days": config.ZONE_LOOKBACK_DAYS,
+        "zone_min_share": config.ZONE_MIN_SHARE,
+        "text_channels": list(config.TEXT_CHANNELS),
+        "merge_gap_sec": config.MERGE_GAP_SEC,
+        "features": list(D.feature_cols),
+    }

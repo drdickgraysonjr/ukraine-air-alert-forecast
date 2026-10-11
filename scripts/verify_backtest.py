@@ -1,4 +1,5 @@
-"""Gates G5/G6: the backtest report covers what it claims, without look-ahead.
+"""Gates: the backtest report covers what it claims, without look-ahead, for
+the 24 regions and for the zones of regular alerts.
 
 Usage: verify_backtest.py phase1|phase2
 """
@@ -29,18 +30,37 @@ def finite(x) -> bool:
     return x is not None and np.isfinite(np.asarray(x, float)).all()
 
 
+def zone_days(first: str, last: str) -> int:
+    """Zone-days in the window, from the zone membership (not from the backtest)."""
+    from alerts import stitch
+    from alerts import zones as Z
+
+    a = Z.activity(Z.unit_alerts(stitch.load_all()), "2022-03-16", last)
+    m = Z.membership(a, config.ZONE_LOOKBACK_DAYS, config.ZONE_MIN_SHARE)
+    reg = np.array([k[0] for k in a.keys])
+    days = a.days["day"].to_numpy()
+    cols = np.nonzero((days >= first) & (days <= last) & a.day_ok)[0]
+    return int(sum(len(set(reg[m[:, i]])) for i in cols))
+
+
 def check(phase: str) -> list[str]:
-    err = []
     m = json.loads((config.REPORTS_DIR / f"metrics_{phase}.json").read_text())
+    err = check_windows(phase, m["windows"], "regions")
+    if "zones" not in m:
+        return err + ["no zone results"]
+    return err + check_windows(phase, m["zones"]["windows"], "zones")
+
+
+def check_windows(phase: str, w: dict, kind: str) -> list[str]:
+    err = []
     last = last_complete_day_from_raw()
-    w = m["windows"]
     if set(w) != {"pre_break", "post_break"}:
         return [f"windows {sorted(w)}"]
     if [w["pre_break"]["first_day"], w["pre_break"]["last_day"]] != list(config.PRE_BREAK_WINDOW):
         err.append("pre_break window differs from config")
     if w["post_break"]["first_day"] != config.POST_BREAK_START or w["post_break"]["last_day"] != last:
         err.append(f"post_break ends {w['post_break']['last_day']}, last complete day in raw data is {last}")
-    print(f"last complete day (raw): {last}")
+    print(f"[{kind}] last complete day (raw): {last}")
     for name, x in w.items():
         if not x["refits"]:
             err.append(f"{name}: no refits")
@@ -48,9 +68,9 @@ def check(phase: str) -> list[str]:
             if not (r["train_known_until"] <= r["refit"] <= r["first_forecast"]):
                 err.append(f"{name}: refit {r['refit']} trains on labels known at {r['train_known_until']} or forecasts before it")
         if phase == "phase1":
-            exp = 24 * valid_days(x["first_day"], x["last_day"])
+            exp = 24 * valid_days(x["first_day"], x["last_day"]) if kind == "regions" else zone_days(x["first_day"], x["last_day"])
             if x["n_rows"] != exp:
-                err.append(f"{name}: {x['n_rows']} rows, expected 24 regions x valid days = {exp}")
+                err.append(f"{kind}/{name}: {x['n_rows']} rows, expected {exp} ({'24 regions' if kind == 'regions' else 'zone membership'} x valid days)")
             for tgt in ("count", "hours"):
                 meth = x["targets"][tgt]["methods"]
                 bases = [k for k in meth if k != "model"]
@@ -80,7 +100,7 @@ def check(phase: str) -> list[str]:
                 if not rel or sum(b["n"] for b in rel) != v["n"]:
                     err.append(f"{name}/{h}h: reliability table does not cover all samples")
             # Forecasts exist only for moments without an ongoing alert, and are monotone in the horizon.
-            q = pd.read_csv(config.ARTIFACTS_DIR / f"phase2_{name}.csv.gz")
+            q = pd.read_csv(config.ARTIFACTS_DIR / f"phase2_{'' if kind == 'regions' else 'zone_'}{name}.csv.gz")
             ys = q[[f"y{h}" for h in config.HORIZONS]]
             if ys.isna().all(axis=1).any():
                 err.append(f"{name}: forecast rows without any usable label")
