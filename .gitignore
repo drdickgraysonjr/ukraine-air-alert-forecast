@@ -222,3 +222,4 @@ __marimo__/
 # Project data: raw downloads and derived caches are never committed
 data/
 artifacts/
+logs/

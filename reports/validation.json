@@ -1,0 +1,282 @@
+{
+  "validation_window": [
+    "2026-03-02",
+    "2026-05-31"
+  ],
+  "zones": {
+    "criterion": "F1 of membership on day d vs alerts on >= 5 of days d..d+6",
+    "days": [
+      "2026-03-02",
+      "2026-05-25"
+    ],
+    "n_unit_days": 11390,
+    "trials": [
+      {
+        "lookback_days": 7,
+        "min_share": 0.5,
+        "tp": 470,
+        "fp": 8,
+        "fn": 0,
+        "precision": 0.9832635983263598,
+        "recall": 1.0,
+        "f1": 0.9915611814345991
+      },
+      {
+        "lookback_days": 7,
+        "min_share": 0.6,
+        "tp": 470,
+        "fp": 7,
+        "fn": 0,
+        "precision": 0.9853249475890985,
+        "recall": 1.0,
+        "f1": 0.9926082365364307
+      },
+      {
+        "lookback_days": 7,
+        "min_share": 0.7,
+        "tp": 470,
+        "fp": 7,
+        "fn": 0,
+        "precision": 0.9853249475890985,
+        "recall": 1.0,
+        "f1": 0.9926082365364307
+      },
+      {
+        "lookback_days": 7,
+        "min_share": 0.8,
+        "tp": 470,
+        "fp": 6,
+        "fn": 0,
+        "precision": 0.9873949579831933,
+        "recall": 1.0,
+        "f1": 0.9936575052854123
+      },
+      {
+        "lookback_days": 7,
+        "min_share": 0.9,
+        "tp": 470,
+        "fp": 5,
+        "fn": 0,
+        "precision": 0.9894736842105263,
+        "recall": 1.0,
+        "f1": 0.9947089947089947
+      },
+      {
+        "lookback_days": 14,
+        "min_share": 0.5,
+        "tp": 470,
+        "fp": 12,
+        "fn": 0,
+        "precision": 0.975103734439834,
+        "recall": 1.0,
+        "f1": 0.9873949579831932
+      },
+      {
+        "lookback_days": 14,
+        "min_share": 0.6,
+        "tp": 470,
+        "fp": 10,
+        "fn": 0,
+        "precision": 0.9791666666666666,
+        "recall": 1.0,
+        "f1": 0.9894736842105264
+      },
+      {
+        "lookback_days": 14,
+        "min_share": 0.7,
+        "tp": 470,
+        "fp": 9,
+        "fn": 0,
+        "precision": 0.9812108559498957,
+        "recall": 1.0,
+        "f1": 0.9905163329820864
+      },
+      {
+        "lookback_days": 14,
+        "min_share": 0.8,
+        "tp": 470,
+        "fp": 7,
+        "fn": 0,
+        "precision": 0.9853249475890985,
+        "recall": 1.0,
+        "f1": 0.9926082365364307
+      },
+      {
+        "lookback_days": 14,
+        "min_share": 0.9,
+        "tp": 470,
+        "fp": 6,
+        "fn": 0,
+        "precision": 0.9873949579831933,
+        "recall": 1.0,
+        "f1": 0.9936575052854123
+      },
+      {
+        "lookback_days": 28,
+        "min_share": 0.5,
+        "tp": 470,
+        "fp": 19,
+        "fn": 0,
+        "precision": 0.9611451942740287,
+        "recall": 1.0,
+        "f1": 0.9801876955161627
+      },
+      {
+        "lookback_days": 28,
+        "min_share": 0.6,
+        "tp": 470,
+        "fp": 16,
+        "fn": 0,
+        "precision": 0.9670781893004116,
+        "recall": 1.0,
+        "f1": 0.9832635983263598
+      },
+      {
+        "lookback_days": 28,
+        "min_share": 0.7,
+        "tp": 470,
+        "fp": 13,
+        "fn": 0,
+        "precision": 0.9730848861283644,
+        "recall": 1.0,
+        "f1": 0.9863588667366211
+      },
+      {
+        "lookback_days": 28,
+        "min_share": 0.8,
+        "tp": 470,
+        "fp": 10,
+        "fn": 0,
+        "precision": 0.9791666666666666,
+        "recall": 1.0,
+        "f1": 0.9894736842105264
+      },
+      {
+        "lookback_days": 28,
+        "min_share": 0.9,
+        "tp": 470,
+        "fp": 7,
+        "fn": 0,
+        "precision": 0.9853249475890985,
+        "recall": 1.0,
+        "f1": 0.9926082365364307
+      },
+      {
+        "lookback_days": 56,
+        "min_share": 0.5,
+        "tp": 470,
+        "fp": 33,
+        "fn": 0,
+        "precision": 0.9343936381709742,
+        "recall": 1.0,
+        "f1": 0.9660842754367934
+      },
+      {
+        "lookback_days": 56,
+        "min_share": 0.6,
+        "tp": 470,
+        "fp": 27,
+        "fn": 0,
+        "precision": 0.9456740442655935,
+        "recall": 1.0,
+        "f1": 0.9720785935884177
+      },
+      {
+        "lookback_days": 56,
+        "min_share": 0.7,
+        "tp": 470,
+        "fp": 21,
+        "fn": 0,
+        "precision": 0.9572301425661914,
+        "recall": 1.0,
+        "f1": 0.9781477627471384
+      },
+      {
+        "lookback_days": 56,
+        "min_share": 0.8,
+        "tp": 470,
+        "fp": 16,
+        "fn": 0,
+        "precision": 0.9670781893004116,
+        "recall": 1.0,
+        "f1": 0.9832635983263598
+      },
+      {
+        "lookback_days": 56,
+        "min_share": 0.9,
+        "tp": 470,
+        "fp": 10,
+        "fn": 0,
+        "precision": 0.9791666666666666,
+        "recall": 1.0,
+        "f1": 0.9894736842105264
+      }
+    ],
+    "selected": {
+      "lookback_days": 7,
+      "min_share": 0.9
+    }
+  },
+  "history": {
+    "trials": [
+      {
+        "phase1_rel_mae": {
+          "count": 0.9687661440357476,
+          "hours": 0.908903765925328
+        },
+        "phase1_mae": {
+          "count": 1.3500023629038185,
+          "hours": 1.8918178542141701
+        },
+        "phase2_rel_logloss": {
+          "1": 0.8422536626053249,
+          "3": 0.8497223547210973,
+          "6": 0.8844403028438034
+        },
+        "phase2_bss_clim": {
+          "1": 0.09404207247623897,
+          "3": 0.11334593434657192,
+          "6": 0.0943682154067943
+        },
+        "score": 0.8988201975186398,
+        "first_scored_day": "2026-03-02",
+        "last_scored_day": "2026-05-31",
+        "n_phase1_rows": 2184,
+        "n_phase2_rows": 37753,
+        "train_known_until_max": 1779656400,
+        "seconds": 219.3,
+        "option": "2022-04-13"
+      },
+      {
+        "phase1_rel_mae": {
+          "count": 0.9589582276602073,
+          "hours": 0.9125621037309807
+        },
+        "phase1_mae": {
+          "count": 1.3363347607031641,
+          "hours": 1.8994324213850242
+        },
+        "phase2_rel_logloss": {
+          "1": 0.8425444276255531,
+          "3": 0.8549144784726256,
+          "6": 0.8767420196551066
+        },
+        "phase2_bss_clim": {
+          "1": 0.09175134818888142,
+          "3": 0.1100665030351734,
+          "6": 0.10165867307837118
+        },
+        "score": 0.8969135704733446,
+        "first_scored_day": "2026-03-02",
+        "last_scored_day": "2026-05-31",
+        "n_phase1_rows": 2184,
+        "n_phase2_rows": 37753,
+        "train_known_until_max": 1779656400,
+        "seconds": 208.4,
+        "option": "2023-01-01"
+      }
+    ],
+    "criterion": "lowest score: mean of phase 1 relative MAE and phase 2 relative log loss (regions)",
+    "selected": "2023-01-01"
+  }
+}

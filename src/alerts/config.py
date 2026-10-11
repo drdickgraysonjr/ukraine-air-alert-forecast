@@ -72,6 +72,10 @@ CUTOVER_UTC = pd.Timestamp("2026-09-06 13:00", tz="UTC")
 # End of usable data: the alerts.in.ua snapshot moment.
 DATA_END_UTC = pd.Timestamp(ALERTS_IN_UA.snapshot_utc)
 
+# First moment covered by the official feed (its first alert starts 16:10 UTC);
+# grid hours before it are not valid data.
+DATA_START_UTC = pd.Timestamp("2022-03-15 16:00", tz="UTC")
+
 # Start of the modelling history. 2022 is a distinct regime (invasion phase,
 # official data only from 2022-03-15) and is left out of training.
 HISTORY_START_UTC = pd.Timestamp("2023-01-01 00:00", tz=KYIV_TZ).tz_convert("UTC")
@@ -90,11 +94,18 @@ EXCLUDED_DAYS = tuple(
 LEVEL_SYSTEM_START_UTC = pd.Timestamp("2026-09-07 05:36:03", tz="UTC")
 
 # Only oblast- and raion-level alerts define a region's state ("an alert in a
-# raion means an alert in the oblast"). Hromada- and city-level alerts are
-# excluded: in frontline communities they last for months (one hromada alert in
-# Kharkivskyi raion started 2024-05-12 and lasted ~14,500 h) and would pin the
-# whole oblast to "alert".
+# raion means an alert in the oblast"). Hromada- and city-level alerts define
+# the zones of regular alerts (alerts.zones) and get their own forecast: in
+# frontline communities they are declared almost daily and some last for months
+# (one in Kharkivskyi raion started 2024-05-12 and lasted ~14,500 h), so they
+# would pin the whole oblast to "alert".
 REGION_UNIT_LEVELS = ("oblast", "raion")
+
+# Zone of regular alerts: hromadas with an alert on at least ZONE_MIN_SHARE of
+# the valid days among the ZONE_LOOKBACK_DAYS before the day. Chosen on the
+# validation window (reports/validation.json, "zones").
+ZONE_LOOKBACK_DAYS = 7
+ZONE_MIN_SHARE = 0.9
 
 # Evaluation windows (Kyiv calendar days, inclusive).
 PRE_BREAK_WINDOW = ("2026-06-01", "2026-08-22")

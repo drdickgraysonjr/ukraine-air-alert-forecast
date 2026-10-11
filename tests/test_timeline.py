@@ -17,6 +17,7 @@ def rows(spec):
             "region": "sumy",
             "unit_level": [x[0] for x in spec],
             "unit": [x[1] for x in spec],
+            "raion": [x[1] if x[0] == "raion" else "" for x in spec],
             "started_at": pd.to_datetime([x[2] for x in spec], utc=True),
             "finished_at": pd.to_datetime([x[3] for x in spec], utc=True),
             "level": "single",

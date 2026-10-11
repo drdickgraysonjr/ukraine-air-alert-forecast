@@ -31,13 +31,13 @@ def _train_filter(df: pd.DataFrame, refit: int, time_col: str, train_days) -> pd
     return m
 
 
-def phase1(D: Data, first_day: str, last_day: str, params=None, train_days=None, every_days=config.REFIT_DAYS):
-    d = D.daily[D.daily["valid"]].copy()
+def phase1(D: Data, first_day: str, last_day: str, params=None, train_days=None, every_days=config.REFIT_DAYS, kind="region"):
+    d = D.daily[D.daily["valid"] & (D.daily["kind"] == kind)].copy()
     preds, refits = [], []
     for refit, block_end in refit_points(first_day, last_day, every_days):
         train = d[_train_filter(d, refit, "m0", train_days)]
         test = d[(d["m0"] >= refit) & (d["m0"] < block_end)].copy()
-        if test.empty:
+        if test.empty or train.empty:
             continue
         for tgt in ("count", "hours"):
             m = models.fit_phase1(train, D.feature_cols, tgt, params)
@@ -48,8 +48,8 @@ def phase1(D: Data, first_day: str, last_day: str, params=None, train_days=None,
     return pd.concat(preds, ignore_index=True), refits
 
 
-def phase2(D: Data, first_day: str, last_day: str, params=None, train_days=None, every_days=config.REFIT_DAYS, horizons=config.HORIZONS):
-    h = D.hourly
+def phase2(D: Data, first_day: str, last_day: str, params=None, train_days=None, every_days=config.REFIT_DAYS, horizons=config.HORIZONS, kind="region"):
+    h = D.hourly[D.hourly["kind"] == kind]
     lo = int(T.to_sec(pd.Timestamp(first_day).tz_localize(config.KYIV_TZ)))
     hi = int(T.to_sec((pd.Timestamp(last_day) + pd.Timedelta(days=1)).tz_localize(config.KYIV_TZ)))
     window = h[(h["t"] >= lo) & (h["t"] < hi)]

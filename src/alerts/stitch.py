@@ -24,7 +24,11 @@ def region_alerts(alerts: pd.DataFrame, levels=config.REGION_UNIT_LEVELS) -> pd.
     return alerts[alerts["unit_level"].isin(levels)].reset_index(drop=True)
 
 
-def load_stitched(levels=config.REGION_UNIT_LEVELS) -> pd.DataFrame:
+def load_all() -> pd.DataFrame:
+    """Every unit level (oblast, raion, hromada, city) of the stitched table."""
     alerts = stitch(load_official(), load_alerts_in_ua())
-    alerts = alerts[alerts["started_at"] < config.DATA_END_UTC]
-    return region_alerts(alerts, levels)
+    return alerts[alerts["started_at"] < config.DATA_END_UTC].reset_index(drop=True)
+
+
+def load_stitched(levels=config.REGION_UNIT_LEVELS) -> pd.DataFrame:
+    return region_alerts(load_all(), levels)

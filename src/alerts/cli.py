@@ -14,7 +14,7 @@ from . import config
 def _data():
     from . import datasets, stitch
 
-    return datasets.build(stitch.load_stitched(), config.DATA_END_UTC)
+    return datasets.build(stitch.load_all(), config.DATA_END_UTC)
 
 
 def main(argv=None) -> int:
@@ -22,6 +22,8 @@ def main(argv=None) -> int:
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("download", help="fetch the pinned sources and write data_manifest.json")
     sub.add_parser("tune", help="choose hyper-parameters on the validation window")
+    v = sub.add_parser("validate", help="validation-window trials for one decision -> reports/validation.json")
+    v.add_argument("step", choices=["zones", "history", "text", "edited"])
     sub.add_parser("backtest", help="rolling-origin backtest of both phases -> reports/")
     f = sub.add_parser("forecast", help="forecast as of a moment, using only data known then")
     f.add_argument("--as-of", default=None, help="ISO time with offset, e.g. 2026-10-10T21:00+00:00 (default: data end)")
@@ -35,6 +37,10 @@ def main(argv=None) -> int:
 
         data.download()
         print("data downloaded and verified against the manifest")
+    if a.cmd == "validate":
+        from . import validate
+
+        getattr(validate, f"step_{a.step}")()
     if a.cmd == "tune":
         from . import tune
 

@@ -4,6 +4,7 @@ Normalised schema (one row per alert of one territorial unit):
     region       region id from alerts.regions (excluded regions dropped)
     unit_level   "oblast" | "raion" | "hromada" | "city"
     unit         unit name as given by the source ("" for oblast level)
+    raion        raion of a raion- or hromada-level row as given by the source
     started_at   UTC timestamp
     finished_at  UTC timestamp, NaT while the alert is still active
     level        "red" | "yellow" | "single" (pre-2026-09 single-level system)
@@ -21,7 +22,7 @@ import pandas as pd
 from . import config
 from .regions import EXCLUDED_ALERTS_IN_UA, EXCLUDED_OFFICIAL, OFFICIAL_TO_ID, UA_TO_ID
 
-COLUMNS = ["region", "unit_level", "unit", "started_at", "finished_at", "level", "source"]
+COLUMNS = ["region", "unit_level", "unit", "raion", "started_at", "finished_at", "level", "source"]
 
 
 def sha256(path) -> str:
@@ -84,6 +85,7 @@ def load_official() -> pd.DataFrame:
             "region": raw["oblast"].map(OFFICIAL_TO_ID),
             "unit_level": raw["level"],
             "unit": unit.where(raw["level"] != "oblast", ""),
+            "raion": raw["raion"],
             "started_at": _utc(raw["started_at"]),
             "finished_at": _utc(raw["finished_at"].replace("", None)),
             "level": "single",
@@ -106,6 +108,7 @@ def load_alerts_in_ua() -> pd.DataFrame:
             "region": raw["location_oblast"].map(UA_TO_ID),
             "unit_level": level,
             "unit": raw["location_title"].where(level != "oblast", ""),
+            "raion": raw["location_title"].where(level == "raion", raw["location_raion"]),
             "started_at": _utc(raw["started_at"]),
             "finished_at": _utc(raw["finished_at"].replace("", None)),
             "level": raw["alert_level"],
