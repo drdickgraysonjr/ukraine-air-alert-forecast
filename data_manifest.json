@@ -63,6 +63,20 @@
       "first_post_local": "2022-12-03 19:11:49",
       "last_post_local": "2026-10-11 15:53:09",
       "edited_posts": 9506
+    },
+    "alarm_signal": {
+      "handle": "@UkraineAlarmSignal",
+      "export": "ChatExport_єТривога_2",
+      "format": "Telegram Desktop HTML export, local time Europe/Warsaw",
+      "sha256": "c627fedf25fb90895ababfef0f7b878bf4acb7769e6a94ea383ccf53561c3e9c",
+      "bytes": 419907773,
+      "n_files": 131,
+      "n_posts": 651275,
+      "first_id": 2,
+      "last_id": 653164,
+      "first_post_local": "2022-02-25 17:18:44",
+      "last_post_local": "2026-10-12 00:48:29",
+      "edited_posts": 5109
     }
   }
 }

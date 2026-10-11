@@ -25,25 +25,48 @@ from . import config, stitch, telegram
 from . import timeline as T
 
 TOL_MIN = 5
-_HEAD = re.compile(r"^\s*(🚨|🟢)\s*(?:(?P<raion>[^\n(]+?)\s+район\s*\()?\s*(?P<obl>[^\n()]+?)\s+обл\.?\)?\s*$", re.M)
+# One place per line: "Сумський район (Сумська обл.)", "Сумська обл.", "м. Київ" / "Київ".
+_PLACE = re.compile(r"^\s*(?:(?P<raion>[^\n(]+?)\s+район\s*\()?\s*(?P<obl>[^\n()]+?)\s+обл\.?\)?\s*$")
+_KYIV = re.compile(r"^\s*(м\.\s*)?київ\s*$", re.I)
 _OBL = {v[1].replace(" область", "").lower(): k for k, v in __import__("alerts.regions", fromlist=["REGIONS"]).REGIONS.items()}
+# Post headers that announce an alert start, and the level they announce.
+_START = {"🚨": "single", "🟡": "yellow", "🔴": "red"}
 WINDOWS = {"before_seam": ("2026-06-01", "2026-09-05"), "after_seam": ("2026-09-08", None)}
 
 
+def _place(line: str):
+    if _KYIV.match(line):
+        return "kyiv_city", "oblast"
+    m = _PLACE.match(line)
+    if not m:
+        return None
+    r = _OBL.get(m.group("obl").strip().lower())
+    return (r, "raion" if m.group("raion") else "oblast") if r else None
+
+
 def alert_posts(df: pd.DataFrame) -> pd.DataFrame:
+    """(ts, region, unit_level, level) for every place in an alert-start post.
+    Single posts: "🟡 Полтавський район (Полтавська обл.)\nЖовтий рівень тривоги...";
+    grouped posts: "🔴 Червоний рівень тривоги\n<place>\n<place>..." (blocks split by
+    blank lines). "🟡 Відбій червоної тривоги" (red down to yellow) and "🟢" (end)
+    are not starts."""
     rows = []
     for ts, text in zip(df["ts"], df["text"]):
-        first = text.split("\n", 1)[0]
-        if re.match(r"^\s*🚨\s*м\.\s*київ\s*$", first, re.I):
-            rows.append((int(ts), "kyiv_city", "oblast"))
-            continue
-        m = _HEAD.match(first)
-        if not m or m.group(1) != "🚨":
-            continue
-        r = _OBL.get(m.group("obl").strip().lower())
-        if r:
-            rows.append((int(ts), r, "raion" if m.group("raion") else "oblast"))
-    return pd.DataFrame(rows, columns=["ts", "region", "unit_level"])
+        for block in re.split(r"\n\s*\n", text):
+            lines = [x for x in block.split("\n") if x.strip()]
+            if not lines:
+                continue
+            head = lines[0].strip()
+            emoji = head[:1]
+            if emoji not in _START or "відбій" in head.lower():
+                continue
+            rest = head[1:].strip()
+            p = _place(rest)
+            places = [p] if p else [_place(x) for x in lines[1:]]
+            for q in places:
+                if q:
+                    rows.append((int(ts), q[0], q[1], _START[emoji]))
+    return pd.DataFrame(rows, columns=["ts", "region", "unit_level", "level"])
 
 
 def _share(a: np.ndarray, b: np.ndarray, tol: int) -> float | None:
@@ -85,11 +108,16 @@ def run() -> dict:
                     n_s += len(ss)
             res["levels"][level] = {"series_starts": n_s, "series_to_posts": sum(s2p) / n_s if n_s else None}
         res["alert_posts"] = int(len(p))
-        allp = []
-        for r in sorted(set(p["region"])):
-            ps = p[p["region"] == r]["ts"].to_numpy(np.int64)
-            allp.append(_share(ps, T.to_sec(s[s["region"] == r]["started_at"]).astype(np.int64), tol) * len(ps))
-        res["posts_to_series"] = sum(allp) / len(p) if len(p) else None
+
+        def p2s(pp):
+            hit = 0.0
+            for r in sorted(set(pp["region"])):
+                ps = pp[pp["region"] == r]["ts"].to_numpy(np.int64)
+                hit += _share(ps, T.to_sec(s[s["region"] == r]["started_at"]).astype(np.int64), tol) * len(ps)
+            return hit / len(pp) if len(pp) else None
+
+        res["posts_to_series"] = p2s(p)
+        res["post_levels"] = {lv: {"posts": int((p["level"] == lv).sum()), "posts_to_series": p2s(p[p["level"] == lv])} for lv in sorted(set(p["level"]))}
         out["windows"][name] = res
     (config.REPORTS_DIR / "crosscheck.json").write_text(json.dumps(out, indent=2) + "\n")
     return out

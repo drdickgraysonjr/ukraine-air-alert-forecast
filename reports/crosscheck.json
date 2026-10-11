@@ -1,0 +1,50 @@
+{
+  "tolerance_min": 5,
+  "posts_last_utc": "2026-10-11 22:48:29+00:00",
+  "windows": {
+    "before_seam": {
+      "first_day": "2026-06-01",
+      "last_day": "2026-09-05",
+      "levels": {
+        "single": {
+          "series_starts": 31312,
+          "series_to_posts": 0.9919200306591722
+        }
+      },
+      "alert_posts": 33330,
+      "posts_to_series": 0.9296729672967297,
+      "post_levels": {
+        "single": {
+          "posts": 33330,
+          "posts_to_series": 0.9296729672967297
+        }
+      }
+    },
+    "after_seam": {
+      "first_day": "2026-09-08",
+      "last_day": "2026-10-10",
+      "levels": {
+        "red": {
+          "series_starts": 5508,
+          "series_to_posts": 0.9929193899782135
+        },
+        "yellow": {
+          "series_starts": 10065,
+          "series_to_posts": 0.9943368107302534
+        }
+      },
+      "alert_posts": 17312,
+      "posts_to_series": 0.9355938077634011,
+      "post_levels": {
+        "red": {
+          "posts": 6078,
+          "posts_to_series": 0.8338269167489306
+        },
+        "yellow": {
+          "posts": 11234,
+          "posts_to_series": 0.9906533736870216
+        }
+      }
+    }
+  }
+}

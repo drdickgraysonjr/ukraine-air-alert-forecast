@@ -357,6 +357,12 @@ uv run python scripts/verify_readme.py     # tables here equal reports/*.json
   channels and hyper-parameters were all chosen on the same 13 weeks; some of
   what looks like a gain there is noise, which is why the test windows are the
   numbers to read.
+- **Live data later.** For a live version, [NEPTUN](https://neptun.in.ua/developers)
+  offers a free, keyless API with current official alerts (raions, oblasts),
+  threat tracks and a Telegram feed, as a snapshot and a WebSocket stream, but
+  no history; recording it from now on would give an as-of history with honest
+  timestamps. [mapa.ua](https://mapa.ua/docs/) has attack histories only from
+  2026-03-31 and builds them from the same Telegram channels. Neither is used here.
 - **Not an early-warning system.** These are statistical forecasts for planning
   and analysis. Follow official alerts.
 
