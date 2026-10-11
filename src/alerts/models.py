@@ -1,5 +1,6 @@
 """Models for both phases. Hyper-parameters were chosen on the validation window
-(config.VALIDATION_WINDOW) by `alerts tune`; see reports/tuning.json."""
+(config.VALIDATION_WINDOW) by `alerts tune`; the backtest and the forecast read
+them from reports/tuning.json, and the defaults below mirror that selection."""
 
 from __future__ import annotations
 
@@ -10,8 +11,8 @@ from sklearn.ensemble import HistGradientBoostingClassifier, HistGradientBoostin
 from . import config
 
 # Selected on the validation window; kept fixed for both test windows.
-PHASE1_PARAMS = dict(learning_rate=0.05, max_iter=300, max_leaf_nodes=15, min_samples_leaf=100, l2_regularization=1.0)
-PHASE2_PARAMS = dict(learning_rate=0.1, max_iter=200, max_leaf_nodes=31, min_samples_leaf=200, l2_regularization=1.0)
+PHASE1_PARAMS = dict(learning_rate=0.05, max_iter=300, max_leaf_nodes=31, min_samples_leaf=100, l2_regularization=1.0)
+PHASE2_PARAMS = dict(learning_rate=0.1, max_iter=200, max_leaf_nodes=31, min_samples_leaf=1000, l2_regularization=1.0)
 # Training history used at each refit (days before the refit moment; None = all).
 TRAIN_DAYS = None
 

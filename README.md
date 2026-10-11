@@ -24,7 +24,53 @@ reported separately, because the data changes meaning between them (see
 earlier validation window (2026-03-02 .. 2026-05-31) and not touched afterwards.
 
 <!-- RESULTS:START -->
+#### Phase 1: alerts and alert hours per region for the coming Kyiv day (forecast at 00:00)
+
+Mean absolute error per region-day. Skill = 1 - MAE(model) / MAE(best naive forecast), 90% interval from a day-level bootstrap.
+
+| Window | Target | Days | Actual mean | Model MAE | Best naive forecast | Its MAE | Skill [90% CI] |
+|---|---|---:|---:|---:|---|---:|---|
+| Before the break (Jun 1 - Aug 22) | alerts | 83 | 2.97 | 1.328 | mean of last 7 days | 1.329 | +0.1% [-3.0%, +3.1%] |
+| Before the break (Jun 1 - Aug 22) | hours | 83 | 7.17 | 1.462 | mean of last 7 days | 1.412 | -3.6% [-7.6%, +0.1%] |
+| After the break (Sep 14 - last day) | alerts | 27 | 5.26 | 1.994 | mean of last 28 days | 2.026 | +1.6% [-3.1%, +5.8%] |
+| After the break (Sep 14 - last day) | hours | 27 | 10.03 | 2.173 | mean of last 28 days | 2.197 | +1.1% [-6.5%, +7.8%] |
+
+#### Phase 2: probability that an alert starts in the region within the next h hours
+
+Scored only at moments with no alert in progress (otherwise the answer is "alert in progress"). BSS = Brier skill vs the 28-day climatology of the same region and hour of day, 90% bootstrap interval.
+
+| Window | h | Forecasts | Base rate | Brier model | Brier climatology | BSS [90% CI] | AUC model | AUC climatology |
+|---|---:|---:|---:|---:|---:|---|---:|---:|
+| Before the break (Jun 1 - Aug 22) | 1 | 33446 | 0.123 | 0.0786 | 0.0823 | +4.5% [+3.6%, +5.4%] | 0.876 | 0.856 |
+| Before the break (Jun 1 - Aug 22) | 2 | 33446 | 0.196 | 0.1019 | 0.1070 | +4.8% [+3.6%, +5.9%] | 0.884 | 0.868 |
+| Before the break (Jun 1 - Aug 22) | 3 | 33446 | 0.248 | 0.1109 | 0.1166 | +4.9% [+3.7%, +6.1%] | 0.890 | 0.877 |
+| Before the break (Jun 1 - Aug 22) | 4 | 33446 | 0.288 | 0.1157 | 0.1205 | +3.9% [+2.4%, +5.5%] | 0.892 | 0.883 |
+| Before the break (Jun 1 - Aug 22) | 5 | 33446 | 0.320 | 0.1175 | 0.1218 | +3.5% [+1.7%, +5.0%] | 0.896 | 0.888 |
+| Before the break (Jun 1 - Aug 22) | 6 | 33446 | 0.347 | 0.1196 | 0.1223 | +2.2% [-0.1%, +4.2%] | 0.898 | 0.891 |
+| After the break (Sep 14 - last day) | 1 | 9080 | 0.250 | 0.1249 | 0.1403 | +10.9% [+8.9%, +13.1%] | 0.864 | 0.833 |
+| After the break (Sep 14 - last day) | 2 | 9080 | 0.362 | 0.1342 | 0.1503 | +10.7% [+8.0%, +13.7%] | 0.878 | 0.859 |
+| After the break (Sep 14 - last day) | 3 | 9080 | 0.428 | 0.1316 | 0.1471 | +10.5% [+7.4%, +13.5%] | 0.889 | 0.874 |
+| After the break (Sep 14 - last day) | 4 | 9080 | 0.476 | 0.1282 | 0.1429 | +10.3% [+7.9%, +12.9%] | 0.897 | 0.884 |
+| After the break (Sep 14 - last day) | 5 | 9080 | 0.512 | 0.1278 | 0.1382 | +7.5% [+4.7%, +10.2%] | 0.899 | 0.892 |
+| After the break (Sep 14 - last day) | 6 | 9080 | 0.541 | 0.1261 | 0.1348 | +6.5% [+3.4%, +9.4%] | 0.902 | 0.897 |
 <!-- RESULTS:END -->
+
+What the numbers say:
+
+- **Phase 1 shows no skill over a simple moving average.** In both test windows
+  the model's error is within a few percent of the best naive forecast, and every
+  interval includes zero; for alert hours before the break it is slightly worse
+  (-3.6%). On the validation window the same model was 4-7% better than the naive
+  forecasts, and that gain did not carry over. With alert history alone, the size
+  of the next day's attack is not predictable beyond its recent average.
+- **Phase 2 has a small, consistent edge.** The model beats the 28-day
+  climatology at every horizon, by about 2-5% in Brier score before the break and
+  7-11% after it, and its ranking of risky moments is better (higher AUC). Most
+  of the gain comes from the current situation: neighbouring regions under alert,
+  alerts in the last hours, the whole country's state.
+- **Probabilities are well calibrated** (figure below). After the break the model
+  slightly under-forecasts at longer horizons, which is expected: alerts became
+  more frequent and the model has only a few post-break weeks to learn from.
 
 ![Average alert hours per region and day](reports/fig_daily_hours.png)
 
