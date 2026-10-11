@@ -111,7 +111,6 @@ def feature_matrix(g: Grid) -> dict[str, np.ndarray]:
             f[f"cover_{w}h"] = _rolling_sum(g.cover * v, w) / (vsum[w] * HOUR)
         for w in ROLL_COUNT:
             f[f"starts_{w}h"] = _rolling_sum(g.starts * v, w) / vsum[w] * 24
-            f[f"alerts_{w}h"] = _rolling_sum(g.ep_starts * v, w) / vsum[w] * 24
     for lag in (24, 168):
         a = np.full((R, n), np.nan)
         a[:, lag:] = g.active[:, :-lag]
@@ -164,7 +163,7 @@ def feature_matrix(g: Grid) -> dict[str, np.ndarray]:
     f["ua_cover_24h"] = ones * colmean(f["cover_24h"])[None, :]
     f["ua_starts_1h"] = ones * g.starts.sum(axis=0)[None, :]
     f["ua_starts_3h"] = ones * s3.sum(axis=0)[None, :]
-    f["ua_alerts_24h"] = ones * colmean(f["alerts_24h"])[None, :]
+    f["ua_starts_24h"] = ones * colmean(f["starts_24h"])[None, :]
     # Calendar (Kyiv local time) and regime.
     local = pd.to_datetime(h, unit="s", utc=True).tz_convert(config.KYIV_TZ)
     hod = local.hour.to_numpy()

@@ -64,7 +64,10 @@ def download(force: bool = False) -> dict:
 
 
 def _utc(series: pd.Series) -> pd.Series:
-    return pd.to_datetime(series, utc=True, format="ISO8601")
+    # Whole seconds: alerts.in.ua gives starts with milliseconds but finishes
+    # rounded to the second, so a raion hand-over in the same second would
+    # otherwise look like a sub-second gap between two alerts.
+    return pd.to_datetime(series, utc=True, format="ISO8601").dt.floor("s")
 
 
 def load_official() -> pd.DataFrame:

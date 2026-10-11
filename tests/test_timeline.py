@@ -93,13 +93,14 @@ def test_dst_days_have_23_and_25_hours():
     assert d["day_hours"].iloc[0] == 25 and d["hours"].iloc[0] == 25
 
 
-def test_gap_merged_count():
+def test_any_gap_starts_a_new_alert_touching_does_not():
     spec = [("oblast", "", "2026-06-10 06:00", "2026-06-10 07:00"),
-            ("oblast", "", "2026-06-10 07:01", "2026-06-10 08:00"),  # 1 min gap: same alert
+            ("oblast", "", "2026-06-10 07:01", "2026-06-10 08:00"),  # 1 min gap: a new alert
+            ("raion", "Сумський район", "2026-06-10 08:00", "2026-06-10 08:30"),  # touching: same alert
             ("oblast", "", "2026-06-10 09:00", "2026-06-10 10:00")]
     g = _grid_for(spec, "2026-06-13 00:00", "2026-06-01 00:00")
     d = F.daily_targets(g, "2026-06-10", "2026-06-10").query("region_id == 'sumy'")
-    assert d["count"].iloc[0] == 2
+    assert d["count"].iloc[0] == 3
 
 
 def test_hourly_target_masks_active_and_labels_next_start():

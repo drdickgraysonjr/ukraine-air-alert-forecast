@@ -105,10 +105,10 @@ VALIDATION_WINDOW = ("2026-03-02", "2026-05-31")
 # Weekly refit cadence of the rolling-origin backtest.
 REFIT_DAYS = 7
 
-# Two alerts of a region separated by at most this gap count as one alert.
-# Gap quantiles (2023-01..2026-10) show no artefact peak; 2 min catches level
-# switches and raion hand-overs (0.7% of gaps in 2023-24, 3.6% after the cutover).
-MERGE_GAP_SEC = 120
+# Alerts of a region separated by any gap, however short, count separately:
+# under intense attacks an alert can be re-declared within a minute, or declared
+# late. Overlapping and touching alerts are one alert (union of intervals).
+MERGE_GAP_SEC = 0
 
 # The feature grid starts this long before the history so the longest lookback
 # window (28 days) is filled from the first training sample on.

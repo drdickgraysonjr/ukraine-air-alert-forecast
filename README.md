@@ -145,10 +145,11 @@ What this project does about it:
   alert.
 - **Crimea and Luhansk oblast are not modelled**: each has had one uninterrupted
   alert since 2022.
-- **Counting alerts.** Overlapping alerts within a region are merged into one;
-  alerts separated by at most 2 minutes count as one (raion hand-overs and level
-  switches). An alert is counted on the day it starts, so a night alert crossing
-  midnight counts once.
+- **Counting alerts.** Overlapping or touching alerts within a region are one
+  alert; alerts separated by any gap, even a few seconds, count separately. Under
+  intense attacks an alert can be re-declared within a minute, or declared late,
+  and that is a new alert. An alert is counted on the day it starts, so a night
+  alert crossing midnight counts once.
 
 ## No look-ahead
 
