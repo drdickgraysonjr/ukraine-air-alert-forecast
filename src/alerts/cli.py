@@ -28,6 +28,7 @@ def main(argv=None) -> int:
     gr.add_argument("action", choices=["review-page", "import-review", "report"])
     gr.add_argument("--file", default=None, help="downloaded gold_review.json (import-review)")
     gr.add_argument("--reviewer", default=None)
+    sub.add_parser("crosscheck", help="series after the seam vs @UkraineAlarmSignal -> reports/crosscheck.json")
     sub.add_parser("ablate-edited", help="test-window backtest without edited posts -> reports/edited_ablation.json")
     sub.add_parser("tune", help="choose hyper-parameters on the validation window")
     v = sub.add_parser("validate", help="validation-window trials for one decision -> reports/validation.json")
@@ -62,6 +63,10 @@ def main(argv=None) -> int:
             r = gold.report(chans)
             for c, m in r["channels"].items():
                 print(c, "reviewed" if m["reviewed"] else "not reviewed", "oblasts F1", round(m["oblasts"]["f1"], 3), "types F1", round(m["types_micro"]["f1"], 3))
+    if a.cmd == "crosscheck":
+        from . import crosscheck
+
+        print(json.dumps(crosscheck.run()["windows"], indent=2))
     if a.cmd == "ablate-edited":
         from . import ablation
 

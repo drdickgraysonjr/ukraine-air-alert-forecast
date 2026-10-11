@@ -278,5 +278,73 @@
     ],
     "criterion": "lowest score: mean of phase 1 relative MAE and phase 2 relative log loss (regions)",
     "selected": "2023-01-01"
+  },
+  "text": {
+    "trials": [
+      {
+        "phase1_rel_mae": {
+          "count": 0.9589582276602073,
+          "hours": 0.9125621037309807
+        },
+        "phase1_mae": {
+          "count": 1.3363347607031641,
+          "hours": 1.8994324213850242
+        },
+        "phase2_rel_logloss": {
+          "1": 0.8425444276255531,
+          "3": 0.8549144784726256,
+          "6": 0.8767420196551066
+        },
+        "phase2_bss_clim": {
+          "1": 0.09175134818888142,
+          "3": 0.1100665030351734,
+          "6": 0.10165867307837118
+        },
+        "score": 0.8969135704733446,
+        "first_scored_day": "2026-03-02",
+        "last_scored_day": "2026-05-31",
+        "n_phase1_rows": 2184,
+        "n_phase2_rows": 37753,
+        "train_known_until_max": 1779656400,
+        "seconds": 178.6,
+        "option": "none",
+        "channels": [],
+        "inputs": "b525f8a2ac316c73"
+      },
+      {
+        "phase1_rel_mae": {
+          "count": 0.9494747591643774,
+          "hours": 0.9053052475509654
+        },
+        "phase1_mae": {
+          "count": 1.3231192855787342,
+          "hours": 1.8843277968895578
+        },
+        "phase2_rel_logloss": {
+          "1": 0.8358438448676052,
+          "3": 0.838408784615508,
+          "6": 0.8649522784520917
+        },
+        "phase2_bss_clim": {
+          "1": 0.10226466128576917,
+          "3": 0.12756270548191906,
+          "6": 0.11731546878826771
+        },
+        "score": 0.8868958196680365,
+        "first_scored_day": "2026-03-02",
+        "last_scored_day": "2026-05-31",
+        "n_phase1_rows": 2184,
+        "n_phase2_rows": 37753,
+        "train_known_until_max": 1779656400,
+        "seconds": 237.8,
+        "option": "all-alarm_signal",
+        "channels": [
+          "kpszsu",
+          "war_monitor",
+          "eradar"
+        ],
+        "inputs": "63e3dec9c7133ae0"
+      }
+    ]
   }
 }

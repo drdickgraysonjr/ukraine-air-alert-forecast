@@ -7,7 +7,17 @@ import sys
 
 from alerts import config, report
 
-REQUIRED = ["## Data", "## No look-ahead", "## How to run", "## Limitations", "## Results"]
+REQUIRED = ["## Data", "## No look-ahead", "## How to run", "## Limitations", "## Results",
+            "### Zones of regular alerts", "### History start", "### Telegram channels", "## Choices made on the validation window"]
+# Decisions the README must state in words (lower-cased fragments).
+DECISIONS = {
+    "no gap merging": "separated by any gap",
+    "hromada alerts longer than 24 h": "longer than 24 hours",
+    "2022 history compared": "history from 2022-04-13",
+    "free text before 2022-03-15": "before 2022-03-15",
+    "edited posts kept": "edited posts are kept",
+    "who labelled the gold set": "yehor hunia reviewed every label",
+}
 
 
 def main() -> int:
@@ -15,7 +25,13 @@ def main() -> int:
     err = [f"missing section {h!r}" for h in REQUIRED if h not in text]
     m1 = json.loads((config.REPORTS_DIR / "metrics_phase1.json").read_text())
     m2 = json.loads((config.REPORTS_DIR / "metrics_phase2.json").read_text())
+    low = text.lower()
+    err += [f"decision not described: {k}" for k, frag in DECISIONS.items() if frag not in low]
     want = report.results_markdown(m1, m2)
+    choices = report.choices_markdown(*(json.loads((config.REPORTS_DIR / f).read_text()) for f in ("validation.json", "parsers.json", "edited_ablation.json", "crosscheck.json")))
+    gc = re.search(re.escape(report.CSTART) + r"\n(.*?)\n" + re.escape(report.CEND), text, re.S)
+    if not gc or gc.group(1) != choices:
+        err.append("choices block differs from reports/*.json (run `alerts report`)")
     got = re.search(re.escape(report.START) + r"\n(.*?)\n" + re.escape(report.END), text, re.S)
     if not got:
         err.append("results markers missing")

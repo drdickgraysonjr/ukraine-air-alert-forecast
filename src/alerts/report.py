@@ -6,6 +6,7 @@ import json
 import re
 
 import matplotlib
+import matplotlib.dates
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
@@ -58,6 +59,31 @@ def fig_daily_hours(daily: pd.DataFrame) -> None:
     ax.set_title("Average alert hours per region and day (thin: daily, thick: 7-day mean; grey: excluded days)", loc="left", fontsize=10, color=INK)
     fig.tight_layout()
     fig.savefig(config.REPORTS_DIR / "fig_daily_hours.png", dpi=150, facecolor=SURFACE)
+    plt.close(fig)
+
+
+def fig_zones(daily: pd.DataFrame) -> None:
+    """Alert hours per day: each zone against the rest of its oblast (7-day means)."""
+    z = daily[(daily["kind"] == "zone") & daily["valid"] & (daily["day"] >= "2025-01-01")]
+    regs = [r for r in z["region_id"].value_counts().index if (z["region_id"] == r).sum() >= 60][:4]
+    fig, axes = plt.subplots(1, len(regs), figsize=(10, 3.2), facecolor=SURFACE, sharey=True)
+    axes = np.atleast_1d(axes)
+    for ax, zid in zip(axes, regs):
+        _style(ax)
+        rid = zid.split("~")[0]
+        for sid, color, name in ((rid, SERIES["pre_break"], "rest of the oblast"), (zid, SERIES["post_break"], "zone")):
+            x = daily[(daily["region_id"] == sid) & daily["valid"] & (daily["day"] >= "2025-01-01")].set_index("day")["hours"]
+            x.index = pd.to_datetime(x.index)
+            x = x.asfreq("D")
+            ax.plot(x.index, x.rolling(7, min_periods=4).mean().values, color=color, linewidth=1.6, label=name)
+        ax.set_title(rid.replace("_", " ").title(), fontsize=10, color=INK, loc="left")
+        ax.xaxis.set_major_locator(matplotlib.dates.MonthLocator(bymonth=(1, 7)))
+        ax.xaxis.set_major_formatter(matplotlib.dates.DateFormatter("%b\n%Y"))
+    axes[0].set_ylabel("alert hours per day (7-day mean)", color=INK2, fontsize=9)
+    axes[-1].legend(frameon=False, fontsize=8.5, loc="lower right", labelcolor=INK2)
+    fig.suptitle("Zones of regular alerts against the rest of their oblast (days when the zone has members)", x=0.01, ha="left", fontsize=10, color=INK)
+    fig.tight_layout()
+    fig.savefig(config.REPORTS_DIR / "fig_zones.png", dpi=150, facecolor=SURFACE)
     plt.close(fig)
 
 
@@ -206,5 +232,6 @@ def run() -> None:
     D = datasets.build(stitch.load_all(), config.DATA_END_UTC)
     fig_daily_hours(D.daily[D.daily["kind"] == "region"])
     fig_reliability(m2)
+    fig_zones(D.daily)
     update_readme(results_markdown(m1, m2), choices_markdown(_load("validation.json"), _load("parsers.json"), _load("edited_ablation.json"), _load("crosscheck.json")))
     print("figures and README results updated")

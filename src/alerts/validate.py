@@ -125,22 +125,50 @@ def step_history() -> dict:
 ALL_CHANNELS = ("kpszsu", "war_monitor", "eradar", "alarm_signal")
 
 
-def step_text() -> dict:
+def _inputs_digest(channels) -> str:
+    """Identity of a trial's inputs: export digests, parser rules, data choices."""
+    import hashlib
+
+    from . import telegram
+
+    pinned = json.loads(config.MANIFEST_PATH.read_text()).get("telegram", {})
+    parts = [f"{c}:{pinned[c]['sha256']}" for c in channels] + [telegram.parser_digest(), str(config.HISTORY_START_UTC),
+             f"{config.ZONE_LOOKBACK_DAYS}/{config.ZONE_MIN_SHARE}", json.dumps(backtest.selected_params(), sort_keys=True)]
+    return hashlib.sha256("|".join(parts).encode()).hexdigest()[:16]
+
+
+def step_text(only=None) -> dict:
     """Which channels feed the text features: none, all four, or all but one.
-    History start as chosen in the history step (config)."""
+    History start as chosen in the history step (config). A trial whose inputs
+    are unchanged since it was scored is kept, not rerun."""
     options = [("none", ()), ("all", ALL_CHANNELS)] + [(f"all-{c}", tuple(x for x in ALL_CHANNELS if x != c)) for c in ALL_CHANNELS]
+    out = load()
+    done = {t["option"]: t for t in out.get("text", {}).get("trials", [])}
     trials = []
     for name, chans in options:
+        if only is not None and name not in only and name not in done:
+            continue
+        dig = _inputs_digest(chans)
+        if name in done and done[name].get("inputs") == dig:
+            trials.append(done[name])
+            continue
+        if only is not None and name not in only:
+            continue
         s = score(_data(_posts(chans)))
-        s.update(option=name, channels=list(chans))
+        s.update(option=name, channels=list(chans), inputs=dig)
         print("text", name, round(s["score"], 4), s["phase1_rel_mae"], s["phase2_rel_logloss"], flush=True)
         trials.append(s)
+        out = load()
+        out["text"] = {"trials": trials}
+        save(out)
     out = load()
-    best = pick(trials)
-    best["selected_channels"] = next(t["channels"] for t in trials if t["option"] == best["selected"])
-    out["text"] = {"trials": trials, **best}
+    res = {"trials": trials}
+    if len(trials) == len(options):
+        res.update(pick(trials))
+        res["selected_channels"] = next(t["channels"] for t in trials if t["option"] == res["selected"])
+    out["text"] = res
     save(out)
-    return out["text"]
+    return res
 
 
 def step_edited() -> dict:
