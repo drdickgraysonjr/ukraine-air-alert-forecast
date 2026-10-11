@@ -1,0 +1,24 @@
+{
+  "sources": {
+    "official": {
+      "repo": "Vadimkin/ukrainian-air-raid-sirens-dataset",
+      "commit": "bf0c323c78e3e4508721458797dcd38c95df13f3",
+      "path": "datasets/official_data_en.csv",
+      "url": "https://raw.githubusercontent.com/Vadimkin/ukrainian-air-raid-sirens-dataset/bf0c323c78e3e4508721458797dcd38c95df13f3/datasets/official_data_en.csv",
+      "license": "MIT",
+      "snapshot_utc": "2026-10-11T04:50:14Z",
+      "sha256": "b396f87696243069eec0219880e87dcd642b20beb0a7bae0d0e1f61e1ed20ec4",
+      "bytes": 31025633
+    },
+    "alerts_in_ua": {
+      "repo": "JustJimer/ukraine-air-alert-stats",
+      "commit": "7abc556ba5a0ff47a9e33c6abc136b8da3a9feb8",
+      "path": "archive/alerts_in_ua.csv",
+      "url": "https://raw.githubusercontent.com/JustJimer/ukraine-air-alert-stats/7abc556ba5a0ff47a9e33c6abc136b8da3a9feb8/archive/alerts_in_ua.csv",
+      "license": "none stated (data is downloaded, never redistributed)",
+      "snapshot_utc": "2026-10-11T10:07:59Z",
+      "sha256": "f5110defe3b7661dc350e4d5923668039eaa2f35712313203a3a5f535476e123",
+      "bytes": 3043044
+    }
+  }
+}
