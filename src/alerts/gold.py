@@ -136,6 +136,8 @@ def review_html(channels, out_path) -> int:
             items.append({"channel": c, "handle": telegram.CHANNELS[c].handle, "id": i,
                           "local": df.at[i, "ts_local"], "text": df.at[i, "text"],
                           "oblasts": sorted(x["oblasts"]), "types": [t for t in TYPES if t in x["types"]], "note": x.get("note", "")})
+    # Posts the agent flagged with a note come first within each channel (stable, so ids stay ascending).
+    items.sort(key=lambda it: (channels.index(it["channel"]), not it["note"]))
     regions = [[r, REGIONS[r][1].replace(" область", "")] for r in REGION_IDS]
     types = [[t, TYPE_NAMES_UK[t]] for t in TYPES]
     page = _REVIEW_PAGE.replace("__ITEMS__", json.dumps(items, ensure_ascii=False)).replace(
