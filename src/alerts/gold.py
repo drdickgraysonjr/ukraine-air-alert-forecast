@@ -7,8 +7,11 @@ parser was being written (gold/dev_ids.json). Labels hold post ids and labels
 only; the texts stay in the local exports.
 
 Who labelled: the agent (Claude) labelled every post without seeing the
-parser's output; Yehor Hunia reviewed every label (gold/review_<channel>.json),
-and his corrections win.
+parser's output (rules v1). Yehor Hunia reviewed 250 of the 800 labels
+(gold/review_<channel>.json: all of @kpszsu, 50 of @war_monitor) and set the
+rules v2 below; the other 550 were not reviewed. The reviewed posts, relabelled
+under the rules v2 (gold/dev_v2.json, scripts/build_dev_v2.py), were used to write
+parser v2, so the parser's accuracy on them is a development figure.
 """
 
 from __future__ import annotations
@@ -21,6 +24,7 @@ import pandas as pd
 from . import config, telegram
 
 GOLD_DIR = config.ROOT / "gold"
+DEV_V2_PATH = GOLD_DIR / "dev_v2.json"
 N_PER_CHANNEL = 200
 SEED = 20261012
 FROM_UTC = pd.Timestamp("2023-01-01", tz="UTC")
@@ -47,6 +51,29 @@ types (any number, or none):
   aviation   enemy aircraft activity: tactical aviation, Tu-95/160/22, MiG-31K, take-offs, "борти"
   artillery  artillery or MLRS shelling, or its threat
 Types apply whether the post warns, reports or summarises.
+
+Rules v2 (Yehor Hunia, 2026-10-12, after reviewing 250 posts):
+  macro-regions  "на півдні", "по Півдню", "південних областей" and the like refer to
+             every oblast of the macro-region: north = Kyiv oblast, Kyiv city, Chernihiv,
+             Sumy, Zhytomyr, Poltava, Cherkasy; east = Kharkiv, Donetsk, Luhansk,
+             Dnipropetrovsk, Zaporizhzhia; south = Odesa, Mykolaiv, Kherson, Vinnytsia,
+             Kirovohrad, Zaporizhzhia, Crimea; west = Volyn, Rivne, Lviv, Ternopil,
+             Khmelnytskyi, Ivano-Frankivsk, Zakarpattia, Chernivtsi; centre = Vinnytsia,
+             Cherkasy, Kirovohrad, Poltava, Dnipropetrovsk. A direction inside a named
+             oblast ("на півночі Сумщини") or of movement ("з півночі") is not one.
+  summary    a report after an attack or an overview of the night or the day
+             ("ЗБИТО/ПОДАВЛЕНО", "Обстановка станом на", "За минулу добу", strike
+             reports) is marked as a summary; its places and types are kept.
+  inactive   a type mentioned only as inactive or absent is not a type of the post
+             ("Стратегічна авіація не активна", "флот без активності", "ракетоносії
+             заведені в порти", a NATO reconnaissance drone).
+  context    a post that names a place but no type takes the threat type from the
+             channel's previous posts ("Деміївка.", "1х у Павлоградському районі",
+             "комбінована атака").
+  markers    "вихід" is a ballistic or cruise missile launch; "група" is drones.
+  Kyiv       "передмістя Києва" and the Kyiv reservoir give both Kyiv city and Kyiv
+             oblast; Лук'янівка is Kyiv city, Козин is Kyiv oblast.
+  Bandarol   the "Бандероль" loitering munition stays a drone.
 """
 
 REGION_IDS = tuple(telegram.OBLASTS)
@@ -114,6 +141,43 @@ def metrics(channel: str, reviewed: bool = True) -> dict:
     tc = sum(len(g["types"] - set(pred[i][1])) for i, g in gold.items())
     out["types_micro"] = _prf(ta, tb, tc)
     out["exact_post_match"] = sum(1 for i, g in gold.items() if set(pred[i][0]) == g["oblasts"] and set(pred[i][1]) == g["types"]) / len(gold)
+    return out
+
+
+def dev_metrics() -> dict:
+    """Parser v1 (per post) and parser v2 (with context) on the reviewed posts under the
+    rules v2, per channel and pooled. A development figure: v2 was written on these posts."""
+    from . import parser_v1
+
+    rows = json.loads(DEV_V2_PATH.read_text())["posts"]
+    frames = {c: telegram.load_channel(c).set_index("id") for c in sorted({r["channel"] for r in rows})}
+
+    def score(rs, pred) -> dict:
+        o = [0, 0, 0]
+        t = [0, 0, 0]
+        s = [0, 0, 0]
+        exact = 0
+        for r in rs:
+            po, pt, ps = pred(r)
+            go, gt, gs = set(r["oblasts"]), set(r["types"]), r["summary"]
+            o = [o[0] + len(po & go), o[1] + len(po - go), o[2] + len(go - po)]
+            t = [t[0] + len(pt & gt), t[1] + len(pt - gt), t[2] + len(gt - pt)]
+            s = [s[0] + (ps and gs), s[1] + (ps and not gs), s[2] + (gs and not ps)]
+            exact += po == go and pt == gt and ps == gs
+        return {"n_posts": len(rs), "oblasts": _prf(*o), "types_micro": _prf(*t), "summary": _prf(*s), "exact_post_match": exact / len(rs)}
+
+    def v1(r):
+        o, t = parser_v1.parse_text(frames[r["channel"]].at[r["id"], "text"])
+        return set(o), set(t), False
+
+    def v2(r):
+        x = frames[r["channel"]].loc[r["id"]]
+        return set(x["oblasts"]), set(x["types"]), bool(x["summary"])
+
+    out = {"guide": "rules v2", "parser_v2_digest": telegram.parser_digest(), "channels": {}}
+    for c in list(frames) + ["all"]:
+        rs = [r for r in rows if c == "all" or r["channel"] == c]
+        out["channels"][c] = {"v1": score(rs, v1), "v2": score(rs, v2)}
     return out
 
 
@@ -252,7 +316,8 @@ render();
 
 def report(channels) -> dict:
     """reports/parsers.json: parser accuracy per channel on the (reviewed) gold set."""
-    out = {"guide": GUIDE, "seed": SEED, "n_per_channel": N_PER_CHANNEL, "from_utc": str(FROM_UTC), "channels": {}}
+    out = {"guide": GUIDE, "seed": SEED, "n_per_channel": N_PER_CHANNEL, "from_utc": str(FROM_UTC),
+           "parser_digest": telegram.parser_digest(), "channels": {}}
     for c in channels:
         lab = json.loads(labels_path(c).read_text())
         rev = json.loads(review_path(c).read_text()) if review_path(c).exists() else None
@@ -263,5 +328,7 @@ def report(channels) -> dict:
             "corrections": sum(1 for x in rev["items"] if x.get("verdict") == "fix") if rev else None,
             **metrics(c, reviewed=True),
         }
+    if DEV_V2_PATH.exists():
+        out["dev_v2"] = dev_metrics()
     (config.REPORTS_DIR / "parsers.json").write_text(json.dumps(out, indent=2, ensure_ascii=False) + "\n")
     return out

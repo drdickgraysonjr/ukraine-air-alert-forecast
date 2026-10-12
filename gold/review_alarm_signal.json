@@ -1,0 +1,807 @@
+{
+ "channel": "alarm_signal",
+ "reviewer": "Yehor Hunia",
+ "exported_at": "2026-10-12T11:28:08.469Z",
+ "items": [
+  {
+   "id": 50041,
+   "verdict": null
+  },
+  {
+   "id": 51444,
+   "verdict": null
+  },
+  {
+   "id": 57424,
+   "verdict": null
+  },
+  {
+   "id": 58235,
+   "verdict": null
+  },
+  {
+   "id": 59290,
+   "verdict": null
+  },
+  {
+   "id": 60078,
+   "verdict": null
+  },
+  {
+   "id": 60201,
+   "verdict": null
+  },
+  {
+   "id": 60893,
+   "verdict": null
+  },
+  {
+   "id": 65401,
+   "verdict": null
+  },
+  {
+   "id": 67628,
+   "verdict": null
+  },
+  {
+   "id": 69443,
+   "verdict": null
+  },
+  {
+   "id": 69637,
+   "verdict": null
+  },
+  {
+   "id": 70711,
+   "verdict": null
+  },
+  {
+   "id": 74821,
+   "verdict": null
+  },
+  {
+   "id": 78421,
+   "verdict": null
+  },
+  {
+   "id": 79441,
+   "verdict": null
+  },
+  {
+   "id": 82228,
+   "verdict": null
+  },
+  {
+   "id": 83713,
+   "verdict": null
+  },
+  {
+   "id": 85663,
+   "verdict": null
+  },
+  {
+   "id": 86322,
+   "verdict": null
+  },
+  {
+   "id": 90046,
+   "verdict": null
+  },
+  {
+   "id": 90353,
+   "verdict": null
+  },
+  {
+   "id": 93648,
+   "verdict": null
+  },
+  {
+   "id": 95579,
+   "verdict": null
+  },
+  {
+   "id": 96021,
+   "verdict": null
+  },
+  {
+   "id": 96203,
+   "verdict": null
+  },
+  {
+   "id": 97594,
+   "verdict": null
+  },
+  {
+   "id": 98842,
+   "verdict": null
+  },
+  {
+   "id": 100700,
+   "verdict": null
+  },
+  {
+   "id": 102191,
+   "verdict": null
+  },
+  {
+   "id": 102571,
+   "verdict": null
+  },
+  {
+   "id": 104120,
+   "verdict": null
+  },
+  {
+   "id": 105153,
+   "verdict": null
+  },
+  {
+   "id": 105712,
+   "verdict": null
+  },
+  {
+   "id": 106005,
+   "verdict": null
+  },
+  {
+   "id": 110476,
+   "verdict": null
+  },
+  {
+   "id": 115338,
+   "verdict": null
+  },
+  {
+   "id": 115773,
+   "verdict": null
+  },
+  {
+   "id": 117450,
+   "verdict": null
+  },
+  {
+   "id": 123350,
+   "verdict": null
+  },
+  {
+   "id": 127712,
+   "verdict": null
+  },
+  {
+   "id": 131548,
+   "verdict": null
+  },
+  {
+   "id": 136153,
+   "verdict": null
+  },
+  {
+   "id": 138808,
+   "verdict": null
+  },
+  {
+   "id": 139132,
+   "verdict": null
+  },
+  {
+   "id": 142187,
+   "verdict": null
+  },
+  {
+   "id": 145606,
+   "verdict": null
+  },
+  {
+   "id": 147045,
+   "verdict": null
+  },
+  {
+   "id": 148999,
+   "verdict": null
+  },
+  {
+   "id": 149823,
+   "verdict": null
+  },
+  {
+   "id": 152081,
+   "verdict": null
+  },
+  {
+   "id": 154183,
+   "verdict": null
+  },
+  {
+   "id": 158183,
+   "verdict": null
+  },
+  {
+   "id": 158541,
+   "verdict": null
+  },
+  {
+   "id": 164446,
+   "verdict": null
+  },
+  {
+   "id": 169078,
+   "verdict": null
+  },
+  {
+   "id": 172314,
+   "verdict": null
+  },
+  {
+   "id": 175523,
+   "verdict": null
+  },
+  {
+   "id": 179895,
+   "verdict": null
+  },
+  {
+   "id": 183561,
+   "verdict": null
+  },
+  {
+   "id": 183883,
+   "verdict": null
+  },
+  {
+   "id": 191041,
+   "verdict": null
+  },
+  {
+   "id": 193073,
+   "verdict": null
+  },
+  {
+   "id": 194572,
+   "verdict": null
+  },
+  {
+   "id": 197377,
+   "verdict": null
+  },
+  {
+   "id": 205999,
+   "verdict": null
+  },
+  {
+   "id": 212876,
+   "verdict": null
+  },
+  {
+   "id": 212907,
+   "verdict": null
+  },
+  {
+   "id": 215493,
+   "verdict": null
+  },
+  {
+   "id": 216234,
+   "verdict": null
+  },
+  {
+   "id": 217142,
+   "verdict": null
+  },
+  {
+   "id": 217777,
+   "verdict": null
+  },
+  {
+   "id": 221613,
+   "verdict": null
+  },
+  {
+   "id": 224844,
+   "verdict": null
+  },
+  {
+   "id": 227600,
+   "verdict": null
+  },
+  {
+   "id": 235702,
+   "verdict": null
+  },
+  {
+   "id": 247840,
+   "verdict": null
+  },
+  {
+   "id": 250180,
+   "verdict": null
+  },
+  {
+   "id": 254094,
+   "verdict": null
+  },
+  {
+   "id": 255119,
+   "verdict": null
+  },
+  {
+   "id": 260568,
+   "verdict": null
+  },
+  {
+   "id": 267476,
+   "verdict": null
+  },
+  {
+   "id": 268046,
+   "verdict": null
+  },
+  {
+   "id": 269552,
+   "verdict": null
+  },
+  {
+   "id": 270989,
+   "verdict": null
+  },
+  {
+   "id": 271135,
+   "verdict": null
+  },
+  {
+   "id": 271703,
+   "verdict": null
+  },
+  {
+   "id": 275010,
+   "verdict": null
+  },
+  {
+   "id": 276703,
+   "verdict": null
+  },
+  {
+   "id": 279898,
+   "verdict": null
+  },
+  {
+   "id": 281945,
+   "verdict": null
+  },
+  {
+   "id": 281983,
+   "verdict": null
+  },
+  {
+   "id": 284638,
+   "verdict": null
+  },
+  {
+   "id": 295110,
+   "verdict": null
+  },
+  {
+   "id": 296214,
+   "verdict": null
+  },
+  {
+   "id": 297104,
+   "verdict": null
+  },
+  {
+   "id": 297990,
+   "verdict": null
+  },
+  {
+   "id": 306243,
+   "verdict": null
+  },
+  {
+   "id": 309342,
+   "verdict": null
+  },
+  {
+   "id": 310062,
+   "verdict": null
+  },
+  {
+   "id": 312295,
+   "verdict": null
+  },
+  {
+   "id": 315680,
+   "verdict": null
+  },
+  {
+   "id": 316921,
+   "verdict": null
+  },
+  {
+   "id": 318784,
+   "verdict": null
+  },
+  {
+   "id": 321554,
+   "verdict": null
+  },
+  {
+   "id": 321697,
+   "verdict": null
+  },
+  {
+   "id": 321869,
+   "verdict": null
+  },
+  {
+   "id": 322178,
+   "verdict": null
+  },
+  {
+   "id": 325166,
+   "verdict": null
+  },
+  {
+   "id": 325970,
+   "verdict": null
+  },
+  {
+   "id": 331585,
+   "verdict": null
+  },
+  {
+   "id": 334942,
+   "verdict": null
+  },
+  {
+   "id": 342237,
+   "verdict": null
+  },
+  {
+   "id": 349943,
+   "verdict": null
+  },
+  {
+   "id": 353388,
+   "verdict": null
+  },
+  {
+   "id": 356290,
+   "verdict": null
+  },
+  {
+   "id": 357961,
+   "verdict": null
+  },
+  {
+   "id": 370000,
+   "verdict": null
+  },
+  {
+   "id": 371571,
+   "verdict": null
+  },
+  {
+   "id": 372039,
+   "verdict": null
+  },
+  {
+   "id": 374767,
+   "verdict": null
+  },
+  {
+   "id": 378098,
+   "verdict": null
+  },
+  {
+   "id": 381213,
+   "verdict": null
+  },
+  {
+   "id": 383506,
+   "verdict": null
+  },
+  {
+   "id": 386112,
+   "verdict": null
+  },
+  {
+   "id": 386268,
+   "verdict": null
+  },
+  {
+   "id": 386484,
+   "verdict": null
+  },
+  {
+   "id": 394145,
+   "verdict": null
+  },
+  {
+   "id": 395462,
+   "verdict": null
+  },
+  {
+   "id": 413568,
+   "verdict": null
+  },
+  {
+   "id": 417980,
+   "verdict": null
+  },
+  {
+   "id": 421881,
+   "verdict": null
+  },
+  {
+   "id": 427576,
+   "verdict": null
+  },
+  {
+   "id": 432286,
+   "verdict": null
+  },
+  {
+   "id": 443329,
+   "verdict": null
+  },
+  {
+   "id": 448109,
+   "verdict": null
+  },
+  {
+   "id": 449544,
+   "verdict": null
+  },
+  {
+   "id": 458220,
+   "verdict": null
+  },
+  {
+   "id": 463194,
+   "verdict": null
+  },
+  {
+   "id": 478386,
+   "verdict": null
+  },
+  {
+   "id": 481442,
+   "verdict": null
+  },
+  {
+   "id": 500975,
+   "verdict": null
+  },
+  {
+   "id": 503864,
+   "verdict": null
+  },
+  {
+   "id": 504242,
+   "verdict": null
+  },
+  {
+   "id": 507289,
+   "verdict": null
+  },
+  {
+   "id": 507670,
+   "verdict": null
+  },
+  {
+   "id": 510119,
+   "verdict": null
+  },
+  {
+   "id": 513207,
+   "verdict": null
+  },
+  {
+   "id": 516608,
+   "verdict": null
+  },
+  {
+   "id": 519068,
+   "verdict": null
+  },
+  {
+   "id": 519165,
+   "verdict": null
+  },
+  {
+   "id": 522422,
+   "verdict": null
+  },
+  {
+   "id": 528631,
+   "verdict": null
+  },
+  {
+   "id": 531407,
+   "verdict": null
+  },
+  {
+   "id": 531560,
+   "verdict": null
+  },
+  {
+   "id": 534033,
+   "verdict": null
+  },
+  {
+   "id": 534896,
+   "verdict": null
+  },
+  {
+   "id": 535769,
+   "verdict": null
+  },
+  {
+   "id": 538252,
+   "verdict": null
+  },
+  {
+   "id": 546118,
+   "verdict": null
+  },
+  {
+   "id": 549299,
+   "verdict": null
+  },
+  {
+   "id": 551313,
+   "verdict": null
+  },
+  {
+   "id": 554572,
+   "verdict": null
+  },
+  {
+   "id": 558096,
+   "verdict": null
+  },
+  {
+   "id": 559829,
+   "verdict": null
+  },
+  {
+   "id": 560894,
+   "verdict": null
+  },
+  {
+   "id": 564614,
+   "verdict": null
+  },
+  {
+   "id": 564628,
+   "verdict": null
+  },
+  {
+   "id": 565683,
+   "verdict": null
+  },
+  {
+   "id": 568459,
+   "verdict": null
+  },
+  {
+   "id": 571793,
+   "verdict": null
+  },
+  {
+   "id": 579511,
+   "verdict": null
+  },
+  {
+   "id": 580947,
+   "verdict": null
+  },
+  {
+   "id": 581911,
+   "verdict": null
+  },
+  {
+   "id": 582793,
+   "verdict": null
+  },
+  {
+   "id": 586616,
+   "verdict": null
+  },
+  {
+   "id": 586901,
+   "verdict": null
+  },
+  {
+   "id": 587465,
+   "verdict": null
+  },
+  {
+   "id": 589156,
+   "verdict": null
+  },
+  {
+   "id": 592119,
+   "verdict": null
+  },
+  {
+   "id": 593806,
+   "verdict": null
+  },
+  {
+   "id": 594296,
+   "verdict": null
+  },
+  {
+   "id": 594317,
+   "verdict": null
+  },
+  {
+   "id": 597098,
+   "verdict": null
+  },
+  {
+   "id": 598203,
+   "verdict": null
+  },
+  {
+   "id": 599350,
+   "verdict": null
+  },
+  {
+   "id": 599469,
+   "verdict": null
+  },
+  {
+   "id": 601905,
+   "verdict": null
+  },
+  {
+   "id": 606989,
+   "verdict": null
+  },
+  {
+   "id": 612211,
+   "verdict": null
+  },
+  {
+   "id": 613799,
+   "verdict": null
+  },
+  {
+   "id": 616121,
+   "verdict": null
+  },
+  {
+   "id": 622913,
+   "verdict": null
+  },
+  {
+   "id": 628788,
+   "verdict": null
+  },
+  {
+   "id": 628849,
+   "verdict": null
+  },
+  {
+   "id": 631105,
+   "verdict": null
+  },
+  {
+   "id": 642261,
+   "verdict": null
+  },
+  {
+   "id": 642599,
+   "verdict": null
+  },
+  {
+   "id": 643258,
+   "verdict": null
+  },
+  {
+   "id": 648630,
+   "verdict": null
+  }
+ ]
+}

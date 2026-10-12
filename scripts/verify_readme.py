@@ -16,7 +16,8 @@ DECISIONS = {
     "2022 history compared": "history from 2022-04-13",
     "free text before 2022-03-15": "before 2022-03-15",
     "edited posts kept": "edited posts are kept",
-    "who labelled the gold set": "yehor hunia reviewed every label",
+    "who labelled the gold set": "yehor hunia reviewed 250 of the 800 labels",
+    "parser accuracy is a development figure": "no held-out accuracy was",
 }
 
 

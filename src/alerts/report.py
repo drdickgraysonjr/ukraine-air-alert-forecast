@@ -180,16 +180,44 @@ def choices_markdown(v: dict, parsers: dict, ablation: dict, cross: dict) -> str
             p2 = t["phase2_rel_logloss"]
             out.append(f"| {title} | {t['option']} | {p1['count']:.3f} / {p1['hours']:.3f} | {p2['1']:.3f} / {p2['3']:.3f} / {p2['6']:.3f} | {t['score']:.4f} | {'yes' if t['option'] == sel else ''} |")
     out.append("")
-    out.append("#### Parser accuracy on the gold set\n")
-    out.append(f"{parsers['n_per_channel']} posts per channel drawn at random (seed {parsers['seed']}) from posts with text since 2023-01-01. "
-               "Oblasts: post x oblast pairs. Types: post x type pairs.\n")
-    out.append("| Channel | Labelled by | Reviewed by (corrections) | Oblasts P / R / F1 | Types P / R / F1 | Post fully right |")
-    out.append("|---|---|---|---|---|---:|")
-    for c, m in parsers["channels"].items():
-        o, t = m["oblasts"], m["types_micro"]
-        rv = f"{m['reviewer']} ({m['corrections']})" if m["reviewed"] else "not yet"
-        out.append(f"| {CHANNEL_NAMES[c]} | {m['annotator']} | {rv} | {o['precision']:.2f} / {o['recall']:.2f} / {o['f1']:.2f} | {t['precision']:.2f} / {t['recall']:.2f} / {t['f1']:.2f} | {m['exact_post_match']:.0%} |")
-    out.append("")
+    out.append("#### Parser accuracy on the reviewed gold posts\n")
+    dev = parsers.get("dev_v2")
+    if dev:
+        n = dev["channels"]["all"]["v1"]["n_posts"]
+        out.append(f"The {n} gold posts Yehor Hunia reviewed (all {dev['channels']['kpszsu']['v1']['n_posts']} of the Air Force sample and the first "
+                   f"{dev['channels']['war_monitor']['v1']['n_posts']} of @war_monitor), labelled under the rules v2. Parser v2 was written on these posts, "
+                   "so its numbers here are a development figure, not a held-out one; the other 550 gold posts were not reviewed and no held-out "
+                   "accuracy was measured. Oblasts: post x oblast pairs. Types: post x type pairs. Summary: the post is marked as a summary.\n")
+        out.append("| Posts | Parser | Oblasts P / R | Types P / R | Summaries P / R | Post fully right |")
+        out.append("|---|---|---|---|---|---:|")
+        names = {**CHANNEL_NAMES, "all": "all reviewed"}
+        f = lambda x: "–" if x is None else f"{x:.2f}"  # noqa: E731
+        for c, v in dev["channels"].items():
+            for ver in ("v1", "v2"):
+                m = v[ver]
+                o, t, s_ = m["oblasts"], m["types_micro"], m["summary"]
+                out.append(f"| {names[c]} ({m['n_posts']}) | {ver} | {f(o['precision'])} / {f(o['recall'])} | {f(t['precision'])} / {f(t['recall'])} | "
+                           f"{f(s_['precision'])} / {f(s_['recall'])} | {m['exact_post_match']:.0%} |")
+        out.append("")
+    v1 = config.REPORTS_DIR / "parser_v1"
+    if (v1 / "metrics_phase1.json").exists():
+        from .ablation import headline
+
+        old = headline(_load("parser_v1/metrics_phase1.json"), _load("parser_v1/metrics_phase2.json"))
+        new = headline(_load("metrics_phase1.json"), _load("metrics_phase2.json"))
+        vold = _load("parser_v1/validation.json").get("text", {})
+        out.append("#### Parser v1 against parser v2 on the test windows\n")
+        out.append(f"The whole chain rerun with parser v2: text channels chosen again on the validation window "
+                   f"(v1: {', '.join(CHANNEL_NAMES[c] for c in vold.get('selected_channels', []))}; "
+                   f"v2: {', '.join(CHANNEL_NAMES[c] for c in v.get('text', {}).get('selected_channels', []))}), hyper-parameters tuned again, then the backtest. "
+                   "Phase 1: skill vs the best naive forecast (alerts / hours). Phase 2: BSS vs climatology (1 h / 3 h / 6 h).\n")
+        out.append("| Series / window | Parser v1: P1 | Parser v2: P1 | Parser v1: P2 | Parser v2: P2 |")
+        out.append("|---|---|---|---|---|")
+        for k in sorted(new):
+            c1 = [f"{x['phase1_skill_vs_best_naive']['count']:+.1%} / {x['phase1_skill_vs_best_naive']['hours']:+.1%}" for x in (old[k], new[k])]
+            c2 = [f"{x['phase2_bss_vs_climatology']['1']:+.1%} / {x['phase2_bss_vs_climatology']['3']:+.1%} / {x['phase2_bss_vs_climatology']['6']:+.1%}" for x in (old[k], new[k])]
+            out.append(f"| {k.replace('/', ', ').replace('pre_break', 'before the break').replace('post_break', 'after the break')} | {c1[0]} | {c1[1]} | {c2[0]} | {c2[1]} |")
+        out.append("")
     out.append("#### Edited posts and text features on the test windows\n")
     out.append("The same backtest with edited posts dropped, and with no text features at all; everything else fixed. Phase 1: skill vs the best naive forecast (hours). Phase 2: BSS vs climatology at 1 h.\n")
     out.append("| Series / window | Final model: P1 hours / P2 1 h | Without edited posts | Without text features |")

@@ -1,0 +1,2258 @@
+{
+ "channel": "kpszsu",
+ "reviewer": "Yehor Hunia",
+ "exported_at": "2026-10-12T11:28:08.469Z",
+ "items": [
+  {
+   "id": 2458,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [],
+   "comment": ""
+  },
+  {
+   "id": 2578,
+   "verdict": "fix",
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone",
+    "missile",
+    "ballistic"
+   ],
+   "comment": "Це звіт по к-ті цілей за результатом тривоги, на наступний день. З часом ПСУ перестали писати точну кількість ворожих озброєнь, щоб засекретити це від ворога"
+  },
+  {
+   "id": 3607,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "all_clear",
+    "ballistic"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 3766,
+   "verdict": "fix",
+   "oblasts": [],
+   "types": [
+    "all_clear"
+   ],
+   "comment": "Тут треба детектити західні і центральні області. Для категорій по типу північ, південь, захід, схід треба мати визначений список областей. Ну і для напрямів"
+  },
+  {
+   "id": 3821,
+   "verdict": "ok",
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 6505,
+   "verdict": "ok",
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 7942,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "all_clear",
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 8071,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [],
+   "comment": ""
+  },
+  {
+   "id": 8222,
+   "verdict": "ok",
+   "oblasts": [
+    "cherkasy",
+    "vinnytsia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 8251,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 8908,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 9219,
+   "verdict": "ok",
+   "oblasts": [
+    "kirovohrad"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 9456,
+   "verdict": "ok",
+   "oblasts": [
+    "kherson",
+    "kirovohrad",
+    "mykolaiv"
+   ],
+   "types": [
+    "missile"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 10289,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "all_clear",
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 10925,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 11129,
+   "verdict": "ok",
+   "oblasts": [
+    "kharkiv",
+    "kirovohrad",
+    "poltava"
+   ],
+   "types": [
+    "ballistic"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 12095,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 12462,
+   "verdict": "ok",
+   "oblasts": [
+    "chernihiv",
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 12911,
+   "verdict": "ok",
+   "oblasts": [
+    "kherson"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 13007,
+   "verdict": "ok",
+   "oblasts": [
+    "khmelnytskyi",
+    "lviv",
+    "ternopil",
+    "vinnytsia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 13091,
+   "verdict": "ok",
+   "oblasts": [
+    "dnipropetrovsk",
+    "kharkiv",
+    "khmelnytskyi",
+    "kirovohrad",
+    "mykolaiv",
+    "odesa",
+    "poltava",
+    "sumy",
+    "vinnytsia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 13336,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "alert",
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 15079,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "all_clear"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 15682,
+   "verdict": "ok",
+   "oblasts": [
+    "lviv",
+    "ternopil",
+    "zhytomyr"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 16262,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "all_clear",
+    "ballistic",
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 16331,
+   "verdict": "ok",
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [],
+   "comment": ""
+  },
+  {
+   "id": 16406,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [],
+   "comment": ""
+  },
+  {
+   "id": 16417,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "all_clear"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 16443,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "all_clear"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 16578,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [],
+   "comment": ""
+  },
+  {
+   "id": 17022,
+   "verdict": "ok",
+   "oblasts": [
+    "kherson"
+   ],
+   "types": [
+    "kab"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 17303,
+   "verdict": "ok",
+   "oblasts": [
+    "chernihiv",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 17431,
+   "verdict": "ok",
+   "oblasts": [
+    "mykolaiv",
+    "odesa"
+   ],
+   "types": [],
+   "comment": ""
+  },
+  {
+   "id": 19679,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "all_clear"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 19953,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [],
+   "comment": ""
+  },
+  {
+   "id": 20864,
+   "verdict": "ok",
+   "oblasts": [
+    "khmelnytskyi",
+    "odesa",
+    "vinnytsia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 21245,
+   "verdict": "ok",
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "kab"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 21783,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 22463,
+   "verdict": "ok",
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 22966,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "all_clear",
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 23043,
+   "verdict": "ok",
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "missile"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 23579,
+   "verdict": "ok",
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 25088,
+   "verdict": "ok",
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "missile"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 25104,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "ballistic"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 25893,
+   "verdict": "ok",
+   "oblasts": [
+    "cherkasy"
+   ],
+   "types": [],
+   "comment": ""
+  },
+  {
+   "id": 26122,
+   "verdict": "ok",
+   "oblasts": [
+    "chernihiv",
+    "sumy"
+   ],
+   "types": [
+    "kab",
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 26815,
+   "verdict": "ok",
+   "oblasts": [
+    "cherkasy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 27153,
+   "verdict": "ok",
+   "oblasts": [
+    "chernihiv",
+    "dnipropetrovsk",
+    "kharkiv",
+    "khmelnytskyi",
+    "kyiv",
+    "poltava",
+    "rivne",
+    "sumy",
+    "zaporizhzhia",
+    "zhytomyr"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 27215,
+   "verdict": "ok",
+   "oblasts": [
+    "khmelnytskyi",
+    "vinnytsia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 27543,
+   "verdict": "ok",
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "kab",
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 28300,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 28523,
+   "verdict": "ok",
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 29279,
+   "verdict": "ok",
+   "oblasts": [
+    "kherson"
+   ],
+   "types": [
+    "kab",
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 29530,
+   "verdict": "ok",
+   "oblasts": [
+    "kherson",
+    "mykolaiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 29802,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "all_clear"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 30154,
+   "verdict": "ok",
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 30249,
+   "verdict": "ok",
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 30381,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 30437,
+   "verdict": "ok",
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 30562,
+   "verdict": "ok",
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "kab",
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 31067,
+   "verdict": "ok",
+   "oblasts": [
+    "chernihiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 31166,
+   "verdict": "ok",
+   "oblasts": [
+    "cherkasy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 31661,
+   "verdict": "ok",
+   "oblasts": [
+    "dnipropetrovsk",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 32564,
+   "verdict": "ok",
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 32867,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "alert",
+    "ballistic"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 33315,
+   "verdict": "ok",
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 33973,
+   "verdict": "ok",
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 35381,
+   "verdict": "ok",
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 35552,
+   "verdict": "ok",
+   "oblasts": [
+    "sumy",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 35968,
+   "verdict": "ok",
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "kab",
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 36029,
+   "verdict": "ok",
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "missile"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 36343,
+   "verdict": "ok",
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [],
+   "comment": ""
+  },
+  {
+   "id": 36523,
+   "verdict": "ok",
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "kab",
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 36758,
+   "verdict": "ok",
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "kab",
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 37406,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "all_clear",
+    "ballistic"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 37715,
+   "verdict": "ok",
+   "oblasts": [
+    "zhytomyr"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 37949,
+   "verdict": "ok",
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "missile",
+    "kab",
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 38114,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "ballistic"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 38508,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "all_clear",
+    "ballistic"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 38903,
+   "verdict": "ok",
+   "oblasts": [
+    "cherkasy",
+    "kyiv",
+    "kyiv_city",
+    "poltava",
+    "zhytomyr"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 39005,
+   "verdict": "ok",
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 39313,
+   "verdict": "ok",
+   "oblasts": [
+    "chernihiv",
+    "dnipropetrovsk",
+    "kharkiv",
+    "kherson",
+    "poltava",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 40610,
+   "verdict": "ok",
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 40812,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 40942,
+   "verdict": "ok",
+   "oblasts": [
+    "dnipropetrovsk",
+    "kharkiv",
+    "poltava"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 41215,
+   "verdict": "ok",
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 41362,
+   "verdict": "ok",
+   "oblasts": [
+    "chernihiv",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 41655,
+   "verdict": "ok",
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 41726,
+   "verdict": "ok",
+   "oblasts": [
+    "donetsk",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "kab",
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 42350,
+   "verdict": "ok",
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 42437,
+   "verdict": "ok",
+   "oblasts": [
+    "chernihiv",
+    "dnipropetrovsk",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 42497,
+   "verdict": "ok",
+   "oblasts": [
+    "dnipropetrovsk",
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 42726,
+   "verdict": "ok",
+   "oblasts": [
+    "cherkasy"
+   ],
+   "types": [
+    "missile"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 43037,
+   "verdict": "ok",
+   "oblasts": [
+    "odesa",
+    "vinnytsia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 43388,
+   "verdict": "ok",
+   "oblasts": [
+    "dnipropetrovsk",
+    "donetsk"
+   ],
+   "types": [
+    "kab"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 44333,
+   "verdict": "ok",
+   "oblasts": [
+    "dnipropetrovsk",
+    "kharkiv",
+    "kyiv_city",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 44790,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "all_clear",
+    "ballistic"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 45477,
+   "verdict": "ok",
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 45832,
+   "verdict": "ok",
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "missile"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 46828,
+   "verdict": "ok",
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 46949,
+   "verdict": "ok",
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "kab"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 47206,
+   "verdict": "ok",
+   "oblasts": [
+    "chernihiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 47510,
+   "verdict": "ok",
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "kab"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 48564,
+   "verdict": "ok",
+   "oblasts": [
+    "odesa",
+    "vinnytsia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 48625,
+   "verdict": "ok",
+   "oblasts": [
+    "dnipropetrovsk",
+    "donetsk",
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 48743,
+   "verdict": "ok",
+   "oblasts": [
+    "chernihiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 48942,
+   "verdict": "ok",
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "kab"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 51217,
+   "verdict": "ok",
+   "oblasts": [
+    "poltava",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 51436,
+   "verdict": "ok",
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 52179,
+   "verdict": "ok",
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 52611,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "all_clear",
+    "ballistic"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 52679,
+   "verdict": "ok",
+   "oblasts": [
+    "kharkiv",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 53599,
+   "verdict": "ok",
+   "oblasts": [
+    "kharkiv",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 54012,
+   "verdict": "ok",
+   "oblasts": [
+    "kharkiv",
+    "poltava"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 54413,
+   "verdict": "ok",
+   "oblasts": [
+    "cherkasy",
+    "chernihiv",
+    "kherson",
+    "kirovohrad",
+    "kyiv",
+    "mykolaiv",
+    "odesa",
+    "sumy",
+    "vinnytsia",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 54696,
+   "verdict": "ok",
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "kab"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 55094,
+   "verdict": "ok",
+   "oblasts": [
+    "odesa",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 55236,
+   "verdict": "ok",
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "missile"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 55258,
+   "verdict": "ok",
+   "oblasts": [
+    "dnipropetrovsk",
+    "kharkiv",
+    "kherson"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 55764,
+   "verdict": "ok",
+   "oblasts": [
+    "kharkiv",
+    "kherson",
+    "mykolaiv",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 55776,
+   "verdict": "ok",
+   "oblasts": [
+    "cherkasy",
+    "kyiv",
+    "poltava"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 56477,
+   "verdict": "ok",
+   "oblasts": [
+    "kharkiv",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 56921,
+   "verdict": "ok",
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "kab"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 56923,
+   "verdict": "ok",
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 57043,
+   "verdict": "ok",
+   "oblasts": [
+    "dnipropetrovsk",
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 57185,
+   "verdict": "ok",
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "kab",
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 57337,
+   "verdict": "fix",
+   "oblasts": [
+    "chernivtsi",
+    "kharkiv",
+    "khmelnytskyi",
+    "kyiv_city",
+    "zhytomyr"
+   ],
+   "types": [
+    "drone",
+    "missile",
+    "ballistic"
+   ],
+   "comment": "Так само, це звіт (summary) про збиття від ПСУ. Тобто це щось, що виходить за підсумками тривоги після її завершення і ідентифікації. Такі звіти з часом перестали формувати (уточни на практиці, я можу помилятися)"
+  },
+  {
+   "id": 57567,
+   "verdict": "ok",
+   "oblasts": [
+    "donetsk",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "kab"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 58066,
+   "verdict": "ok",
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "kab"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 58825,
+   "verdict": "ok",
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "kab"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 59230,
+   "verdict": "ok",
+   "oblasts": [
+    "poltava",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 59607,
+   "verdict": "ok",
+   "oblasts": [
+    "mykolaiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 59705,
+   "verdict": "ok",
+   "oblasts": [
+    "dnipropetrovsk",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 61071,
+   "verdict": "ok",
+   "oblasts": [
+    "ternopil"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 61086,
+   "verdict": "ok",
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 61516,
+   "verdict": "ok",
+   "oblasts": [
+    "poltava",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 62103,
+   "verdict": "ok",
+   "oblasts": [
+    "kharkiv",
+    "kherson",
+    "mykolaiv",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 62231,
+   "verdict": "ok",
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "kab"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 62415,
+   "verdict": "fix",
+   "oblasts": [],
+   "types": [
+    "drone"
+   ],
+   "comment": "Тут ти коректно визначив, що це summary"
+  },
+  {
+   "id": 62421,
+   "verdict": "ok",
+   "oblasts": [
+    "dnipropetrovsk",
+    "donetsk"
+   ],
+   "types": [
+    "kab"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 62495,
+   "verdict": "ok",
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "kab",
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 62560,
+   "verdict": "ok",
+   "oblasts": [
+    "kherson",
+    "mykolaiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 62596,
+   "verdict": "ok",
+   "oblasts": [
+    "chernihiv",
+    "sumy"
+   ],
+   "types": [
+    "missile"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 63336,
+   "verdict": "ok",
+   "oblasts": [
+    "rivne",
+    "volyn"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 63864,
+   "verdict": "ok",
+   "oblasts": [
+    "mykolaiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 63946,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 63992,
+   "verdict": "ok",
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 64850,
+   "verdict": "ok",
+   "oblasts": [
+    "mykolaiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 65736,
+   "verdict": "ok",
+   "oblasts": [
+    "dnipropetrovsk",
+    "kharkiv",
+    "kherson"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 66046,
+   "verdict": "fix",
+   "oblasts": [],
+   "types": [
+    "drone"
+   ],
+   "comment": "Так само самарі"
+  },
+  {
+   "id": 66205,
+   "verdict": "ok",
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "kab"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 66260,
+   "verdict": "ok",
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "kab"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 67344,
+   "verdict": "ok",
+   "oblasts": [
+    "kherson",
+    "mykolaiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 67518,
+   "verdict": "ok",
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "kab"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 68223,
+   "verdict": "ok",
+   "oblasts": [
+    "kharkiv",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 68278,
+   "verdict": "ok",
+   "oblasts": [
+    "mykolaiv",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 68503,
+   "verdict": "ok",
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 68721,
+   "verdict": "ok",
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 69538,
+   "verdict": "ok",
+   "oblasts": [
+    "chernihiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 69623,
+   "verdict": "ok",
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 71173,
+   "verdict": "ok",
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 71447,
+   "verdict": "ok",
+   "oblasts": [
+    "kharkiv",
+    "sumy",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 72127,
+   "verdict": "ok",
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone",
+    "missile"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 72508,
+   "verdict": "ok",
+   "oblasts": [
+    "cherkasy",
+    "mykolaiv",
+    "poltava"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 72616,
+   "verdict": "ok",
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "kab"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 73287,
+   "verdict": "ok",
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "missile"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 73302,
+   "verdict": "ok",
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 73820,
+   "verdict": "fix",
+   "oblasts": [
+    "poltava",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": "Можливо, є сенс ввести для Бандеролі «баражуючий боєприпас»? Або малогабаритна крилата ракета. Дійсно тут проблема в тому, що нема консенсусу щодо того, чим вона є. Треба дослідити аналоги, і як додавання нового типу повпливає на класифікацію"
+  },
+  {
+   "id": 73894,
+   "verdict": "ok",
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 75018,
+   "verdict": "ok",
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 75487,
+   "verdict": "ok",
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 75718,
+   "verdict": "ok",
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 76294,
+   "verdict": "ok",
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "kab"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 76599,
+   "verdict": "ok",
+   "oblasts": [
+    "vinnytsia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 77231,
+   "verdict": "ok",
+   "oblasts": [
+    "chernihiv",
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 77530,
+   "verdict": "ok",
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 78811,
+   "verdict": "ok",
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 78956,
+   "verdict": "fix",
+   "oblasts": [
+    "donetsk",
+    "kyiv",
+    "odesa"
+   ],
+   "types": [
+    "drone",
+    "missile"
+   ],
+   "comment": "Це самарі"
+  },
+  {
+   "id": 78979,
+   "verdict": "ok",
+   "oblasts": [
+    "kyiv",
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 79165,
+   "verdict": "ok",
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 79264,
+   "verdict": "ok",
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 79493,
+   "verdict": "ok",
+   "oblasts": [
+    "chernihiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 79822,
+   "verdict": "ok",
+   "oblasts": [
+    "rivne"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 80344,
+   "verdict": "ok",
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 80357,
+   "verdict": "ok",
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 81366,
+   "verdict": "fix",
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [],
+   "comment": "Треба дивитися з контексту попередніх значить. Якщо немає і емодзі, яке би вказало на тип"
+  },
+  {
+   "id": 81604,
+   "verdict": "ok",
+   "oblasts": [
+    "rivne",
+    "zhytomyr"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 81652,
+   "verdict": "fix",
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 82458,
+   "verdict": "ok",
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 82734,
+   "verdict": "ok",
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 83091,
+   "verdict": "fix",
+   "oblasts": [
+    "volyn"
+   ],
+   "types": [],
+   "comment": "Так само — з контексту"
+  },
+  {
+   "id": 83470,
+   "verdict": "ok",
+   "oblasts": [
+    "cherkasy",
+    "poltava"
+   ],
+   "types": [
+    "missile"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 83630,
+   "verdict": "ok",
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 83693,
+   "verdict": "fix",
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [],
+   "comment": "З контексту"
+  },
+  {
+   "id": 83945,
+   "verdict": "ok",
+   "oblasts": [
+    "mykolaiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 84008,
+   "verdict": "ok",
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 84023,
+   "verdict": "ok",
+   "oblasts": [
+    "kyiv",
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 84402,
+   "verdict": "ok",
+   "oblasts": [
+    "chernihiv",
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 84885,
+   "verdict": "fix",
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [],
+   "comment": "З контексту відновити типи"
+  },
+  {
+   "id": 84906,
+   "verdict": "fix",
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": "Козин в Київській області"
+  }
+ ]
+}

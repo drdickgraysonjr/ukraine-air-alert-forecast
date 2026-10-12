@@ -119,5 +119,6 @@ def run() -> dict:
         res["posts_to_series"] = p2s(p)
         res["post_levels"] = {lv: {"posts": int((p["level"] == lv).sum()), "posts_to_series": p2s(p[p["level"] == lv])} for lv in sorted(set(p["level"]))}
         out["windows"][name] = res
+    out["parser_digest"] = telegram.parser_digest()
     (config.REPORTS_DIR / "crosscheck.json").write_text(json.dumps(out, indent=2) + "\n")
     return out

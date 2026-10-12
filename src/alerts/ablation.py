@@ -53,6 +53,7 @@ def run() -> dict:
     with_ = headline(json.loads((config.REPORTS_DIR / "metrics_phase1.json").read_text()),
                      json.loads((config.REPORTS_DIR / "metrics_phase2.json").read_text()))
     out = {
+        "parser_digest": telegram.parser_digest(),
         "channels": list(config.TEXT_CHANNELS),
         "dropped_posts": dropped,
         "with_edited": with_,

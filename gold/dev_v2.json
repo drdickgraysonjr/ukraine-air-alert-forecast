@@ -1,0 +1,3933 @@
+{
+ "rules": "v2 (2026-10-12)",
+ "posts": [
+  {
+   "channel": "kpszsu",
+   "id": 2458,
+   "oblasts": [],
+   "types": [],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 2578,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "ballistic",
+    "drone",
+    "missile"
+   ],
+   "summary": true,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 3607,
+   "oblasts": [],
+   "types": [
+    "all_clear",
+    "ballistic"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 3766,
+   "oblasts": [
+    "cherkasy",
+    "chernivtsi",
+    "dnipropetrovsk",
+    "ivano_frankivsk",
+    "khmelnytskyi",
+    "kirovohrad",
+    "lviv",
+    "poltava",
+    "rivne",
+    "ternopil",
+    "vinnytsia",
+    "volyn",
+    "zakarpattia"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix",
+    "macro: західні, центральні області"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 3821,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 6505,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 7942,
+   "oblasts": [],
+   "types": [
+    "all_clear",
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 8071,
+   "oblasts": [],
+   "types": [],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 8222,
+   "oblasts": [
+    "cherkasy",
+    "vinnytsia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 8251,
+   "oblasts": [
+    "dnipropetrovsk",
+    "donetsk",
+    "kharkiv",
+    "kherson",
+    "kirovohrad",
+    "mykolaiv",
+    "odesa",
+    "vinnytsia",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "aviation"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok",
+    "macro: на півдні та сході"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 8908,
+   "oblasts": [
+    "dnipropetrovsk",
+    "donetsk",
+    "kharkiv",
+    "kherson",
+    "kirovohrad",
+    "mykolaiv",
+    "odesa",
+    "vinnytsia",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "aviation"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok",
+    "macro: на сході та півдні"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 9219,
+   "oblasts": [
+    "kirovohrad"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 9456,
+   "oblasts": [
+    "kherson",
+    "kirovohrad",
+    "mykolaiv"
+   ],
+   "types": [
+    "missile"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 10289,
+   "oblasts": [
+    "kherson",
+    "kirovohrad",
+    "mykolaiv",
+    "odesa",
+    "vinnytsia",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "all_clear",
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok",
+    "macro: для південних областей"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 10925,
+   "oblasts": [],
+   "types": [
+    "aviation"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 11129,
+   "oblasts": [
+    "kharkiv",
+    "kirovohrad",
+    "poltava"
+   ],
+   "types": [
+    "ballistic"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 12095,
+   "oblasts": [],
+   "types": [
+    "aviation"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 12462,
+   "oblasts": [
+    "chernihiv",
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 12911,
+   "oblasts": [
+    "kherson"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 13007,
+   "oblasts": [
+    "khmelnytskyi",
+    "lviv",
+    "ternopil",
+    "vinnytsia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 13091,
+   "oblasts": [
+    "dnipropetrovsk",
+    "kharkiv",
+    "khmelnytskyi",
+    "kirovohrad",
+    "mykolaiv",
+    "odesa",
+    "poltava",
+    "sumy",
+    "vinnytsia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 13336,
+   "oblasts": [],
+   "types": [
+    "alert",
+    "aviation"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 15079,
+   "oblasts": [],
+   "types": [
+    "all_clear"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 15682,
+   "oblasts": [
+    "lviv",
+    "ternopil",
+    "zhytomyr"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 16262,
+   "oblasts": [],
+   "types": [
+    "all_clear",
+    "aviation",
+    "ballistic"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 16331,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "missile"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok",
+    "context"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 16406,
+   "oblasts": [],
+   "types": [],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 16417,
+   "oblasts": [],
+   "types": [
+    "all_clear"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 16443,
+   "oblasts": [],
+   "types": [
+    "all_clear"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 16578,
+   "oblasts": [],
+   "types": [],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 17022,
+   "oblasts": [
+    "kherson"
+   ],
+   "types": [
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 17303,
+   "oblasts": [
+    "chernihiv",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 17431,
+   "oblasts": [
+    "mykolaiv",
+    "odesa"
+   ],
+   "types": [],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 19679,
+   "oblasts": [],
+   "types": [
+    "all_clear"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 19953,
+   "oblasts": [],
+   "types": [],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 20864,
+   "oblasts": [
+    "khmelnytskyi",
+    "odesa",
+    "vinnytsia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 21245,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 21783,
+   "oblasts": [],
+   "types": [
+    "aviation"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 22463,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 22966,
+   "oblasts": [],
+   "types": [
+    "all_clear",
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 23043,
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "missile"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 23579,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 25088,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "missile"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 25104,
+   "oblasts": [],
+   "types": [
+    "ballistic"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 25893,
+   "oblasts": [
+    "cherkasy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok",
+    "context"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 26122,
+   "oblasts": [
+    "chernihiv",
+    "sumy"
+   ],
+   "types": [
+    "aviation",
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 26815,
+   "oblasts": [
+    "cherkasy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 27153,
+   "oblasts": [
+    "chernihiv",
+    "dnipropetrovsk",
+    "kharkiv",
+    "khmelnytskyi",
+    "kyiv",
+    "poltava",
+    "rivne",
+    "sumy",
+    "zaporizhzhia",
+    "zhytomyr"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 27215,
+   "oblasts": [
+    "khmelnytskyi",
+    "vinnytsia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 27543,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "aviation",
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 28300,
+   "oblasts": [],
+   "types": [
+    "aviation"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 28523,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 29279,
+   "oblasts": [
+    "kherson"
+   ],
+   "types": [
+    "aviation",
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 29530,
+   "oblasts": [
+    "kherson",
+    "mykolaiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 29802,
+   "oblasts": [],
+   "types": [
+    "all_clear"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 30154,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 30249,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 30381,
+   "oblasts": [],
+   "types": [
+    "aviation"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 30437,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 30562,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "aviation",
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 31067,
+   "oblasts": [
+    "chernihiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 31166,
+   "oblasts": [
+    "cherkasy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 31661,
+   "oblasts": [
+    "dnipropetrovsk",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 32564,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 32867,
+   "oblasts": [],
+   "types": [
+    "alert",
+    "ballistic"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 33315,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 33973,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 35381,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 35552,
+   "oblasts": [
+    "sumy",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 35968,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "aviation",
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 36029,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "missile"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 36343,
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "missile"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok",
+    "context"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 36523,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "aviation",
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 36758,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "aviation",
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 37406,
+   "oblasts": [],
+   "types": [
+    "all_clear",
+    "ballistic"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 37715,
+   "oblasts": [
+    "zhytomyr"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 37949,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "aviation",
+    "kab",
+    "missile"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 38114,
+   "oblasts": [],
+   "types": [
+    "ballistic"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 38508,
+   "oblasts": [],
+   "types": [
+    "all_clear",
+    "ballistic"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 38903,
+   "oblasts": [
+    "cherkasy",
+    "kyiv",
+    "kyiv_city",
+    "poltava",
+    "zhytomyr"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 39005,
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 39313,
+   "oblasts": [
+    "chernihiv",
+    "dnipropetrovsk",
+    "kharkiv",
+    "kherson",
+    "poltava",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 40610,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 40812,
+   "oblasts": [],
+   "types": [
+    "aviation"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 40942,
+   "oblasts": [
+    "dnipropetrovsk",
+    "kharkiv",
+    "poltava"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 41215,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 41362,
+   "oblasts": [
+    "chernihiv",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 41655,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 41726,
+   "oblasts": [
+    "donetsk",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "aviation",
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 42350,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 42437,
+   "oblasts": [
+    "chernihiv",
+    "dnipropetrovsk",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 42497,
+   "oblasts": [
+    "dnipropetrovsk",
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 42726,
+   "oblasts": [
+    "cherkasy"
+   ],
+   "types": [
+    "missile"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 43037,
+   "oblasts": [
+    "odesa",
+    "vinnytsia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 43388,
+   "oblasts": [
+    "dnipropetrovsk",
+    "donetsk"
+   ],
+   "types": [
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 44333,
+   "oblasts": [
+    "dnipropetrovsk",
+    "kharkiv",
+    "kyiv_city",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 44790,
+   "oblasts": [],
+   "types": [
+    "all_clear",
+    "ballistic"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 45477,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 45832,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "missile"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 46828,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 46949,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 47206,
+   "oblasts": [
+    "chernihiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 47510,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 48564,
+   "oblasts": [
+    "odesa",
+    "vinnytsia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 48625,
+   "oblasts": [
+    "dnipropetrovsk",
+    "donetsk",
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 48743,
+   "oblasts": [
+    "chernihiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 48942,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 51217,
+   "oblasts": [
+    "poltava",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 51436,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 52179,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 52611,
+   "oblasts": [],
+   "types": [
+    "all_clear",
+    "ballistic"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 52679,
+   "oblasts": [
+    "kharkiv",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 53599,
+   "oblasts": [
+    "kharkiv",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 54012,
+   "oblasts": [
+    "kharkiv",
+    "poltava"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 54413,
+   "oblasts": [
+    "cherkasy",
+    "chernihiv",
+    "kherson",
+    "kirovohrad",
+    "kyiv",
+    "kyiv_city",
+    "mykolaiv",
+    "odesa",
+    "sumy",
+    "vinnytsia",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok",
+    "Kyiv reservoir: city and oblast"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 54696,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 55094,
+   "oblasts": [
+    "odesa",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 55236,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "missile"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 55258,
+   "oblasts": [
+    "dnipropetrovsk",
+    "kharkiv",
+    "kherson"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 55764,
+   "oblasts": [
+    "kharkiv",
+    "kherson",
+    "mykolaiv",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 55776,
+   "oblasts": [
+    "cherkasy",
+    "kyiv",
+    "poltava"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 56477,
+   "oblasts": [
+    "kharkiv",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 56921,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 56923,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 57043,
+   "oblasts": [
+    "dnipropetrovsk",
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 57185,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "aviation",
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 57337,
+   "oblasts": [
+    "chernivtsi",
+    "kharkiv",
+    "khmelnytskyi",
+    "kyiv_city",
+    "zhytomyr"
+   ],
+   "types": [
+    "ballistic",
+    "drone",
+    "missile"
+   ],
+   "summary": true,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 57567,
+   "oblasts": [
+    "donetsk",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 58066,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 58825,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 59230,
+   "oblasts": [
+    "poltava",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 59607,
+   "oblasts": [
+    "mykolaiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 59705,
+   "oblasts": [
+    "dnipropetrovsk",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 61071,
+   "oblasts": [
+    "ternopil"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 61086,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 61516,
+   "oblasts": [
+    "poltava",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 62103,
+   "oblasts": [
+    "kharkiv",
+    "kherson",
+    "mykolaiv",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 62231,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 62415,
+   "oblasts": [
+    "cherkasy",
+    "chernihiv",
+    "dnipropetrovsk",
+    "donetsk",
+    "kharkiv",
+    "kherson",
+    "kirovohrad",
+    "kyiv",
+    "kyiv_city",
+    "mykolaiv",
+    "odesa",
+    "poltava",
+    "sumy",
+    "vinnytsia",
+    "zaporizhzhia",
+    "zhytomyr"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": true,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix",
+    "macro: на півночі, півдні та сході країни"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 62421,
+   "oblasts": [
+    "dnipropetrovsk",
+    "donetsk"
+   ],
+   "types": [
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 62495,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "aviation",
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 62560,
+   "oblasts": [
+    "kherson",
+    "mykolaiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 62596,
+   "oblasts": [
+    "chernihiv",
+    "sumy"
+   ],
+   "types": [
+    "missile"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 63336,
+   "oblasts": [
+    "rivne",
+    "volyn"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 63864,
+   "oblasts": [
+    "mykolaiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 63946,
+   "oblasts": [],
+   "types": [
+    "aviation"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 63992,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 64850,
+   "oblasts": [
+    "mykolaiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 65736,
+   "oblasts": [
+    "dnipropetrovsk",
+    "kharkiv",
+    "kherson"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 66046,
+   "oblasts": [
+    "cherkasy",
+    "chernihiv",
+    "dnipropetrovsk",
+    "donetsk",
+    "kharkiv",
+    "kherson",
+    "kirovohrad",
+    "kyiv",
+    "kyiv_city",
+    "mykolaiv",
+    "odesa",
+    "poltava",
+    "sumy",
+    "vinnytsia",
+    "zaporizhzhia",
+    "zhytomyr"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": true,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix",
+    "macro: на півночі, півдні та сході країни"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 66205,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 66260,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 67344,
+   "oblasts": [
+    "kherson",
+    "mykolaiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 67518,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 68223,
+   "oblasts": [
+    "kharkiv",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 68278,
+   "oblasts": [
+    "mykolaiv",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 68503,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 68721,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 69538,
+   "oblasts": [
+    "chernihiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 69623,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 71173,
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 71447,
+   "oblasts": [
+    "kharkiv",
+    "sumy",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 72127,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone",
+    "missile"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 72508,
+   "oblasts": [
+    "cherkasy",
+    "mykolaiv",
+    "poltava"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 72616,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 73287,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "missile"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 73302,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 73820,
+   "oblasts": [
+    "poltava",
+    "sumy"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 73894,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 75018,
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 75487,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 75718,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 76294,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 76599,
+   "oblasts": [
+    "vinnytsia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 77231,
+   "oblasts": [
+    "chernihiv",
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 77530,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 78811,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 78956,
+   "oblasts": [
+    "donetsk",
+    "kyiv",
+    "odesa"
+   ],
+   "types": [
+    "drone",
+    "missile"
+   ],
+   "summary": true,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 78979,
+   "oblasts": [
+    "kyiv",
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 79165,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 79264,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 79493,
+   "oblasts": [
+    "chernihiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 79822,
+   "oblasts": [
+    "rivne"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 80344,
+   "oblasts": [
+    "kyiv",
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok",
+    "Kyiv reservoir: city and oblast"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 80357,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 81366,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix",
+    "context"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 81604,
+   "oblasts": [
+    "rivne",
+    "zhytomyr"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 81652,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 82458,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 82734,
+   "oblasts": [
+    "kharkiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 83091,
+   "oblasts": [
+    "volyn"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix",
+    "context"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 83470,
+   "oblasts": [
+    "cherkasy",
+    "poltava"
+   ],
+   "types": [
+    "missile"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 83630,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 83693,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix",
+    "context"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 83945,
+   "oblasts": [
+    "mykolaiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 84008,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 84023,
+   "oblasts": [
+    "kyiv",
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 84402,
+   "oblasts": [
+    "chernihiv",
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 84885,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix",
+    "context"
+   ]
+  },
+  {
+   "channel": "kpszsu",
+   "id": 84906,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 5123,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "ballistic"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 5157,
+   "oblasts": [
+    "dnipropetrovsk",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "missile"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 5283,
+   "oblasts": [
+    "kherson",
+    "kirovohrad",
+    "mykolaiv",
+    "odesa",
+    "vinnytsia",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "all_clear"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix",
+    "macro: відбій на півдні"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 5352,
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "ballistic"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok",
+    "context"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 5646,
+   "oblasts": [
+    "khmelnytskyi"
+   ],
+   "types": [
+    "missile"
+   ],
+   "summary": true,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 6020,
+   "oblasts": [],
+   "types": [],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 6368,
+   "oblasts": [
+    "kherson",
+    "kirovohrad",
+    "mykolaiv",
+    "odesa",
+    "vinnytsia",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "missile"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix",
+    "macro: по Півдню"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 6997,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": true,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 7258,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok",
+    "context"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 7531,
+   "oblasts": [
+    "kherson",
+    "kirovohrad",
+    "mykolaiv",
+    "odesa",
+    "vinnytsia",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "aviation",
+    "kab",
+    "missile"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok",
+    "macro: на Півдні"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 7639,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 9902,
+   "oblasts": [],
+   "types": [],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 10487,
+   "oblasts": [],
+   "types": [
+    "missile"
+   ],
+   "summary": true,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix",
+    "inactive: авіація не активна, запуск БпЛА не фіксувався"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 11118,
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [],
+   "summary": true,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 11676,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "ballistic",
+    "kab"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix",
+    "context: Yehor - балістика або КАБ"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 12082,
+   "oblasts": [
+    "ternopil"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 12400,
+   "oblasts": [],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 12864,
+   "oblasts": [],
+   "types": [
+    "aviation",
+    "ballistic",
+    "drone",
+    "kab",
+    "missile"
+   ],
+   "summary": true,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 15450,
+   "oblasts": [],
+   "types": [],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 17416,
+   "oblasts": [],
+   "types": [
+    "ballistic"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 17574,
+   "oblasts": [
+    "dnipropetrovsk",
+    "kherson",
+    "kirovohrad",
+    "mykolaiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 19715,
+   "oblasts": [],
+   "types": [
+    "aviation",
+    "missile"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 19916,
+   "oblasts": [],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 20592,
+   "oblasts": [
+    "kyiv",
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 24931,
+   "oblasts": [],
+   "types": [
+    "drone",
+    "missile"
+   ],
+   "summary": true,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 24945,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix",
+    "context"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 25642,
+   "oblasts": [],
+   "types": [
+    "drone"
+   ],
+   "summary": true,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix",
+    "inactive: ракетоносії в портах"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 25824,
+   "oblasts": [],
+   "types": [
+    "drone",
+    "missile"
+   ],
+   "summary": true,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 26781,
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 27854,
+   "oblasts": [],
+   "types": [],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 28682,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "ballistic"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix",
+    "context (Yehor: for «комбінована атака» the type comes from the previous posts; balistics approached Kyiv a minute earlier) supersedes his added drone"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 30053,
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix",
+    "context"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 31100,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "ballistic",
+    "missile"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 31505,
+   "oblasts": [
+    "kyiv",
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix",
+    "context"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 33382,
+   "oblasts": [],
+   "types": [
+    "aviation"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 33534,
+   "oblasts": [
+    "kyiv",
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 33871,
+   "oblasts": [],
+   "types": [
+    "drone"
+   ],
+   "summary": true,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok",
+    "inactive: авіація не активна, ракетоносії в пунктах базування"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 34133,
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix",
+    "context"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 34402,
+   "oblasts": [
+    "kirovohrad",
+    "vinnytsia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 34763,
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix",
+    "context"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 35098,
+   "oblasts": [],
+   "types": [
+    "drone"
+   ],
+   "summary": true,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix",
+    "inactive: ракетоносії в портах"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 38558,
+   "oblasts": [
+    "khmelnytskyi",
+    "vinnytsia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 38797,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix",
+    "context"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 40229,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "ballistic"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 40961,
+   "oblasts": [
+    "dnipropetrovsk",
+    "kharkiv",
+    "odesa",
+    "sumy"
+   ],
+   "types": [
+    "ballistic",
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 41827,
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": true,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix",
+    "inactive: ракетоносії в портах"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 42322,
+   "oblasts": [
+    "dnipropetrovsk",
+    "kharkiv",
+    "odesa",
+    "sumy",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "ballistic",
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 42330,
+   "oblasts": [
+    "kyiv",
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 43034,
+   "oblasts": [
+    "kherson",
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:ok"
+   ]
+  },
+  {
+   "channel": "war_monitor",
+   "id": 46786,
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "summary": false,
+   "reviewer": "Yehor Hunia",
+   "rules": [
+    "review:fix",
+    "context"
+   ]
+  }
+ ]
+}

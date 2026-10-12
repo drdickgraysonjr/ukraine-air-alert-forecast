@@ -159,7 +159,7 @@ THREATS = ("drone", "missile", "ballistic", "kab", "aviation", "artillery")
 # centres often named in threat posts. Russian spellings for the 2022 posts.
 OBLASTS: dict[str, re.Pattern] = {
     "kyiv_city": _rx(r"\bкиїв(?!щин|ськ)", r"\bкиєв", r"\bкиев(?!щин|ск)", r"столиц", r"жулян", r"оболон", r"троєщин", r"деміїв", r"позняк", r"осокорк", r"дарниц", r"голосіїв", r"печерськ", r"святошин|світошин", r"воскресенк", r"теремк", r"березняк", r"лісов\w* масив", r"виноградар", r"нивк", r"борщагівк", r"соломʼян|солом'ян|соломян", r"подільськ\w* район\w* києв"),
-    "kyiv": _rx(r"київщин", r"киевщин", r"київськ\w* обл", r"київськ\w* област", r"киевск\w* обл", r"бровар", r"бориспіл|борисполь|бориспол", r"біл\w* церкв|бел\w* церкв", r"обухів|обухов", r"вишгород", r"ірпін|ирпен", r"\bбуч[аіи]\b", r"фастів|фастов", r"василь?ків", r"бородянк", r"макарів", r"переяслав", r"яготин", r"кагарлик", r"сквир", r"чорнобил|чернобыл", r"гостомел", r"українк", r"богуслав", r"миронівк", r"славутич", r"узин", r"боярк", r"лютіж", r"бузов", r"ржищ", r"гатне", r"баришівк", r"ворзел", r"димер", r"кодр", r"згурівк", r"березан", r"білогород", r"вишнев", r"ставищ"),
+    "kyiv": _rx(r"київщин", r"киевщин", r"київськ\w* обл", r"київськ\w* област", r"киевск\w* обл", r"бровар", r"бориспіл|борисполь|бориспол", r"біл\w* церкв|бел\w* церкв", r"обухів|обухов", r"вишгород", r"ірпін|ирпен", r"\bбуч[аіи]\b", r"фастів|фастов", r"василь?ків", r"бородянк", r"макарів", r"переяслав", r"яготин", r"кагарлик", r"сквир", r"чорнобил|чернобыл", r"гостомел", r"(?<!ново)українк", r"богуслав", r"миронівк", r"славутич", r"узин", r"боярк", r"лютіж", r"бузов", r"ржищ", r"гатне", r"баришівк", r"ворзел", r"димер", r"кодр", r"згурівк", r"березан", r"білогород", r"вишнев", r"ставищ"),
     "chernihiv": _rx(r"черніг", r"чернигов", r"ніжин", r"нежин", r"прилук", r"новгород-сівер", r"семенівк", r"бахмач", r"корюків", r"городн[яі]", r"мена\b|\bмени\b", r"любеч|любич"),
     "sumy": _rx(r"\bсум(и|ах|ам|ами|ськ|щин)", r"\bсуми\b", r"\bсумы\b", r"шостк", r"конотоп", r"охтирк|ахтырк", r"ромн", r"глухів|глухов", r"лебедин", r"тростян", r"путивл", r"кролевец|кролевц", r"білопіл|белопол", r"середин[аио]-буд"),
     "kharkiv": _rx(r"харків", r"харьков", r"ізюм|изюм", r"куп.янськ|купянск", r"чугуїв|чугуев", r"лозов", r"балакл", r"богодух", r"золочів|золочев", r"вовчанськ|волчанск", r"красноград|берестин", r"дергач", r"мерефа", r"люботин"),
@@ -189,35 +189,158 @@ assert set(OBLASTS) == set(REGION_IDS)
 # Channel signatures repeated under posts ("✅ єРадар | Повітряна тривога").
 _SIGNATURE = re.compile(r"^.*єрадар\s*\|.*$", re.M)
 
+# ---- rules v2 (Yehor Hunia's review of 250 gold posts, 2026-10-12)
+
+# Macro-regions as Yehor defined them; six oblasts belong to two regions.
+# Crimea and Luhansk oblast are not among the model's regions.
+MACRO: dict[str, tuple[str, ...]] = {
+    "north": ("kyiv", "kyiv_city", "chernihiv", "sumy", "zhytomyr", "poltava", "cherkasy"),
+    "east": ("kharkiv", "donetsk", "dnipropetrovsk", "zaporizhzhia"),
+    "south": ("odesa", "mykolaiv", "kherson", "vinnytsia", "kirovohrad", "zaporizhzhia"),
+    "west": ("volyn", "rivne", "lviv", "ternopil", "khmelnytskyi", "ivano_frankivsk", "zakarpattia", "chernivtsi"),
+    "centre": ("vinnytsia", "cherkasy", "kirovohrad", "poltava", "dnipropetrovsk"),
+}
+_MACRO_ADJ = {"північн": "north", "східн": "east", "південн": "south", "західн": "west", "центральн": "centre"}
+_MACRO_NOUN = {"півноч": "north", "півн": "north", "сход": "east", "півдн": "south", "заход": "west", "центр": "centre"}
+# "західні, центральні області", "для південних областей", "у центральних регіонах"
+_MACRO_ADJ_RX = re.compile(r"(?<![-\w])((?:північн|східн|південн|західн|центральн)(?:і|их|ими|ім)(?:\s*(?:,|та|і|й)\s*(?:північн|східн|південн|західн|центральн)(?:і|их|ими|ім))*)\s+(?:област|регіон)")
+# "на півдні", "по Півдню", "на півдні та сході" -- but not "на півночі Сумщини" or "з півночі"
+_MACRO_NOUN_RX = re.compile(r"\b(?:на|по)\s+((?:півдн|півноч|сход|заход|центр)(?:і|у|ю|ові)\b(?:\s*(?:,|та|і|й)\s*(?:півдн|півноч|сход|заход|центр)(?:і|у|ю)\b)*)")
+_NOT_MACRO_NEXT = re.compile(r"^(від|м\.|міст|област|район|сумщ|черніг|харків|київ|полтав|житомир|одещ|миколаїв|херсон|запоріж|дніпр|донеч|луган|черкащ|кіровоград|віннич|хмельнич|рівн|волин|львів|тернопіл|франків|закарпат|буковин|криму|\w+щин)")
+
+# A type mentioned as inactive or absent is not a type of the post ("Стратегічна авіація не активна",
+# "Флот без активності", "Ракетоносії заведені в порти", the NATO reconnaissance drone).
+_NEGATION = re.compile(r"не\s+активн|неактивн|без\s+активност|заведен\w*\s+(?:в|у)\s+(?:порт|пункт)|не\s+перебува|не\s+фіксув|відсутн|\bнато\b")
+# "Вихід" announces a ballistic or cruise missile launch; "група(и)" are drones.
+_IMPLIED = (
+    (re.compile(r"\bвих(?:ід|оди|оду)\b"), ("ballistic", "missile")),
+    (re.compile(r"\bгруп(?:а|и|у|ою)\b"), ("drone",)),
+)
+# Reservoir and suburbs: both Kyiv city and Kyiv oblast.
+_KYIV_BOTH = re.compile(r"київськ\w*\s+водосховищ|передмісті?\w*\s+києва|києв\w*\s+(?:та|і)\s+передміст|київ\s+(?:та|і)\s+передміст|передмістя")
+# Kyiv neighbourhoods and ambiguous names Yehor resolved: Лук'янівка is Kyiv, Козин is Kyiv oblast.
+_KYIV_CITY_EXTRA = re.compile(r"лук'янівк|караваєв\w*\s+дач|пріорк|сирц|шулявк|пущ\w*[-\s]водиц|чоколівк|куренівк|відрадн\w*|нов\w*\s+забудов|рибальськ|дврз|гнідин(?!.*київщин)")
+_KYIV_OBL_EXTRA = re.compile(r"\bкозин|зазим|гаврилівк|глевах|пирогів(?!.*києв)|погреб")
+# Summaries after an attack or about the day: not a live signal (Yehor: "це самарі").
+_SUMMARY = re.compile(
+    r"збито\s*/\s*подавлено|обстановка станом на|за минулу добу|оцінка діяльності|у ніч на \d+ \w+ \(з 18:00|"
+    r"станом на \d\d:\d\d,? (?:протиповітряною|ппо)|знищено (?:шість|\d+|два|три|чотири|п.ять)|\bстратком|"
+    r"\bураження\b.*(?:аеродром|гелікоптер|літак)|пропустив\w*\s+\w*\s*(?:повітрян\w* )?тривог|знищено ворож\w* бпла|збито\s+\d+"
+)
+CONTEXT_WINDOW_SEC = 3600  # a post without a type takes the types of the channel's last typed post within an hour
+
 
 def normalise(text: str) -> str:
     t = re.sub(r"[’ʼ`´]", "'", text).lower()
     return _SIGNATURE.sub("", t)
 
 
-def parse_text(text: str) -> tuple[tuple[str, ...], tuple[str, ...]]:
-    """(oblast region ids referred to, threat/event types)."""
+def _macro(t: str) -> set[str]:
+    out: set[str] = set()
+    for m in _MACRO_ADJ_RX.finditer(t):
+        for stem, name in _MACRO_ADJ.items():
+            if stem in m.group(1):
+                out |= set(MACRO[name])
+    for m in _MACRO_NOUN_RX.finditer(t):
+        # "на півночі Сумщини", "на півночі та в центрі Сумщини", "на Півдні та Сході (Суми, Харків...)":
+        # a direction inside a named oblast or a list of named cities is not a macro-region
+        after = t[m.end(1):m.end(1) + 60].split()[:4]
+        if after and (after[0].startswith("(") or any(_NOT_MACRO_NEXT.match(w) or any(rx.match(w) for rx in OBLASTS.values()) for w in after)):
+            continue
+        for stem, name in _MACRO_NOUN.items():
+            if re.search(r"\b" + stem, m.group(1)):
+                out |= set(MACRO[name])
+    return out
+
+
+def _types(t: str) -> list[str]:
+    """Types of the text, dropping those that occur only in clauses that call them inactive or absent."""
+    clauses = [c for c in re.split(r"[\n;.!]+", t) if c.strip()]
+    keep: set[str] = set()
+    negated: set[str] = set()
+    for c in clauses:
+        found = {k for k, rx in TYPES.items() if rx.search(c)}
+        for rx, implied in _IMPLIED:
+            if rx.search(c):
+                found |= set(implied)
+        if "🚀" in c and "kab" not in found:
+            found.add("missile")
+        if "флот" in c or "ракетоносі" in c:
+            fleet = {"missile"}
+        else:
+            fleet = set()
+        if _NEGATION.search(c):
+            negated |= found | fleet
+        else:
+            keep |= found
+    # a section header ("— Стратегічна авіація:") followed by "Не активна;" negates the header's type
+    for head, nxt in zip(clauses, clauses[1:]):
+        if head.rstrip().endswith(":") and _NEGATION.search(nxt):
+            hk = {k for k, rx in TYPES.items() if rx.search(head)}
+            if "флот" in head:
+                hk.add("missile")
+            keep -= hk
+            negated |= hk
+    return [k for k in TYPES if k in keep]
+
+
+def parse_post(text: str) -> tuple[tuple[str, ...], tuple[str, ...], bool]:
+    """(oblast region ids referred to, threat/event types, is a summary) of one post on its own."""
     if not text:
-        return (), ()
+        return (), (), False
     t = normalise(text)
-    obl = tuple(r for r, rx in OBLASTS.items() if rx.search(t))
-    typ = [k for k, rx in TYPES.items() if rx.search(t)]
-    # The rocket emoji marks missiles, but the Air Force also uses it for guided bombs.
-    if "🚀" in t and "kab" not in typ:
-        typ.append("missile")
-    return obl, tuple(k for k in TYPES if k in typ)
+    obl = {r for r, rx in OBLASTS.items() if rx.search(t)}
+    obl |= _macro(t)
+    if _KYIV_BOTH.search(t):
+        obl |= {"kyiv", "kyiv_city"}
+    if _KYIV_CITY_EXTRA.search(t):
+        obl.add("kyiv_city")
+    if _KYIV_OBL_EXTRA.search(t):
+        obl.add("kyiv")
+    typ = _types(t)
+    return tuple(r for r in OBLASTS if r in obl), tuple(typ), bool(_SUMMARY.search(t))
+
+
+def parse_text(text: str) -> tuple[tuple[str, ...], tuple[str, ...]]:
+    """(oblast region ids referred to, threat/event types) of one post on its own, without context."""
+    obl, typ, _ = parse_post(text)
+    return obl, typ
 
 
 def parse_frame(df: pd.DataFrame) -> pd.DataFrame:
-    parsed = [parse_text(t) for t in df["text"]]
+    """Parse every post; a post that names a place but no type at all takes the threat types of the
+    channel's last earlier non-summary post with a threat type within CONTEXT_WINDOW_SEC
+    (earlier posts only, so no look-ahead). Needs columns text and ts."""
+    parsed = [parse_post(t) for t in df["text"]]
     out = df.copy()
     out["oblasts"] = [p[0] for p in parsed]
-    out["types"] = [p[1] for p in parsed]
+    types = [p[1] for p in parsed]
+    out["summary"] = [p[2] for p in parsed]
+    ctx = [False] * len(df)
+    if "ts" in df.columns:
+        order = np.argsort(df["ts"].to_numpy(), kind="stable")
+        ts = df["ts"].to_numpy()
+        last_t, last_types = None, ()
+        for j in order:
+            own = [k for k in types[j] if k in THREATS]
+            # only a post with no type at all: an alert or all-clear announcement is not a threat of unknown type
+            if parsed[j][0] and not types[j] and not parsed[j][2]:
+                if last_t is not None and ts[j] - last_t <= CONTEXT_WINDOW_SEC:
+                    types[j] = tuple(k for k in TYPES if k in set(types[j]) | set(last_types))
+                    ctx[j] = True
+            elif own and not parsed[j][2]:
+                last_t, last_types = ts[j], tuple(own)
+    out["types"] = types
+    out["types_from_context"] = ctx
     return out
 
 
 def parser_digest() -> str:
-    spec = repr([(k, v.pattern) for k, v in {**TYPES, **OBLASTS}.items()]) + _SIGNATURE.pattern + inspect.getsource(parse_text)
+    spec = repr([(k, v.pattern) for k, v in {**TYPES, **OBLASTS}.items()]) + repr(MACRO) + repr(_IMPLIED) + repr(CONTEXT_WINDOW_SEC)
+    for rx in (_SIGNATURE, _MACRO_ADJ_RX, _MACRO_NOUN_RX, _NOT_MACRO_NEXT, _NEGATION, _KYIV_BOTH, _KYIV_CITY_EXTRA, _KYIV_OBL_EXTRA, _SUMMARY):
+        spec += rx.pattern
+    for fn in (parse_post, parse_frame, _types, _macro):
+        spec += inspect.getsource(fn)
     return hashlib.sha256(spec.encode()).hexdigest()[:12]
 
 
@@ -245,7 +368,7 @@ def load_channel(key: str) -> pd.DataFrame:
 class Posts:
     """Posts of the channels used for the text features, as known up to `known_until`."""
 
-    frames: dict[str, pd.DataFrame]  # channel -> columns ts, oblasts, types
+    frames: dict[str, pd.DataFrame]  # channel -> columns ts, oblasts, types, summary
 
     @classmethod
     def load(cls, channels=None, drop_edited: bool = False) -> "Posts":
@@ -255,7 +378,7 @@ class Posts:
             df = load_channel(c)
             if drop_edited:
                 df = df[~df["edited"]]
-            frames[c] = df[["ts", "oblasts", "types"]].reset_index(drop=True)
+            frames[c] = df[["ts", "oblasts", "types", "summary"]].reset_index(drop=True)
         return cls(frames)
 
     def as_of(self, t_sec: int) -> "Posts":
@@ -278,20 +401,24 @@ def _bin_counts(ts: np.ndarray, hours: np.ndarray, weights_rows: np.ndarray | No
 
 def text_features(g) -> dict[str, np.ndarray]:
     """Counts of channel posts over the last hours, per region (mentions) and for
-    the country, from posts published before H. Zones take their oblast's."""
+    the country, from posts published before H. Zones take their oblast's.
+    Summaries (reports after an attack, daily overviews) are not live signals: they are
+    left out of the threat counts and counted separately over the last 24 hours."""
     from .features import _rolling_sum
 
     R, n = len(g.regions), len(g.hours)
     ridx = {r: i for i, r in enumerate(g.regions)}
-    reg = {k: np.zeros((R, n)) for k in ("threat", "drone", "missile", "kab", "clear")}
-    ua = {k: np.zeros((1, n)) for k in ("threat", "drone", "missile", "aviation", "posts")}
+    reg = {k: np.zeros((R, n)) for k in ("threat", "drone", "missile", "kab", "clear", "summary")}
+    ua = {k: np.zeros((1, n)) for k in ("threat", "drone", "missile", "aviation", "posts", "summary")}
     for df in g.posts.frames.values():
         if df.empty:
             continue
         ts = df["ts"].to_numpy(np.int64)
         types = df["types"].to_numpy()
         obl = df["oblasts"].to_numpy()
-        has = {k: np.array([k in t for t in types]) for k in TYPES}
+        summ = df["summary"].to_numpy(bool) if "summary" in df.columns else np.zeros(len(df), bool)
+        live = ~summ
+        has = {k: np.array([k in t for t in types]) & live for k in TYPES}
         threat = np.zeros(len(df), bool)
         for k in THREATS:
             threat |= has[k]
@@ -304,6 +431,8 @@ def text_features(g) -> dict[str, np.ndarray]:
         for name, m in (("threat", threat), ("drone", has["drone"]), ("missile", has["missile"] | has["ballistic"]), ("aviation", has["aviation"])):
             ua[name] += _bin_counts(ts[m], g.hours, None, 1)
         ua["posts"] += _bin_counts(ts, g.hours, None, 1)
+        reg["summary"] += _bin_counts(ts, g.hours, mention & summ[None, :], R)
+        ua["summary"] += _bin_counts(ts[summ], g.hours, None, 1)
     f = {}
     for w in (1, 3, 6, 24):
         f[f"tg_threat_{w}h"] = _rolling_sum(reg["threat"], w)
@@ -318,6 +447,8 @@ def text_features(g) -> dict[str, np.ndarray]:
     f["tg_nb_threat_3h"] = nb3
     for k in ("drone", "missile", "aviation"):
         f[f"tg_ua_{k}_6h"] = np.repeat(_rolling_sum(ua[k], 6), R, axis=0)
+    f["tg_summary_24h"] = _rolling_sum(reg["summary"], 24)
+    f["tg_ua_summary_24h"] = np.repeat(_rolling_sum(ua["summary"], 24), R, axis=0)
     f["tg_posts_per_day_28d"] = np.repeat(_rolling_sum(ua["posts"], 672) / 28.0, R, axis=0)
     return {k: v[g.parent] for k, v in f.items()}
 

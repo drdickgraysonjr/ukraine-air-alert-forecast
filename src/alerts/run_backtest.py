@@ -65,5 +65,8 @@ def run(D: Data) -> None:
             dst2[name] = {"first_day": first, "last_day": last, "refits": refits, "ongoing_samples_in_window": _ongoing(D, first, last, kind), **evaluate.phase2_metrics(q, rng)}
             q.to_csv(config.ARTIFACTS_DIR / f"phase2_{tag}{name}.csv.gz", index=False)
             print(f"phase2 {kind} {name}: {len(q)} rows", flush=True)
+    from . import telegram
+
+    out1["parser_digest"] = out2["parser_digest"] = telegram.parser_digest() if config.TEXT_CHANNELS else None
     (config.REPORTS_DIR / "metrics_phase1.json").write_text(json.dumps(out1, indent=2) + "\n")
     (config.REPORTS_DIR / "metrics_phase2.json").write_text(json.dumps(out2, indent=2) + "\n")

@@ -7,7 +7,7 @@ import json
 
 import numpy as np
 
-from . import backtest, config, evaluate
+from . import backtest, config, evaluate, telegram
 
 P1_GRID = {"learning_rate": [0.05, 0.1], "max_leaf_nodes": [15, 31], "min_samples_leaf": [100], "l2_regularization": [1.0], "max_iter": [300]}
 P2_GRID = {"learning_rate": [0.1], "max_leaf_nodes": [31, 63], "min_samples_leaf": [200, 1000], "l2_regularization": [1.0], "max_iter": [200]}
@@ -49,6 +49,7 @@ def run(D) -> dict:
         "phase1_trials": trials1,
         "phase2_trials": trials2,
         "selected": {"phase1": best1, "phase2": best2},
+        "parser_digest": telegram.parser_digest() if config.TEXT_CHANNELS else None,
     }
     config.REPORTS_DIR.mkdir(exist_ok=True)
     (config.REPORTS_DIR / "tuning.json").write_text(json.dumps(out, indent=2) + "\n")

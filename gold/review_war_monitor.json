@@ -1,0 +1,1127 @@
+{
+ "channel": "war_monitor",
+ "reviewer": "Yehor Hunia",
+ "exported_at": "2026-10-12T11:28:08.469Z",
+ "items": [
+  {
+   "id": 5123,
+   "verdict": "ok",
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [
+    "ballistic"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 5157,
+   "verdict": "fix",
+   "oblasts": [
+    "dnipropetrovsk",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "missile"
+   ],
+   "comment": "З контексту попередніх постів це могла б бути балістика, важко визначити"
+  },
+  {
+   "id": 5283,
+   "verdict": "fix",
+   "oblasts": [],
+   "types": [
+    "all_clear"
+   ],
+   "comment": "Фідбек про сторони світу теж треба врахувати"
+  },
+  {
+   "id": 5352,
+   "verdict": "ok",
+   "oblasts": [
+    "donetsk"
+   ],
+   "types": [],
+   "comment": ""
+  },
+  {
+   "id": 5646,
+   "verdict": "fix",
+   "oblasts": [
+    "khmelnytskyi"
+   ],
+   "types": [
+    "missile"
+   ],
+   "comment": "Це теж самарі"
+  },
+  {
+   "id": 6020,
+   "verdict": "fix",
+   "oblasts": [],
+   "types": [],
+   "comment": "Але це дійсно не загроза, оскільки це НАТО"
+  },
+  {
+   "id": 6368,
+   "verdict": "fix",
+   "oblasts": [],
+   "types": [
+    "missile"
+   ],
+   "comment": "Фідбек про сторони світу теж треба врахувати"
+  },
+  {
+   "id": 6997,
+   "verdict": "ok",
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 7258,
+   "verdict": "ok",
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [],
+   "comment": ""
+  },
+  {
+   "id": 7531,
+   "verdict": "ok",
+   "oblasts": [
+    "kherson",
+    "zaporizhzhia"
+   ],
+   "types": [
+    "missile",
+    "kab",
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 7639,
+   "verdict": "ok",
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 8462,
+   "verdict": null
+  },
+  {
+   "id": 8718,
+   "verdict": null
+  },
+  {
+   "id": 9623,
+   "verdict": null
+  },
+  {
+   "id": 9696,
+   "verdict": null
+  },
+  {
+   "id": 9902,
+   "verdict": "fix",
+   "oblasts": [],
+   "types": [],
+   "comment": "Не загроза, це про відсутність ракет"
+  },
+  {
+   "id": 10452,
+   "verdict": null
+  },
+  {
+   "id": 10487,
+   "verdict": "fix",
+   "oblasts": [],
+   "types": [
+    "drone",
+    "missile",
+    "aviation"
+   ],
+   "comment": "Самарі"
+  },
+  {
+   "id": 10908,
+   "verdict": null
+  },
+  {
+   "id": 11118,
+   "verdict": "fix",
+   "oblasts": [
+    "zaporizhzhia"
+   ],
+   "types": [],
+   "comment": "Це самарі про ураження ворожих гелікоптерів, не про повітряні тривоги"
+  },
+  {
+   "id": 11347,
+   "verdict": null
+  },
+  {
+   "id": 11378,
+   "verdict": null
+  },
+  {
+   "id": 11396,
+   "verdict": null
+  },
+  {
+   "id": 11676,
+   "verdict": "fix",
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [],
+   "comment": "З контексту попередніх постів треба було б відловити. Або балістика, або КАБ"
+  },
+  {
+   "id": 11774,
+   "verdict": null
+  },
+  {
+   "id": 12082,
+   "verdict": "fix",
+   "oblasts": [
+    "ternopil"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": "Група це дійсно скоріше за все дрони, але можуть бути і ракети. Тут треба було б подивитися на контекст сусідніх постів"
+  },
+  {
+   "id": 12389,
+   "verdict": null
+  },
+  {
+   "id": 12400,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 12715,
+   "verdict": null
+  },
+  {
+   "id": 12738,
+   "verdict": null
+  },
+  {
+   "id": 12828,
+   "verdict": null
+  },
+  {
+   "id": 12864,
+   "verdict": "fix",
+   "oblasts": [],
+   "types": [
+    "drone",
+    "missile",
+    "ballistic",
+    "kab",
+    "aviation"
+   ],
+   "comment": "Самарі теж"
+  },
+  {
+   "id": 12877,
+   "verdict": null
+  },
+  {
+   "id": 13795,
+   "verdict": null
+  },
+  {
+   "id": 13921,
+   "verdict": null
+  },
+  {
+   "id": 13948,
+   "verdict": null
+  },
+  {
+   "id": 14312,
+   "verdict": null
+  },
+  {
+   "id": 14354,
+   "verdict": null
+  },
+  {
+   "id": 14571,
+   "verdict": null
+  },
+  {
+   "id": 14590,
+   "verdict": null
+  },
+  {
+   "id": 14754,
+   "verdict": null
+  },
+  {
+   "id": 15100,
+   "verdict": null
+  },
+  {
+   "id": 15450,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [],
+   "comment": ""
+  },
+  {
+   "id": 15557,
+   "verdict": null
+  },
+  {
+   "id": 15790,
+   "verdict": null
+  },
+  {
+   "id": 15858,
+   "verdict": null
+  },
+  {
+   "id": 15912,
+   "verdict": null
+  },
+  {
+   "id": 16160,
+   "verdict": null
+  },
+  {
+   "id": 16293,
+   "verdict": null
+  },
+  {
+   "id": 16429,
+   "verdict": null
+  },
+  {
+   "id": 16658,
+   "verdict": null
+  },
+  {
+   "id": 16693,
+   "verdict": null
+  },
+  {
+   "id": 17416,
+   "verdict": "fix",
+   "oblasts": [],
+   "types": [
+    "ballistic"
+   ],
+   "comment": "Мова скоріше за все про лівий берег Дніпра як частину країни. Бракує контексту"
+  },
+  {
+   "id": 17505,
+   "verdict": null
+  },
+  {
+   "id": 17574,
+   "verdict": "ok",
+   "oblasts": [
+    "dnipropetrovsk",
+    "kherson",
+    "kirovohrad",
+    "mykolaiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 17933,
+   "verdict": null
+  },
+  {
+   "id": 18054,
+   "verdict": null
+  },
+  {
+   "id": 18193,
+   "verdict": null
+  },
+  {
+   "id": 18205,
+   "verdict": null
+  },
+  {
+   "id": 18215,
+   "verdict": null
+  },
+  {
+   "id": 18271,
+   "verdict": null
+  },
+  {
+   "id": 18295,
+   "verdict": null
+  },
+  {
+   "id": 18952,
+   "verdict": null
+  },
+  {
+   "id": 19103,
+   "verdict": null
+  },
+  {
+   "id": 19309,
+   "verdict": null
+  },
+  {
+   "id": 19606,
+   "verdict": null
+  },
+  {
+   "id": 19715,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "missile",
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 19902,
+   "verdict": null
+  },
+  {
+   "id": 19916,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 19980,
+   "verdict": null
+  },
+  {
+   "id": 20156,
+   "verdict": null
+  },
+  {
+   "id": 20292,
+   "verdict": null
+  },
+  {
+   "id": 20462,
+   "verdict": null
+  },
+  {
+   "id": 20592,
+   "verdict": "ok",
+   "oblasts": [
+    "kyiv",
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 20926,
+   "verdict": null
+  },
+  {
+   "id": 21041,
+   "verdict": null
+  },
+  {
+   "id": 21375,
+   "verdict": null
+  },
+  {
+   "id": 21483,
+   "verdict": null
+  },
+  {
+   "id": 21575,
+   "verdict": null
+  },
+  {
+   "id": 21717,
+   "verdict": null
+  },
+  {
+   "id": 22066,
+   "verdict": null
+  },
+  {
+   "id": 23500,
+   "verdict": null
+  },
+  {
+   "id": 23649,
+   "verdict": null
+  },
+  {
+   "id": 23862,
+   "verdict": null
+  },
+  {
+   "id": 24307,
+   "verdict": null
+  },
+  {
+   "id": 24649,
+   "verdict": null
+  },
+  {
+   "id": 24931,
+   "verdict": "fix",
+   "oblasts": [],
+   "types": [
+    "drone",
+    "missile"
+   ],
+   "comment": "Якщо авіація не активна, то для чого ми її фіксуємо?"
+  },
+  {
+   "id": 24945,
+   "verdict": "fix",
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [],
+   "comment": "З контексту попередніх постів"
+  },
+  {
+   "id": 25143,
+   "verdict": null
+  },
+  {
+   "id": 25239,
+   "verdict": null
+  },
+  {
+   "id": 25370,
+   "verdict": null
+  },
+  {
+   "id": 25642,
+   "verdict": "fix",
+   "oblasts": [],
+   "types": [
+    "drone",
+    "missile"
+   ],
+   "comment": "Так само, авіація неактивна ж"
+  },
+  {
+   "id": 25716,
+   "verdict": null
+  },
+  {
+   "id": 25751,
+   "verdict": null
+  },
+  {
+   "id": 25818,
+   "verdict": null
+  },
+  {
+   "id": 25824,
+   "verdict": "fix",
+   "oblasts": [],
+   "types": [
+    "drone",
+    "missile"
+   ],
+   "comment": "Авіація не активна"
+  },
+  {
+   "id": 25904,
+   "verdict": null
+  },
+  {
+   "id": 26251,
+   "verdict": null
+  },
+  {
+   "id": 26287,
+   "verdict": null
+  },
+  {
+   "id": 26342,
+   "verdict": null
+  },
+  {
+   "id": 26471,
+   "verdict": null
+  },
+  {
+   "id": 26781,
+   "verdict": "ok",
+   "oblasts": [
+    "sumy"
+   ],
+   "types": [],
+   "comment": ""
+  },
+  {
+   "id": 26991,
+   "verdict": null
+  },
+  {
+   "id": 27582,
+   "verdict": null
+  },
+  {
+   "id": 27626,
+   "verdict": null
+  },
+  {
+   "id": 27659,
+   "verdict": null
+  },
+  {
+   "id": 27782,
+   "verdict": null
+  },
+  {
+   "id": 27854,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [],
+   "comment": ""
+  },
+  {
+   "id": 28247,
+   "verdict": null
+  },
+  {
+   "id": 28324,
+   "verdict": null
+  },
+  {
+   "id": 28497,
+   "verdict": null
+  },
+  {
+   "id": 28581,
+   "verdict": null
+  },
+  {
+   "id": 28627,
+   "verdict": null
+  },
+  {
+   "id": 28682,
+   "verdict": "fix",
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": "Комбінована атака, як правило, = ракети, балістика, бпла. "
+  },
+  {
+   "id": 28921,
+   "verdict": null
+  },
+  {
+   "id": 30053,
+   "verdict": "fix",
+   "oblasts": [
+    "kyiv_city"
+   ],
+   "types": [],
+   "comment": "З контексту треба відловити тип загрози"
+  },
+  {
+   "id": 30148,
+   "verdict": null
+  },
+  {
+   "id": 30211,
+   "verdict": null
+  },
+  {
+   "id": 30280,
+   "verdict": null
+  },
+  {
+   "id": 30365,
+   "verdict": null
+  },
+  {
+   "id": 30397,
+   "verdict": null
+  },
+  {
+   "id": 31047,
+   "verdict": null
+  },
+  {
+   "id": 31100,
+   "verdict": "fix",
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [
+    "missile",
+    "ballistic"
+   ],
+   "comment": "Вихід — це про балістику або ракети"
+  },
+  {
+   "id": 31151,
+   "verdict": null
+  },
+  {
+   "id": 31309,
+   "verdict": null
+  },
+  {
+   "id": 31505,
+   "verdict": "fix",
+   "oblasts": [
+    "kyiv",
+    "kyiv_city"
+   ],
+   "types": [],
+   "comment": "Тип з контексту"
+  },
+  {
+   "id": 31656,
+   "verdict": null
+  },
+  {
+   "id": 32732,
+   "verdict": null
+  },
+  {
+   "id": 33164,
+   "verdict": null
+  },
+  {
+   "id": 33382,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 33534,
+   "verdict": "fix",
+   "oblasts": [
+    "kyiv_city",
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": "Для Київського водосховища фіксуємо Київ і область, бо часто звідти залітають в столицю"
+  },
+  {
+   "id": 33773,
+   "verdict": null
+  },
+  {
+   "id": 33871,
+   "verdict": "ok",
+   "oblasts": [],
+   "types": [
+    "drone",
+    "missile",
+    "aviation"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 34133,
+   "verdict": "fix",
+   "oblasts": [
+    "poltava"
+   ],
+   "types": [],
+   "comment": "Контекст типу "
+  },
+  {
+   "id": 34280,
+   "verdict": null
+  },
+  {
+   "id": 34402,
+   "verdict": "ok",
+   "oblasts": [
+    "kirovohrad",
+    "vinnytsia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 34564,
+   "verdict": null
+  },
+  {
+   "id": 34763,
+   "verdict": "fix",
+   "oblasts": [
+    "dnipropetrovsk"
+   ],
+   "types": [],
+   "comment": "Контекст типу "
+  },
+  {
+   "id": 34815,
+   "verdict": null
+  },
+  {
+   "id": 35098,
+   "verdict": "fix",
+   "oblasts": [],
+   "types": [
+    "drone",
+    "missile"
+   ],
+   "comment": "Стратегічна авіація не активна"
+  },
+  {
+   "id": 35124,
+   "verdict": null
+  },
+  {
+   "id": 35461,
+   "verdict": null
+  },
+  {
+   "id": 35747,
+   "verdict": null
+  },
+  {
+   "id": 36099,
+   "verdict": null
+  },
+  {
+   "id": 36508,
+   "verdict": null
+  },
+  {
+   "id": 37089,
+   "verdict": null
+  },
+  {
+   "id": 37197,
+   "verdict": null
+  },
+  {
+   "id": 37609,
+   "verdict": null
+  },
+  {
+   "id": 37649,
+   "verdict": null
+  },
+  {
+   "id": 37861,
+   "verdict": null
+  },
+  {
+   "id": 37894,
+   "verdict": null
+  },
+  {
+   "id": 37967,
+   "verdict": null
+  },
+  {
+   "id": 37997,
+   "verdict": null
+  },
+  {
+   "id": 38274,
+   "verdict": null
+  },
+  {
+   "id": 38429,
+   "verdict": null
+  },
+  {
+   "id": 38558,
+   "verdict": "ok",
+   "oblasts": [
+    "khmelnytskyi",
+    "vinnytsia"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 38797,
+   "verdict": "fix",
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [],
+   "comment": "Тип з контексту"
+  },
+  {
+   "id": 39157,
+   "verdict": null
+  },
+  {
+   "id": 39263,
+   "verdict": null
+  },
+  {
+   "id": 39853,
+   "verdict": null
+  },
+  {
+   "id": 40229,
+   "verdict": "ok",
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [
+    "ballistic"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 40275,
+   "verdict": null
+  },
+  {
+   "id": 40311,
+   "verdict": null
+  },
+  {
+   "id": 40316,
+   "verdict": null
+  },
+  {
+   "id": 40961,
+   "verdict": "fix",
+   "oblasts": [
+    "sumy",
+    "kharkiv",
+    "dnipropetrovsk",
+    "odesa"
+   ],
+   "types": [
+    "drone",
+    "ballistic"
+   ],
+   "comment": "Авіація не активна"
+  },
+  {
+   "id": 41050,
+   "verdict": null
+  },
+  {
+   "id": 41099,
+   "verdict": null
+  },
+  {
+   "id": 41264,
+   "verdict": null
+  },
+  {
+   "id": 41463,
+   "verdict": null
+  },
+  {
+   "id": 41827,
+   "verdict": "fix",
+   "oblasts": [
+    "odesa"
+   ],
+   "types": [
+    "drone",
+    "missile"
+   ],
+   "comment": "Авіація не активна"
+  },
+  {
+   "id": 42200,
+   "verdict": null
+  },
+  {
+   "id": 42235,
+   "verdict": null
+  },
+  {
+   "id": 42304,
+   "verdict": null
+  },
+  {
+   "id": 42322,
+   "verdict": "fix",
+   "oblasts": [
+    "sumy",
+    "kharkiv",
+    "dnipropetrovsk",
+    "zaporizhzhia",
+    "odesa"
+   ],
+   "types": [
+    "drone",
+    "ballistic"
+   ],
+   "comment": "Авіація не активна. Можна подумати над тим, щоб додати в типи флот, але флот запускає ракети, тож це сумнівно"
+  },
+  {
+   "id": 42330,
+   "verdict": "fix",
+   "oblasts": [
+    "kyiv_city",
+    "kyiv"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": "Давай тут Київ теж враховувати"
+  },
+  {
+   "id": 42598,
+   "verdict": null
+  },
+  {
+   "id": 42618,
+   "verdict": null
+  },
+  {
+   "id": 43034,
+   "verdict": "ok",
+   "oblasts": [
+    "kherson",
+    "odesa"
+   ],
+   "types": [
+    "drone"
+   ],
+   "comment": ""
+  },
+  {
+   "id": 43129,
+   "verdict": null
+  },
+  {
+   "id": 43151,
+   "verdict": null
+  },
+  {
+   "id": 43168,
+   "verdict": null
+  },
+  {
+   "id": 43766,
+   "verdict": null
+  },
+  {
+   "id": 43873,
+   "verdict": null
+  },
+  {
+   "id": 44047,
+   "verdict": null
+  },
+  {
+   "id": 44137,
+   "verdict": null
+  },
+  {
+   "id": 44272,
+   "verdict": null
+  },
+  {
+   "id": 44523,
+   "verdict": null
+  },
+  {
+   "id": 44587,
+   "verdict": null
+  },
+  {
+   "id": 44734,
+   "verdict": null
+  },
+  {
+   "id": 45084,
+   "verdict": null
+  },
+  {
+   "id": 45368,
+   "verdict": null
+  },
+  {
+   "id": 45830,
+   "verdict": null
+  },
+  {
+   "id": 46189,
+   "verdict": null
+  },
+  {
+   "id": 46575,
+   "verdict": null
+  },
+  {
+   "id": 46786,
+   "verdict": "fix",
+   "oblasts": [
+    "kyiv"
+   ],
+   "types": [],
+   "comment": "Визначити з контексту"
+  },
+  {
+   "id": 46796,
+   "verdict": null
+  },
+  {
+   "id": 47012,
+   "verdict": null
+  },
+  {
+   "id": 47498,
+   "verdict": null
+  },
+  {
+   "id": 47509,
+   "verdict": null
+  },
+  {
+   "id": 47539,
+   "verdict": null
+  }
+ ]
+}

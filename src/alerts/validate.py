@@ -21,7 +21,7 @@ import time
 
 import numpy as np
 
-from . import backtest, config, evaluate
+from . import backtest, config, evaluate, telegram
 
 P2_EVERY = 28
 P2_HORIZONS = (1, 3, 6)
@@ -162,7 +162,7 @@ def step_text(only=None) -> dict:
         out["text"] = {"trials": trials}
         save(out)
     out = load()
-    res = {"trials": trials}
+    res = {"trials": trials, "parser_digest": telegram.parser_digest()}
     if len(trials) == len(options):
         res.update(pick(trials))
         res["selected_channels"] = next(t["channels"] for t in trials if t["option"] == res["selected"])
@@ -177,7 +177,7 @@ def step_edited() -> dict:
     from . import telegram
 
     chans = config.TEXT_CHANNELS
-    res = {"channels": list(chans), "dropped_posts": {}, "trials": []}
+    res = {"channels": list(chans), "parser_digest": telegram.parser_digest(), "dropped_posts": {}, "trials": []}
     for c in chans:
         df = telegram.load_channel(c)
         res["dropped_posts"][c] = int(df["edited"].sum())
