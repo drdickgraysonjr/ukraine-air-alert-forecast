@@ -123,8 +123,10 @@ TYPE_NAMES_UK = {
 }
 
 
-def review_html(channels, out_path) -> int:
-    """A local page for reviewing every gold label (texts included, never committed)."""
+def review_html(channels, out_path, prior=None) -> int:
+    """A local page for reviewing every gold label (texts included, never committed).
+    `prior`: an earlier downloaded gold_review.json whose verdicts the page starts from
+    (browser progress lives per address, so it can be lost)."""
     from .regions import REGIONS
 
     items = []
@@ -140,7 +142,16 @@ def review_html(channels, out_path) -> int:
     items.sort(key=lambda it: (channels.index(it["channel"]), not it["note"]))
     regions = [[r, REGIONS[r][1].replace(" область", "")] for r in REGION_IDS]
     types = [[t, TYPE_NAMES_UK[t]] for t in TYPES]
-    page = _REVIEW_PAGE.replace("__ITEMS__", json.dumps(items, ensure_ascii=False)).replace(
+    keys = {f"{it['channel']}:{it['id']}" for it in items}
+    seed = {}
+    if prior:
+        for x in json.loads(open(prior, encoding="utf-8").read())["items"]:
+            key = f"{x['channel']}:{x['id']}"
+            if x.get("verdict") in ("ok", "fix") and key in keys:
+                seed[key] = {"verdict": x["verdict"], "comment": x.get("comment", "")}
+                if x["verdict"] == "fix":
+                    seed[key] |= {"oblasts": x["oblasts"], "types": x["types"]}
+    page = _REVIEW_PAGE.replace("__ITEMS__", json.dumps(items, ensure_ascii=False)).replace("__PRIOR__", json.dumps(seed, ensure_ascii=False)).replace(
         "__REGIONS__", json.dumps(regions, ensure_ascii=False)).replace("__TYPES__", json.dumps(types, ensure_ascii=False)).replace(
         "__GUIDE__", json.dumps(GUIDE, ensure_ascii=False))
     out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -194,6 +205,7 @@ const ITEMS=__ITEMS__, REGIONS=__REGIONS__, TYPES=__TYPES__, GUIDE=__GUIDE__;
 const RN=Object.fromEntries(REGIONS), TN=Object.fromEntries(TYPES);
 const KEY='gold-review-v1';let st={};try{st=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}};
+const PRIOR=__PRIOR__;for(const [key,v] of Object.entries(PRIOR))if(!st[key])st[key]=v;save();
 const k=it=>it.channel+':'+it.id;let cur=0;
 document.getElementById('guide').textContent=GUIDE;
 const chs=[...new Set(ITEMS.map(i=>i.channel))];const sel=document.getElementById('ch');

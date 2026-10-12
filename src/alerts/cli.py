@@ -26,7 +26,7 @@ def main(argv=None) -> int:
     tp.add_argument("export_dir")
     gr = sub.add_parser("gold", help="parser gold set: review page, import a review, accuracy report")
     gr.add_argument("action", choices=["review-page", "import-review", "report"])
-    gr.add_argument("--file", default=None, help="downloaded gold_review.json (import-review)")
+    gr.add_argument("--file", default=None, help="downloaded gold_review.json (import-review; for review-page: earlier verdicts to start from)")
     gr.add_argument("--reviewer", default=None)
     sub.add_parser("crosscheck", help="series after the seam vs @UkraineAlarmSignal -> reports/crosscheck.json")
     sub.add_parser("ablate-edited", help="test-window backtest without edited posts -> reports/edited_ablation.json")
@@ -55,7 +55,7 @@ def main(argv=None) -> int:
 
         chans = list(gold.CHANNELS_WITH_GOLD())
         if a.action == "review-page":
-            n = gold.review_html(chans, config.ARTIFACTS_DIR / "gold_review.html")
+            n = gold.review_html(chans, config.ARTIFACTS_DIR / "gold_review.html", prior=a.file)
             print(f"{n} posts -> {config.ARTIFACTS_DIR / 'gold_review.html'}")
         elif a.action == "import-review":
             print(gold.import_review(a.file, a.reviewer))
