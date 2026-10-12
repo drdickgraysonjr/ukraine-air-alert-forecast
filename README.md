@@ -34,14 +34,14 @@ start, text channels, hyper-parameters) was made on an earlier validation window
 <!-- RESULTS:START -->
 #### Phase 1: alerts and alert hours per region for the coming Kyiv day (forecast at 00:00)
 
-Mean absolute error per region-day. Skill = 1 - MAE(model) / MAE(best naive forecast), 90% interval from a day-level bootstrap.
+Mean absolute error per region-day (the region series: oblast- and raion-level alerts, i.e. the oblast outside its zone of regular alerts). Skill = 1 - MAE(model) / MAE(best naive forecast), 90% interval from a day-level bootstrap.
 
 | Window | Target | Days | Actual mean | Model MAE | Best naive forecast | Its MAE | Skill [90% CI] |
 |---|---|---:|---:|---:|---|---:|---|
-| Before the break (Jun 1 - Aug 22) | alerts | 83 | 2.97 | 1.328 | mean of last 7 days | 1.329 | +0.1% [-3.0%, +3.1%] |
-| Before the break (Jun 1 - Aug 22) | hours | 83 | 7.17 | 1.462 | mean of last 7 days | 1.412 | -3.6% [-7.6%, +0.1%] |
-| After the break (Sep 14 - last day) | alerts | 27 | 5.26 | 1.994 | mean of last 28 days | 2.026 | +1.6% [-3.1%, +5.8%] |
-| After the break (Sep 14 - last day) | hours | 27 | 10.03 | 2.173 | mean of last 28 days | 2.197 | +1.1% [-6.5%, +7.8%] |
+| Before the break (Jun 1 - Aug 22) | alerts | 83 | 3.04 | 1.355 | mean of last 7 days | 1.352 | -0.2% [-3.2%, +2.6%] |
+| Before the break (Jun 1 - Aug 22) | hours | 83 | 7.17 | 1.405 | mean of last 7 days | 1.412 | +0.5% [-2.9%, +3.9%] |
+| After the break (Sep 14 - last day) | alerts | 27 | 5.46 | 2.037 | mean of last 28 days | 2.076 | +1.9% [-2.9%, +6.3%] |
+| After the break (Sep 14 - last day) | hours | 27 | 10.03 | 2.099 | mean of last 28 days | 2.197 | +4.4% [-3.0%, +11.2%] |
 
 #### Phase 2: probability that an alert starts in the region within the next h hours
 
@@ -49,40 +49,77 @@ Scored only at moments with no alert in progress (otherwise the answer is "alert
 
 | Window | h | Forecasts | Base rate | Brier model | Brier climatology | BSS [90% CI] | AUC model | AUC climatology |
 |---|---:|---:|---:|---:|---:|---|---:|---:|
-| Before the break (Jun 1 - Aug 22) | 1 | 33446 | 0.123 | 0.0786 | 0.0823 | +4.5% [+3.6%, +5.4%] | 0.876 | 0.856 |
-| Before the break (Jun 1 - Aug 22) | 2 | 33446 | 0.196 | 0.1019 | 0.1070 | +4.8% [+3.6%, +5.9%] | 0.884 | 0.868 |
-| Before the break (Jun 1 - Aug 22) | 3 | 33446 | 0.248 | 0.1109 | 0.1166 | +4.9% [+3.7%, +6.1%] | 0.890 | 0.877 |
-| Before the break (Jun 1 - Aug 22) | 4 | 33446 | 0.288 | 0.1157 | 0.1205 | +3.9% [+2.4%, +5.5%] | 0.892 | 0.883 |
-| Before the break (Jun 1 - Aug 22) | 5 | 33446 | 0.320 | 0.1175 | 0.1218 | +3.5% [+1.7%, +5.0%] | 0.896 | 0.888 |
-| Before the break (Jun 1 - Aug 22) | 6 | 33446 | 0.347 | 0.1196 | 0.1223 | +2.2% [-0.1%, +4.2%] | 0.898 | 0.891 |
-| After the break (Sep 14 - last day) | 1 | 9080 | 0.250 | 0.1249 | 0.1403 | +10.9% [+8.9%, +13.1%] | 0.864 | 0.833 |
-| After the break (Sep 14 - last day) | 2 | 9080 | 0.362 | 0.1342 | 0.1503 | +10.7% [+8.0%, +13.7%] | 0.878 | 0.859 |
-| After the break (Sep 14 - last day) | 3 | 9080 | 0.428 | 0.1316 | 0.1471 | +10.5% [+7.4%, +13.5%] | 0.889 | 0.874 |
-| After the break (Sep 14 - last day) | 4 | 9080 | 0.476 | 0.1282 | 0.1429 | +10.3% [+7.9%, +12.9%] | 0.897 | 0.884 |
-| After the break (Sep 14 - last day) | 5 | 9080 | 0.512 | 0.1278 | 0.1382 | +7.5% [+4.7%, +10.2%] | 0.899 | 0.892 |
-| After the break (Sep 14 - last day) | 6 | 9080 | 0.541 | 0.1261 | 0.1348 | +6.5% [+3.4%, +9.4%] | 0.902 | 0.897 |
+| Before the break (Jun 1 - Aug 22) | 1 | 33446 | 0.123 | 0.0780 | 0.0823 | +5.2% [+4.2%, +6.2%] | 0.879 | 0.856 |
+| Before the break (Jun 1 - Aug 22) | 2 | 33446 | 0.196 | 0.1017 | 0.1070 | +5.0% [+3.5%, +6.2%] | 0.884 | 0.868 |
+| Before the break (Jun 1 - Aug 22) | 3 | 33446 | 0.248 | 0.1109 | 0.1166 | +4.9% [+3.3%, +6.5%] | 0.890 | 0.877 |
+| Before the break (Jun 1 - Aug 22) | 4 | 33446 | 0.288 | 0.1158 | 0.1205 | +3.9% [+1.5%, +6.2%] | 0.893 | 0.883 |
+| Before the break (Jun 1 - Aug 22) | 5 | 33446 | 0.320 | 0.1182 | 0.1218 | +3.0% [+0.6%, +5.3%] | 0.896 | 0.888 |
+| Before the break (Jun 1 - Aug 22) | 6 | 33446 | 0.347 | 0.1204 | 0.1223 | +1.5% [-1.6%, +4.2%] | 0.899 | 0.891 |
+| After the break (Sep 14 - last day) | 1 | 9080 | 0.250 | 0.1233 | 0.1403 | +12.1% [+10.0%, +14.4%] | 0.869 | 0.833 |
+| After the break (Sep 14 - last day) | 2 | 9080 | 0.362 | 0.1317 | 0.1503 | +12.4% [+9.5%, +15.4%] | 0.883 | 0.859 |
+| After the break (Sep 14 - last day) | 3 | 9080 | 0.428 | 0.1307 | 0.1471 | +11.1% [+7.9%, +14.3%] | 0.890 | 0.874 |
+| After the break (Sep 14 - last day) | 4 | 9080 | 0.476 | 0.1285 | 0.1429 | +10.1% [+7.4%, +13.0%] | 0.897 | 0.884 |
+| After the break (Sep 14 - last day) | 5 | 9080 | 0.512 | 0.1244 | 0.1382 | +9.9% [+7.1%, +12.9%] | 0.903 | 0.892 |
+| After the break (Sep 14 - last day) | 6 | 9080 | 0.541 | 0.1210 | 0.1348 | +10.3% [+6.7%, +13.7%] | 0.909 | 0.897 |
+
+#### Zones of regular alerts: phase 1 (zone-days; zones: dnipropetrovsk, donetsk, kharkiv, kirovohrad, zaporizhzhia)
+
+| Window | Target | Zone-days | Actual mean | Model MAE | Best naive forecast | Its MAE | Skill [90% CI] |
+|---|---|---:|---:|---:|---|---:|---|
+| Before the break (Jun 1 - Aug 22) | alerts | 318 | 3.65 | 1.327 | mean of last 28 days | 1.316 | -0.8% [-6.5%, +5.2%] |
+| Before the break (Jun 1 - Aug 22) | hours | 318 | 21.68 | 1.262 | mean of last 7 days | 1.105 | -14.2% [-24.9%, -3.7%] |
+| After the break (Sep 14 - last day) | alerts | 108 | 6.02 | 2.009 | mean of last 28 days | 2.135 | +5.9% [-2.1%, +14.4%] |
+| After the break (Sep 14 - last day) | hours | 108 | 18.13 | 2.485 | mean of last 7 days | 2.463 | -0.9% [-9.9%, +6.4%] |
+
+#### Zones of regular alerts: phase 2
+
+| Window | h | Forecasts | Base rate | Brier model | Brier climatology | BSS [90% CI] | AUC model | AUC climatology |
+|---|---:|---:|---:|---:|---:|---|---:|---:|
+| Before the break (Jun 1 - Aug 22) | 1 | 729 | 0.759 | 0.1779 | 0.1924 | +7.6% [+2.1%, +12.5%] | 0.623 | 0.585 |
+| Before the break (Jun 1 - Aug 22) | 2 | 729 | 0.922 | 0.0699 | 0.0787 | +11.2% [+5.0%, +17.0%] | 0.682 | 0.544 |
+| Before the break (Jun 1 - Aug 22) | 3 | 729 | 0.981 | 0.0189 | 0.0212 | +11.0% [+3.7%, +21.8%] | 0.602 | 0.558 |
+| Before the break (Jun 1 - Aug 22) | 4 | 729 | 0.995 | 0.0054 | 0.0067 | +18.7% [+9.5%, +53.0%] | 0.697 | 0.596 |
+| Before the break (Jun 1 - Aug 22) | 5 | 729 | 0.999 | 0.0014 | 0.0022 | +37.3% [+12.8%, +99.8%] | 0.727 | 0.373 |
+| Before the break (Jun 1 - Aug 22) | 6 | 729 | 1.000 | 0.0000 | 0.0006 | +99.9% [+99.7%, +100.0%] | – | – |
+| After the break (Sep 14 - last day) | 1 | 630 | 0.562 | 0.2267 | 0.2562 | +11.5% [+5.3%, +17.1%] | 0.680 | 0.612 |
+| After the break (Sep 14 - last day) | 2 | 630 | 0.738 | 0.1893 | 0.1927 | +1.7% [-5.7%, +9.1%] | 0.661 | 0.658 |
+| After the break (Sep 14 - last day) | 3 | 630 | 0.821 | 0.1483 | 0.1405 | -5.5% [-15.1%, +4.5%] | 0.682 | 0.699 |
+| After the break (Sep 14 - last day) | 4 | 630 | 0.867 | 0.1212 | 0.1089 | -11.3% [-20.8%, +2.8%] | 0.703 | 0.728 |
+| After the break (Sep 14 - last day) | 5 | 630 | 0.897 | 0.0967 | 0.0860 | -12.4% [-21.6%, +4.7%] | 0.768 | 0.753 |
+| After the break (Sep 14 - last day) | 6 | 630 | 0.917 | 0.0794 | 0.0728 | -9.2% [-17.8%, +7.4%] | 0.781 | 0.762 |
 <!-- RESULTS:END -->
 
 What the numbers say:
 
-- **Phase 1 shows no skill over a simple moving average.** In both test windows
-  the model's error is within a few percent of the best naive forecast, and every
-  interval includes zero; for alert hours before the break it is slightly worse
-  (-3.6%). On the validation window the same model was 4-7% better than the naive
-  forecasts, and that gain did not carry over. With alert history alone, the size
-  of the next day's attack is not predictable beyond its recent average.
-- **Phase 2 has a small, consistent edge.** The model beats the 28-day
-  climatology at every horizon, by about 2-5% in Brier score before the break and
-  7-11% after it, and its ranking of risky moments is better (higher AUC). Most
-  of the gain comes from the current situation: neighbouring regions under alert,
-  alerts in the last hours, the whole country's state.
-- **Probabilities are well calibrated** (figure below). After the break the model
-  slightly under-forecasts at longer horizons, which is expected: alerts became
-  more frequent and the model has only a few post-break weeks to learn from.
+- **Phase 1 still has no reliable skill over a moving average.** For the 24
+  regions the model is within a few percent of the best naive forecast in both
+  windows, and every interval includes zero. The text features move it the right
+  way for alert hours: +0.5% instead of -2.9% before the break, +4.4% instead of
+  +2.2% after it (the run without text in [Choices](#choices-made-on-the-validation-window));
+  for the number of alerts they change nothing. The size of the next day's
+  attack stays hard to predict beyond its recent average.
+- **Phase 2 gains from the text.** The model beats the 28-day climatology at
+  every horizon after the break, by 10-12% in Brier score (6-10% without text
+  features), and by 2-5% before it, where the text helps the first three hours
+  and slightly hurts at 4-5 hours. Most of the gain still comes from the current
+  situation: neighbouring regions under alert, alerts in the last hours, the
+  whole country's state, and now what the channels report on the region.
+- **Zones are hard to beat with naive forecasts.** A zone is under alert 12-21
+  hours a day on average and has only a few moments without an alert, so the
+  mean of the last 7 days already tells its alert hours well: the model is 14%
+  worse on hours before the break and level after it. In phase 2 it is better
+  than climatology for the next 1-2 hours and worse beyond, where almost every
+  zone gets an alert anyway.
+- **The series after the seam holds up.** 99.3% of red and 99.4% of yellow
+  alert starts in alerts.in.ua have a post in @UkraineAlarmSignal within 5
+  minutes, the same as for the official feed before the seam (99.2%).
+- **Probabilities are well calibrated** for the regions (figure below).
 
 ![Average alert hours per region and day](reports/fig_daily_hours.png)
 
 ![Phase 2 calibration](reports/fig_reliability.png)
+
+![Zones against the rest of their oblast](reports/fig_zones.png)
 
 ## Data
 
@@ -245,7 +282,69 @@ from comments); that text is not used: it cannot give a reliable oblast series.
 
 ## Choices made on the validation window
 
+The decisions were taken one after another, each with the earlier ones fixed:
+zones, then the history start, then the text channels (scored with the MVP
+hyper-parameters), then the hyper-parameters under the final data choices.
+Text features improve the validation score by about 2% over none. Leaving out
+the Air Force channel scored best, but the four "all but one" options lie within
+0.012 of each other, about the size of the noise; the rule picked the lowest.
+Dropping edited posts made the validation score worse (0.8849 against 0.8769).
+That is consistent with edited posts carrying real information, and also with
+part of their final text arriving after the forecast moment; these data cannot
+tell the two apart.
+
 <!-- CHOICES:START -->
+#### Choices on the validation window (2026-03-02 .. 05-31)
+
+Zones: 20 settings of (lookback, share) scored by the F1 of "member on day d" against "alerts on at least 5 of the next 7 days" over 11390 hromada-days. All settings land between 0.966 and 0.995; the best is a 7-day lookback with a share of 0.9 (precision 0.989, recall 1.000).
+
+Score for the other choices: mean of the phase 1 ratio model MAE / best naive MAE (both targets) and the phase 2 ratio model log loss / climatology log loss (1, 3, 6 h), regions only. Lower is better.
+
+| Decision | Option | Phase 1 MAE ratio (alerts / hours) | Phase 2 log-loss ratio (1 / 3 / 6 h) | Score | Chosen |
+|---|---|---|---|---:|---|
+| History start | 2022-04-13 | 0.969 / 0.909 | 0.842 / 0.850 / 0.884 | 0.8988 |  |
+| History start | 2023-01-01 | 0.959 / 0.913 | 0.843 / 0.855 / 0.877 | 0.8969 | yes |
+| Text channels | none | 0.959 / 0.913 | 0.843 / 0.855 / 0.877 | 0.8969 |  |
+| Text channels | all | 0.956 / 0.904 | 0.833 / 0.830 / 0.851 | 0.8839 |  |
+| Text channels | all-kpszsu | 0.954 / 0.886 | 0.833 / 0.832 / 0.842 | 0.8776 | yes |
+| Text channels | all-war_monitor | 0.953 / 0.902 | 0.835 / 0.834 / 0.858 | 0.8849 |  |
+| Text channels | all-eradar | 0.955 / 0.893 | 0.835 / 0.838 / 0.862 | 0.8844 |  |
+| Text channels | all-alarm_signal | 0.950 / 0.913 | 0.837 / 0.842 / 0.864 | 0.8895 |  |
+| Edited posts (not a choice) | all posts | 0.954 / 0.886 | 0.834 / 0.831 / 0.838 | 0.8769 |  |
+| Edited posts (not a choice) | without edited posts | 0.954 / 0.908 | 0.831 / 0.831 / 0.854 | 0.8849 |  |
+
+#### Parser accuracy on the gold set
+
+200 posts per channel drawn at random (seed 20261012) from posts with text since 2023-01-01. Oblasts: post x oblast pairs. Types: post x type pairs.
+
+| Channel | Labelled by | Reviewed by (corrections) | Oblasts P / R / F1 | Types P / R / F1 | Post fully right |
+|---|---|---|---|---|---:|
+| Air Force (@kpszsu) | Claude (agent), blind to the parser | not yet | 1.00 / 0.94 / 0.97 | 0.94 / 1.00 / 0.97 | 86% |
+| @war_monitor | Claude (agent), blind to the parser | not yet | 0.98 / 0.97 / 0.98 | 0.94 / 0.94 / 0.94 | 84% |
+| eRadar (@eRadarrua) | Claude (agent), blind to the parser | not yet | 0.99 / 0.91 / 0.95 | 0.90 / 0.95 / 0.92 | 78% |
+| @UkraineAlarmSignal | Claude (agent), blind to the parser | not yet | 1.00 / 1.00 / 1.00 | 0.98 / 1.00 / 0.99 | 99% |
+
+#### Edited posts and text features on the test windows
+
+The same backtest with edited posts dropped, and with no text features at all; everything else fixed. Phase 1: skill vs the best naive forecast (hours). Phase 2: BSS vs climatology at 1 h.
+
+| Series / window | Final model: P1 hours / P2 1 h | Without edited posts | Without text features |
+|---|---|---|---|
+| regions, after the break | +4.4% / +12.1% | +4.1% / +11.9% | +2.2% / +10.4% |
+| regions, before the break | +0.5% / +5.2% | -3.2% / +4.8% | -2.9% / +4.8% |
+| zones, after the break | -0.9% / +11.5% | -1.5% / +12.7% | -3.2% / +9.5% |
+| zones, before the break | -14.2% / +7.6% | -13.4% / +6.2% | -11.7% / +5.7% |
+
+Posts dropped: @war_monitor 2648, eRadar (@eRadarrua) 9506, @UkraineAlarmSignal 5109.
+
+#### Cross-check of the series with @UkraineAlarmSignal
+
+Share of alert-start posts with a start of the same region's series within 5 min, and the reverse per alert level.
+
+| Window | Alert posts | Posts matched by the series | Series starts matched by a post, per level |
+|---|---:|---:|---|
+| before seam (2026-06-01 .. 2026-09-05) | 33330 | 93.0% | single: 99.2% of 31312 |
+| after seam (2026-09-08 .. 2026-10-10) | 17312 | 93.6% | red: 99.3% of 5508; yellow: 99.4% of 10065 |
 <!-- CHOICES:END -->
 
 ## No look-ahead

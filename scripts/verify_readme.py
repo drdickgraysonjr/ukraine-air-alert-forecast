@@ -37,7 +37,7 @@ def main() -> int:
         err.append("results markers missing")
     elif got.group(1) != want:
         err.append("results block differs from reports/*.json (run `alerts report`)")
-    for fig in ("reports/fig_daily_hours.png", "reports/fig_reliability.png"):
+    for fig in ("reports/fig_daily_hours.png", "reports/fig_reliability.png", "reports/fig_zones.png"):
         if fig not in text or not (config.ROOT / fig).exists():
             err.append(f"figure {fig} not referenced or missing")
     for src in config.SOURCES:
