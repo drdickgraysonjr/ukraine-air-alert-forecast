@@ -46,15 +46,18 @@ def _variant(drop_edited: bool, channels) -> dict:
 
 
 def run() -> dict:
+    dropped = {c: int(telegram.load_channel(c)["edited"].sum()) for c in config.TEXT_CHANNELS}
+    without_edited = _variant(True, config.TEXT_CHANNELS)
+    without_text = _variant(False, ())
+    # Read last, so the main backtest may run alongside.
     with_ = headline(json.loads((config.REPORTS_DIR / "metrics_phase1.json").read_text()),
                      json.loads((config.REPORTS_DIR / "metrics_phase2.json").read_text()))
-    dropped = {c: int(telegram.load_channel(c)["edited"].sum()) for c in config.TEXT_CHANNELS}
     out = {
         "channels": list(config.TEXT_CHANNELS),
         "dropped_posts": dropped,
         "with_edited": with_,
-        "without_edited": _variant(True, config.TEXT_CHANNELS),
-        "without_text": _variant(False, ()),
+        "without_edited": without_edited,
+        "without_text": without_text,
     }
     (config.REPORTS_DIR / "edited_ablation.json").write_text(json.dumps(out, indent=2) + "\n")
     return out

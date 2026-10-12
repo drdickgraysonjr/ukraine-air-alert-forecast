@@ -132,7 +132,8 @@ def _phase2_rows(windows: dict) -> list[str]:
     for w in ("pre_break", "post_break"):
         for h, v in windows[w]["horizons"].items():
             mm, mc = v["methods"]["model"], v["methods"]["clim"]
-            out.append(f"| {LABEL[w]} | {h} | {v['n']} | {v['base_rate']:.3f} | {mm['brier']:.4f} | {mc['brier']:.4f} | {mc['model_bss']:+.1%} {_ci(mc['model_bss_ci90'])} | {mm['auc']:.3f} | {mc['auc']:.3f} |")
+            auc = lambda x: "–" if x is None else f"{x:.3f}"  # noqa: E731
+            out.append(f"| {LABEL[w]} | {h} | {v['n']} | {v['base_rate']:.3f} | {mm['brier']:.4f} | {mc['brier']:.4f} | {mc['model_bss']:+.1%} {_ci(mc['model_bss_ci90'])} | {auc(mm['auc'])} | {auc(mc['auc'])} |")
     return out
 
 

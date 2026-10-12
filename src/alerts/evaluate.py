@@ -85,7 +85,9 @@ def phase2_metrics(p: pd.DataFrame, rng, horizons=config.HORIZONS) -> dict:
         sq = {}
         for name in ("model", "clim", "poisson"):
             pr = q[f"p_{name}_{hz}"].to_numpy(float)
-            res["methods"][name] = {"brier": _brier(pr, y), "log_loss": _logloss(pr, y), "auc": float(roc_auc_score(y, pr))}
+            # AUC is undefined when every label is the same (a zone that always gets an alert).
+            auc = float(roc_auc_score(y, pr)) if 0 < y.sum() < len(y) else None
+            res["methods"][name] = {"brier": _brier(pr, y), "log_loss": _logloss(pr, y), "auc": auc}
             sq[name] = _per_day(day, uniq, (pr - y) ** 2)
         for ref in ("clim", "poisson"):
             bss = 1 - sq["model"][idx].sum(1) / sq[ref][idx].sum(1)

@@ -91,7 +91,8 @@ def check_windows(phase: str, w: dict, kind: str) -> list[str]:
             for h, v in hz.items():
                 for k in ("model", "clim", "poisson"):
                     mm = v["methods"].get(k)
-                    if not mm or not all(finite(mm[q]) for q in ("brier", "log_loss", "auc")):
+                    one_class = v["base_rate"] in (0.0, 1.0)
+                    if not mm or not all(finite(mm[q]) for q in ("brier", "log_loss")) or not (finite(mm["auc"]) or (one_class and mm["auc"] is None)):
                         err.append(f"{name}/{h}h/{k}: metrics missing")
                 for k in ("clim", "poisson"):
                     if not finite(v["methods"][k].get("model_bss_ci90")):

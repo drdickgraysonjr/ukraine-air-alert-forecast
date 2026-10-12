@@ -490,5 +490,75 @@
       "eradar",
       "alarm_signal"
     ]
+  },
+  "edited": {
+    "channels": [
+      "war_monitor",
+      "eradar",
+      "alarm_signal"
+    ],
+    "dropped_posts": {
+      "war_monitor": 2648,
+      "eradar": 9506,
+      "alarm_signal": 5109
+    },
+    "trials": [
+      {
+        "phase1_rel_mae": {
+          "count": 0.9535812619164166,
+          "hours": 0.8856493729732702
+        },
+        "phase1_mae": {
+          "count": 1.3288418105169295,
+          "hours": 1.8434155068756408
+        },
+        "phase2_rel_logloss": {
+          "1": 0.8338488344339843,
+          "3": 0.8305332712799331,
+          "6": 0.8380439388666975
+        },
+        "phase2_bss_clim": {
+          "1": 0.10481989784549639,
+          "3": 0.13368220272798392,
+          "6": 0.14284067615927698
+        },
+        "score": 0.8768786661525242,
+        "first_scored_day": "2026-03-02",
+        "last_scored_day": "2026-05-31",
+        "n_phase1_rows": 2184,
+        "n_phase2_rows": 37753,
+        "train_known_until_max": 1779656400,
+        "seconds": 491.9,
+        "option": "all posts"
+      },
+      {
+        "phase1_rel_mae": {
+          "count": 0.9537533830191585,
+          "hours": 0.9082328457734816
+        },
+        "phase1_mae": {
+          "count": 1.3290816660247193,
+          "hours": 1.8904213821457299
+        },
+        "phase2_rel_logloss": {
+          "1": 0.8308246497754684,
+          "3": 0.8314440048293774,
+          "6": 0.8539579714724942
+        },
+        "phase2_bss_clim": {
+          "1": 0.1061225955477787,
+          "3": 0.13297113357784596,
+          "6": 0.1254141716278413
+        },
+        "score": 0.8848676615443833,
+        "first_scored_day": "2026-03-02",
+        "last_scored_day": "2026-05-31",
+        "n_phase1_rows": 2184,
+        "n_phase2_rows": 37753,
+        "train_known_until_max": 1779656400,
+        "seconds": 686.3,
+        "option": "without edited posts"
+      }
+    ]
   }
 }
