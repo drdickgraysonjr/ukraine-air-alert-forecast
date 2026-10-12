@@ -8,6 +8,7 @@
     "zone_lookback_days": 7,
     "zone_min_share": 0.9,
     "text_channels": [
+      "kpszsu",
       "war_monitor",
       "eradar",
       "alarm_signal"
@@ -74,6 +75,8 @@
       "tg_ua_drone_6h",
       "tg_ua_missile_6h",
       "tg_ua_aviation_6h",
+      "tg_summary_24h",
+      "tg_ua_summary_24h",
       "tg_posts_per_day_28d"
     ]
   },
@@ -88,7 +91,7 @@
         "max_iter": 300
       },
       "train_days": null,
-      "relative_mae": 0.9350760073964198
+      "relative_mae": 0.9328314452171544
     },
     {
       "params": {
@@ -99,7 +102,7 @@
         "max_iter": 300
       },
       "train_days": 365,
-      "relative_mae": 0.9557939532147244
+      "relative_mae": 0.9454694991749474
     },
     {
       "params": {
@@ -110,7 +113,7 @@
         "max_iter": 300
       },
       "train_days": null,
-      "relative_mae": 0.9165909297601214
+      "relative_mae": 0.9232905277022245
     },
     {
       "params": {
@@ -121,7 +124,7 @@
         "max_iter": 300
       },
       "train_days": 365,
-      "relative_mae": 0.938856335296863
+      "relative_mae": 0.9491280556795565
     },
     {
       "params": {
@@ -132,7 +135,7 @@
         "max_iter": 300
       },
       "train_days": null,
-      "relative_mae": 0.9361602243721961
+      "relative_mae": 0.9389133889064942
     },
     {
       "params": {
@@ -143,7 +146,7 @@
         "max_iter": 300
       },
       "train_days": 365,
-      "relative_mae": 0.9606768434080087
+      "relative_mae": 0.9670223298479385
     },
     {
       "params": {
@@ -154,7 +157,7 @@
         "max_iter": 300
       },
       "train_days": null,
-      "relative_mae": 0.9321652810639094
+      "relative_mae": 0.9426370934199262
     },
     {
       "params": {
@@ -165,7 +168,7 @@
         "max_iter": 300
       },
       "train_days": 365,
-      "relative_mae": 0.9614977283244719
+      "relative_mae": 0.9725367533595596
     }
   ],
   "phase2_trials": [
@@ -178,7 +181,7 @@
         "max_iter": 200
       },
       "train_days": null,
-      "mean_log_loss": 0.3370908700618407
+      "mean_log_loss": 0.34079385979405724
     },
     {
       "params": {
@@ -189,7 +192,7 @@
         "max_iter": 200
       },
       "train_days": 365,
-      "mean_log_loss": 0.34976963719718634
+      "mean_log_loss": 0.35436703501644856
     },
     {
       "params": {
@@ -200,7 +203,7 @@
         "max_iter": 200
       },
       "train_days": null,
-      "mean_log_loss": 0.3378563869344302
+      "mean_log_loss": 0.33897431362277697
     },
     {
       "params": {
@@ -211,7 +214,7 @@
         "max_iter": 200
       },
       "train_days": 365,
-      "mean_log_loss": 0.35093822391752644
+      "mean_log_loss": 0.3564913269850088
     },
     {
       "params": {
@@ -222,7 +225,7 @@
         "max_iter": 200
       },
       "train_days": null,
-      "mean_log_loss": 0.34194955323842935
+      "mean_log_loss": 0.3446721064383824
     },
     {
       "params": {
@@ -233,7 +236,7 @@
         "max_iter": 200
       },
       "train_days": 365,
-      "mean_log_loss": 0.3578829960273284
+      "mean_log_loss": 0.36666335665063016
     },
     {
       "params": {
@@ -244,7 +247,7 @@
         "max_iter": 200
       },
       "train_days": null,
-      "mean_log_loss": 0.3404350093986909
+      "mean_log_loss": 0.3428175617761076
     },
     {
       "params": {
@@ -255,7 +258,7 @@
         "max_iter": 200
       },
       "train_days": 365,
-      "mean_log_loss": 0.36067404803662084
+      "mean_log_loss": 0.37042961374539063
     }
   ],
   "selected": {
@@ -268,18 +271,19 @@
         "max_iter": 300
       },
       "train_days": null,
-      "relative_mae": 0.9165909297601214
+      "relative_mae": 0.9232905277022245
     },
     "phase2": {
       "params": {
         "learning_rate": 0.1,
         "max_leaf_nodes": 31,
-        "min_samples_leaf": 200,
+        "min_samples_leaf": 1000,
         "l2_regularization": 1.0,
         "max_iter": 200
       },
       "train_days": null,
-      "mean_log_loss": 0.3370908700618407
+      "mean_log_loss": 0.33897431362277697
     }
-  }
+  },
+  "parser_digest": "dbb019ebe737"
 }

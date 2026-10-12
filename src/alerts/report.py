@@ -184,10 +184,11 @@ def choices_markdown(v: dict, parsers: dict, ablation: dict, cross: dict) -> str
     dev = parsers.get("dev_v2")
     if dev:
         n = dev["channels"]["all"]["v1"]["n_posts"]
-        out.append(f"The {n} gold posts Yehor Hunia reviewed (all {dev['channels']['kpszsu']['v1']['n_posts']} of the Air Force sample and the first "
-                   f"{dev['channels']['war_monitor']['v1']['n_posts']} of @war_monitor), labelled under the rules v2. Parser v2 was written on these posts, "
-                   "so its numbers here are a development figure, not a held-out one; the other 550 gold posts were not reviewed and no held-out "
-                   "accuracy was measured. Oblasts: post x oblast pairs. Types: post x type pairs. Summary: the post is marked as a summary.\n")
+        out.append(f"The {n} gold posts Yehor Hunia reviewed (all {dev['channels']['kpszsu']['v1']['n_posts']} of the Air Force sample and "
+                   f"{dev['channels']['war_monitor']['v1']['n_posts']} of @war_monitor, most of them posts the agent had flagged as unclear), labelled "
+                   "under the rules v2. Parser v2 was written on these posts, so its numbers here are a development figure, not a held-out one; the "
+                   "other 550 gold posts were not reviewed and no held-out accuracy was measured. Oblasts: post x oblast pairs. Types: post x type "
+                   "pairs. Summary: the post is marked as a summary (parser v1 marks none, so its \"fully right\" counts every summary as a miss).\n")
         out.append("| Posts | Parser | Oblasts P / R | Types P / R | Summaries P / R | Post fully right |")
         out.append("|---|---|---|---|---|---:|")
         names = {**CHANNEL_NAMES, "all": "all reviewed"}
