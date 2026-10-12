@@ -1,4 +1,4 @@
-"""Command line: alerts {download,tune,backtest,forecast,report,all}."""
+"""Command line: alerts {download,tune,backtest,forecast,report,all,neptun-record,neptun-pin}."""
 
 from __future__ import annotations
 
@@ -37,6 +37,11 @@ def main(argv=None) -> int:
     f = sub.add_parser("forecast", help="forecast as of a moment, using only data known then")
     f.add_argument("--as-of", default=None, help="ISO time with offset, e.g. 2026-10-10T21:00+00:00 (default: data end)")
     f.add_argument("--json", default=None, help="also write the result as JSON to this path")
+    f.add_argument("--live", action="store_true", help="live forecast from recorded NEPTUN snapshots (data/live/neptun)")
+    nr = sub.add_parser("neptun-record", help="poll the NEPTUN live API and append snapshots to data/live/neptun")
+    nr.add_argument("--interval", type=float, default=config.NEPTUN_POLL_SEC, help="seconds between alert polls (>= 5)")
+    nr.add_argument("--hours", type=float, default=None, help="stop after this many hours (default: until interrupted)")
+    sub.add_parser("neptun-pin", help="fetch NEPTUN alerts, messages and GeoJSON once -> data/live/neptun/pinned")
     sub.add_parser("report", help="figures and README tables from reports/*.json")
     sub.add_parser("all", help="download, backtest, report")
     a = ap.parse_args(argv)
@@ -87,7 +92,26 @@ def main(argv=None) -> int:
         from . import report
 
         report.run()
-    if a.cmd == "forecast":
+    if a.cmd == "neptun-record":
+        from . import neptun
+
+        print(json.dumps(neptun.record(interval=a.interval, hours=a.hours)))
+    if a.cmd == "neptun-pin":
+        from . import neptun
+
+        print(json.dumps(neptun.pin(), indent=2, ensure_ascii=False))
+    if a.cmd == "forecast" and a.live:
+        from . import forecast
+
+        as_of = pd.Timestamp(a.as_of) if a.as_of else None
+        if as_of is not None and as_of.tzinfo is None:
+            ap.error("--as-of needs a UTC offset")
+        res = forecast.run_live(as_of)
+        print(forecast.render_live(res))
+        if a.json:
+            with open(a.json, "w") as fh:
+                json.dump(res, fh, indent=2, ensure_ascii=False)
+    if a.cmd == "forecast" and not a.live:
         from . import forecast, stitch
 
         as_of = pd.Timestamp(a.as_of) if a.as_of else config.DATA_END_UTC

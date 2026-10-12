@@ -135,3 +135,19 @@ LOOKBACK_PAD = pd.Timedelta(days=35)
 HORIZONS = (1, 2, 3, 4, 5, 6)
 
 SEED = 20261011
+
+# Live data: NEPTUN air-alert aggregator (alerts.neptun). Free, read-only REST,
+# no history; terms at https://neptun.in.ua/api-terms require attribution next
+# to the data and no polling faster than once every 5 s.
+NEPTUN_BASE_URL = "https://neptun.in.ua"
+NEPTUN_DIR = DATA_DIR / "live" / "neptun"
+# Default REST poll interval of the recorder; the model is hour-granular.
+NEPTUN_POLL_SEC = 60
+# The messages endpoint keeps only the latest ~120 posts (~15 min).
+NEPTUN_MESSAGES_EVERY_SEC = 60
+NEPTUN_ATTRIBUTION = "Дані: Карта повітряних тривог — NEPTUN (https://neptun.in.ua/)"
+NEPTUN_DISCLAIMER = (
+    "NEPTUN is an information aggregator, not an official warning system; "
+    "this forecast is not a warning. Follow official air raid alerts "
+    "(sirens, the Air Force of Ukraine, the «Повітряна тривога» app)."
+)
